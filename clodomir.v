@@ -253,7 +253,6 @@ Proof.
 reflexivity.
 Qed.
 
-
 (* Exercise: 1 star, standard (factorial) *)
 
 Fixpoint factorial (n: nat) : nat :=
@@ -312,72 +311,3 @@ Example test_ltb3: (ltb 4 2) = false.
 Proof.
 reflexivity.
 Qed.
-
-(* Exercise: 1 star, standard (plus_id_exercise) *)
-
-Theorem plus_id_exercise : ∀n m o : nat,
-  n = m → m = o → n + m = m + o.
-Proof.
-  (* FILL IN HERE *) Admitted.
-
-(* Exercise: 2 stars, standard (mult_S_1) *)
-
-Theorem mult_S_1 : ∀n m : nat,
-  m = S n →
-  m * (1 + n) = m * m.
-Proof.
-  (* FILL IN HERE *) Admitted.
-
-(* Exercise: 2 stars, standard (andb_true_elim2) *)
-
-Theorem andb_true_elim2 : ∀b c : bool,
-  andb b c = true → c = true.
-Proof.
-  (* FILL IN HERE *) Admitted.
-
-(* Exercise: 1 star, standard (zero_nbeq_plus_1) *)
-
-Theorem zero_nbeq_plus_1 : ∀n : nat,
-  0 =? (n + 1) = false.
-Proof.
-  (* FILL IN HERE *) Admitted.
-
-(* Exercise: 2 stars, standard, optional (decreasing) *)
-
-(* FILL IN HERE *)
-
-(* Exercise: 1 star, standard (indentity_fn_applied_twice) *)
-
-Theorem identity_fn_applied_twice :
-  ∀(f : bool → bool),
-  (∀(x : bool), f x = x) →
-  ∀(b : bool), f (f b) = b.
-Proof.
-  (* FILL IN HERE *) Admitted.
-
-(* Exercise: 1 star, standard (negation_fn_applied_twice) *)
-
-(* FILL IN HERE *)
-(* The Import statement on the next line tells Coq to use the
-   standard library String module.  We'll use strings more in later
-   chapters, but for the moment we just need syntax for literal
-   strings for the grader comments. *)
-From Coq Require Export String.
-(* Do not modify the following line: *)
-Definition manual_grade_for_negation_fn_applied_twice : option (nat*string) := None.
-
-(* Exercise: 1 star, standard (negation_fn_applied_twice) *)
-
-
-
-(* Exercise: 3 stars, standard, optional (andb_eq_orb) *)
-
-Theorem andb_eq_orb :
-  ∀(b c : bool),
-  (andb b c = orb b c) →
-  b = c.
-Proof.
-  (* FILL IN HERE *) Admitted.
-
-(* Exercise: 3 stars, standard (binary) *)
-
