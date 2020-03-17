@@ -6,19 +6,15 @@ Definition negb (x: bool) : bool :=
     | false => true
   end.
 
-Notation "~ x" := (negb x).
-
 (* Tabela Verdade - Negação *)
 
 Example test_negb1 : (negb true) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_negb2 : (negb false) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
@@ -30,31 +26,25 @@ Definition andb (x y: bool) : bool :=
     | _ => false
   end.
 
-Notation "x && y" := (andb x y).
-
 (* Tabela Verdade - Conjunção *)
 
 Example test_andb1 : (andb true true) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_andb2 : (andb true false) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_andb3 : (andb false true) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_andb4 : (andb false false) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
@@ -66,31 +56,25 @@ Definition orb (x y: bool) : bool :=
     | _ => true
   end.
 
-Notation "x || y" := (orb x y).
-
 (* Tabela Verdade - Disjunção *)
 
 Example test_orb1 : (orb true true) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_orb2 : (orb true false) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_orb3 : (orb false true) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_orb4 : (orb false false) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
@@ -102,31 +86,25 @@ Definition implb (x y: bool) : bool :=
     | _ => true
   end.
 
-Notation "x -> y" := (implb x y).
-
 (* Tabela Verdade - Implicação *)
 
 Example test_implb1 : (implb true true) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_implb2 : (implb true false) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_implb3 : (implb false true) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_implb4 : (implb false false) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
@@ -139,31 +117,25 @@ Definition biimplb (x y: bool) : bool :=
     | _ => false
   end.
 
-Notation "x <-> y" :=(biimplb x y).
-
 (* Tabela Verdade - Bi-implicação *)
 
 Example test_biimplb1 : (biimplb true true) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_biimplb2 : (biimplb true false) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_biimplb3 : (biimplb false true) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_biimplb4 : (biimplb false false) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
@@ -177,25 +149,21 @@ Definition nandb (x y: bool) : bool :=
 
 Example test_nandb1: (nandb true false) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_nandb2: (nandb false false) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_nandb3: (nandb false true) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_nandb4: (nandb true true) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
@@ -209,25 +177,21 @@ Definition andb3 (x y z: bool) : bool :=
 
 Example test_andb31: (andb3 true true true) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_andb32: (andb3 false true true) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_andb33: (andb3 true false true) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_andb34: (andb3 true true false) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
@@ -428,21 +392,20 @@ Notation "x < y" := (ltb x y).
 
 Example test_ltb1: (ltb 2 2) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_ltb2: (ltb 2 4) = true.
 Proof.
-  simpl.
   reflexivity.
 Qed.
 
 Example test_ltb3: (ltb 4 2) = false.
 Proof.
-  simpl.
   reflexivity.
 Qed.
+
+(* Exemplo rewrite *)
 
 Theorem plus_id_example : forall x y:nat,
   x = y ->
@@ -450,6 +413,15 @@ Theorem plus_id_example : forall x y:nat,
 Proof.
   intros x y H.
   rewrite -> H.
+  reflexivity.
+Qed.
+
+Theorem plus_id_example' : forall x y:nat,
+  x = y ->
+  x + x = y + y.
+Proof.
+  intros x y H.
+  rewrite <- H.
   reflexivity.
 Qed.
 
@@ -478,6 +450,8 @@ Proof.
   reflexivity.
 Qed.
 
+(* Dupla Negação *)
+
 Theorem negb_involutive : forall x : bool,
   negb (negb x) = x.
 Proof.
@@ -487,7 +461,48 @@ Proof.
   - reflexivity.
 Qed.
 
-Theorem andb_commutative : forall x y,
+Theorem negb_involutive' : forall x : bool,
+  negb (negb x) = x.
+Proof.
+  intros [].
+  - reflexivity.
+  - reflexivity.
+Qed.
+
+Theorem negb_involutive'' : forall x : bool,
+  negb (negb x) = x.
+Proof.
+  intros [].
+  { reflexivity. }
+  { reflexivity. }
+Qed.
+
+(* Comutação *)
+
+Theorem andb_commutative : forall x y, 
+  andb x y = andb y x.
+Proof.
+  intros x y.
+  destruct x.
+  - destruct y.
+    + reflexivity.
+    + reflexivity.
+  - destruct y.
+    + reflexivity.
+    + reflexivity.
+Qed.
+
+Theorem andb_commutative' : forall x y,
+  andb x y = andb y x.
+Proof.
+  intros [] [].
+  - reflexivity.
+  - reflexivity.
+  - reflexivity.
+  - reflexivity.
+Qed.
+
+Theorem andb_commutative'' : forall x y,
   andb x y = andb y x.
 Proof.
   intros x y.
@@ -504,21 +519,89 @@ Proof.
   }
 Qed.
 
-Theorem andb_commutative' : forall b c,
-  andb b c = andb c b.
-Proof.
-  intros [] [].
-  - reflexivity.
-  - reflexivity.
-  - reflexivity.
-  - reflexivity.
-Qed.
-
 (* Exercise: 2 stars, standard (andb_true_elim2) *)
 
 Theorem andb_true_elim2 : forall x y : bool,
   andb x y = true ->
   y = true.
 Proof.
+  intros [] [].
+  - reflexivity.
+  - intro H.
+    rewrite <- H.
+    reflexivity.
+  - reflexivity.
+  - intro H.
+    rewrite <- H.
+    reflexivity.
+Qed.
+
+Theorem andb_true_elim2' : forall x y : bool,
+  andb x y = true ->
+  y = true.
+Proof.
   intros x y H.
-Admitted.
+  destruct x.
+  {
+    destruct y.
+      { reflexivity. }
+      {
+        rewrite <- H.
+        reflexivity.
+      }
+  }
+  {
+    destruct y.
+      { reflexivity. }
+      {
+        rewrite <- H.
+        reflexivity.
+      }
+    }
+Qed.
+
+(* Exercise: 1 star (zero_nbeq_plus_1)  *)
+
+Theorem zero_nbeq_plus_1 : forall x : nat,
+  (0 = x + 1) = false.
+Proof.
+  intros [].
+  - reflexivity.
+  - reflexivity.
+Qed.
+
+Theorem zero_nbeq_plus_1' : forall x : nat,
+  (0 = x + 1) = false.
+Proof.
+  intros x.
+  destruct x.
+  { reflexivity. }
+  { reflexivity. }
+Qed.
+
+(* Exercise: 2 stars (boolean_functions)  *)
+
+Theorem identity_fn_applied_twice :
+  forall (f : bool -> bool),
+  (forall (x : bool), f x = x) ->
+  forall (b : bool), f (f b) = b.
+Proof.
+  intros f H b.
+  rewrite -> H.
+  rewrite -> H.
+  reflexivity.
+Qed.
+
+(* Exercise: 1 star, standard (negation_fn_applied_twice) *)
+
+Theorem negation_fn_applied_twice :
+  forall (f : bool -> bool),
+  (forall (x : bool), f x = negb x) ->
+  forall (b : bool), f (f b) = b.
+Proof.
+  intros f H b.
+  rewrite -> H.
+  rewrite -> H.
+  rewrite -> negb_involutive.
+  reflexivity.
+  Qed.
