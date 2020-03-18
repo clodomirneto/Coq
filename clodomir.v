@@ -6,6 +6,8 @@ Definition negb (x: bool) : bool :=
     | false => true
   end.
 
+Notation "~ x" := (negb x).
+
 (* Tabela Verdade - Negação *)
 
 Example test_negb1 : (negb true) = false.
@@ -25,6 +27,8 @@ Definition andb (x y: bool) : bool :=
     | (true, true) => true
     | _ => false
   end.
+
+Notation "x /\ y" := (andb x y).
 
 (* Tabela Verdade - Conjunção *)
 
@@ -56,6 +60,8 @@ Definition orb (x y: bool) : bool :=
     | _ => true
   end.
 
+Notation "x \/ y" := (orb x y).
+
 (* Tabela Verdade - Disjunção *)
 
 Example test_orb1 : (orb true true) = true.
@@ -85,6 +91,8 @@ Definition implb (x y: bool) : bool :=
     | (true, false) => false
     | _ => true
   end.
+
+Notation "x -> y" := (implb x y).
 
 (* Tabela Verdade - Implicação *)
 
@@ -116,6 +124,8 @@ Definition biimplb (x y: bool) : bool :=
     | (false, false) => true
     | _ => false
   end.
+
+Notation "x <-> y" := (biimplb x y).
 
 (* Tabela Verdade - Bi-implicação *)
 
@@ -427,7 +437,8 @@ Qed.
 
 (* Exercise: 1 star, standard (plus_id_exercise) *)
 
-Theorem plus_id_exercise : forall x y z : nat,
+Theorem plus_id_exercise : 
+  forall x y z : nat,
   x = y ->
   y = z ->
   x + y = y + z.
@@ -440,7 +451,8 @@ Qed.
 
 (* Exercise: 2 stars, standard (mult_S_1) *)
 
-Theorem mult_S_1 : forall x y : nat,
+Theorem mult_S_1 : 
+  forall x y : nat,
   y = S x ->
   y * (1 + x) = y * y.
 Proof.
@@ -452,7 +464,8 @@ Qed.
 
 (* Dupla Negação *)
 
-Theorem negb_involutive : forall x : bool,
+Theorem negb_involutive : 
+  forall x : bool,
   negb (negb x) = x.
 Proof.
   intros x.
@@ -461,7 +474,8 @@ Proof.
   - reflexivity.
 Qed.
 
-Theorem negb_involutive' : forall x : bool,
+Theorem negb_involutive' : 
+  forall x : bool,
   negb (negb x) = x.
 Proof.
   intros [].
@@ -469,7 +483,8 @@ Proof.
   - reflexivity.
 Qed.
 
-Theorem negb_involutive'' : forall x : bool,
+Theorem negb_involutive'' : 
+  forall x : bool,
   negb (negb x) = x.
 Proof.
   intros [].
@@ -479,7 +494,8 @@ Qed.
 
 (* Comutação *)
 
-Theorem andb_commutative : forall x y, 
+Theorem andb_commutative : 
+  forall x y, 
   andb x y = andb y x.
 Proof.
   intros x y.
@@ -492,7 +508,8 @@ Proof.
     + reflexivity.
 Qed.
 
-Theorem andb_commutative' : forall x y,
+Theorem andb_commutative' : 
+  forall x y,
   andb x y = andb y x.
 Proof.
   intros [] [].
@@ -502,7 +519,8 @@ Proof.
   - reflexivity.
 Qed.
 
-Theorem andb_commutative'' : forall x y,
+Theorem andb_commutative'' : 
+  forall x y,
   andb x y = andb y x.
 Proof.
   intros x y.
@@ -521,7 +539,8 @@ Qed.
 
 (* Exercise: 2 stars, standard (andb_true_elim2) *)
 
-Theorem andb_true_elim2 : forall x y : bool,
+Theorem andb_true_elim2 : 
+  forall x y : bool,
   andb x y = true ->
   y = true.
 Proof.
@@ -536,7 +555,8 @@ Proof.
     reflexivity.
 Qed.
 
-Theorem andb_true_elim2' : forall x y : bool,
+Theorem andb_true_elim2' : 
+  forall x y : bool,
   andb x y = true ->
   y = true.
 Proof.
@@ -544,25 +564,25 @@ Proof.
   destruct x.
   {
     destruct y.
-      { reflexivity. }
-      {
-        rewrite <- H.
-        reflexivity.
-      }
+    { reflexivity. }
+    { rewrite <- H.
+      reflexivity.
+    }
   }
   {
     destruct y.
-      { reflexivity. }
-      {
-        rewrite <- H.
-        reflexivity.
-      }
+    { reflexivity. }
+    {
+      rewrite <- H.
+      reflexivity.
     }
+  }
 Qed.
 
 (* Exercise: 1 star (zero_nbeq_plus_1)  *)
 
-Theorem zero_nbeq_plus_1 : forall x : nat,
+Theorem zero_nbeq_plus_1 : 
+  forall x : nat,
   (0 = x + 1) = false.
 Proof.
   intros [].
@@ -570,7 +590,8 @@ Proof.
   - reflexivity.
 Qed.
 
-Theorem zero_nbeq_plus_1' : forall x : nat,
+Theorem zero_nbeq_plus_1' : 
+  forall x : nat,
   (0 = x + 1) = false.
 Proof.
   intros x.
@@ -605,3 +626,24 @@ Proof.
   rewrite -> negb_involutive.
   reflexivity.
   Qed.
+
+(* Exercise: 2 stars (andb_eq_orb) *)
+
+Theorem andb_eq_orb :
+  forall (x y : bool),
+  (andb x y = orb x y) ->
+  x = y.
+Proof.
+  intros x y H.
+  destruct x.
+  - destruct y.
+    + reflexivity.
+    + simpl in H.
+      rewrite -> H.
+      reflexivity.
+  - destruct y.
+    + simpl in H.
+      rewrite -> H. 
+      reflexivity.
+    + reflexivity.
+Qed.
