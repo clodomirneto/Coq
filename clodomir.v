@@ -1,3 +1,9 @@
+(* Booleano *)
+
+Inductive bool : Type :=
+  | true
+  | false.
+
 (* Negação *)
 
 Definition negb (x: bool) : bool :=
@@ -10,10 +16,14 @@ Notation "~ x" := (negb x).
 
 (* Tabela Verdade - Negação *)
 
+Compute (negb true).
+
 Example test_negb1 : (negb true) = false.
 Proof.
   reflexivity.
 Qed.
+
+Compute (negb false).
 
 Example test_negb2 : (negb false) = true.
 Proof.
