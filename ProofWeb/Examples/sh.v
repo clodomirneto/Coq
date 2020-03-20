@@ -1,16 +1,16 @@
 Require Import ProofWeb.
 
-Parameter A B C: Prop.
+Variables A B C : Prop.
 
-Hypothesis P1: A -> B.
-Hypothesis P2: B -> C.
+Hypothesis P1 : A -> B.
+Hypothesis P2 : B -> C.
 
-Theorem sh: A -> C.
+Theorem sh : A -> C.
 Proof.
-imp_i H1.
-imp_e B.
+imp_i Ha.
+imp_e (B).
 exact P2.
-imp_e A.
+imp_e (A).
 exact P1.
-exact H1.
+exact Ha.
 Qed.

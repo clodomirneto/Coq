@@ -1,8 +1,8 @@
 Section PropositionalLogic.
 
-Variables P Q : Prop.
+Variables A B : Prop.
 
-Theorem dm : ~(P /\ Q) <-> (~P \/ ~Q).
+Theorem dm : ~(A /\ B) <-> (~A \/ ~B).
 Proof.
 unfold iff.
 split.

@@ -1,48 +1,48 @@
 Section PropositionalLogic.
 
-Variables P Q R : Prop.
+Variables A B C : Prop.
 
-Theorem dist : (P /\ (Q \/ R)) <-> ((P /\ Q) \/ (P /\ R)).
+Theorem dist_and : (A /\ (B \/ C)) <-> ((A /\ B) \/ (A /\ C)).
 Proof.
 unfold iff.
 split.
 -
-intro Hpqr.
-destruct Hpqr as [Hp Hqr].
-destruct Hqr as [Hq | Hr].
+intro Habc.
+destruct Habc as [Ha Hbc].
+destruct Hbc as [Hb | Hc].
 left.
 split.
 *
-exact Hp.
+exact Ha.
 *
-exact Hq.
+exact Hb.
 *
 right.
 split.
 +
-exact Hp.
+exact Ha.
 +
-exact Hr.
+exact Hc.
 -
-intro Hpqr.
-destruct Hpqr as [Hpq | Hpr].
+intro Habc.
+destruct Habc as [Hab | Hac].
 split.
 *
-destruct Hpq as [Hp Hq].
-exact Hp.
+destruct Hab as [Ha Hb].
+exact Ha.
 *
 left.
-destruct Hpq as [Hp Hq].
-exact Hq.
+destruct Hab as [Ha Hb].
+exact Hb.
 *
 split.
 +
-destruct Hpr as [Hp Hr].
-exact Hp.
+destruct Hac as [Ha Hc].
+exact Ha.
 +
 right.
-destruct Hpr as [Hp Hr].
-exact Hr.
+destruct Hac as [Ha Hc].
+exact Hc.
 Qed.
 
 End PropositionalLogic.

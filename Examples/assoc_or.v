@@ -1,33 +1,33 @@
 Section PropositionalLogic.
 
-Variables P Q R : Prop.
+Variables A B C : Prop.
 
-Theorem assoc : (P \/ (Q \/ R)) <-> ((P \/ Q) \/ R).
+Theorem assoc_or : (A \/ (B \/ C)) <-> ((A \/ B) \/ C).
 Proof.
 unfold iff.
 split.
 -
-intro Hpqr.
-destruct Hpqr as [Hp | [Hq | Hr]].
+intro Habc.
+destruct Habc as [Ha | [Hb | Hc]].
 left.
 left.
-exact Hp.
+exact Ha.
 left.
 right.
-exact Hq.
+exact Hb.
 right.
-exact Hr.
+exact Hc.
 -
-intro Hpqr.
-destruct Hpqr as [[Hp | Hq] | Hr].
+intro Habc.
+destruct Habc as [[Ha | Hb] | Hc].
 left.
-exact Hp.
+exact Ha.
 right.
 left.
-exact Hq.
+exact Hb.
 right.
 right.
-exact Hr.
+exact Hc.
 Qed.
 
 End PropositionalLogic.

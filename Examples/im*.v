@@ -1,16 +1,13 @@
 Section PropositionalLogic.
 
-Variables P Q : Prop.
+Variables A B : Prop.
 
-Theorem im : (P -> Q) <-> (~P \/ Q).
+Theorem im : (A -> B) <-> (~A \/ B).
 Proof.
 unfold iff.
 split.
 -
 intro Hpq.
-left.
-unfold not.
-intro Hp.
 
 -
 

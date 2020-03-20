@@ -1,15 +1,15 @@
 Require Import ProofWeb.
 
-Parameter A B: Prop.
+Variables A B : Prop.
 
-Hypothesis P1: A -> B.
+Hypothesis P1 : A -> B.
 
-Theorem abs: A -> (A /\ B).
+Theorem abs : A -> (A /\ B).
 Proof.
-imp_i H1.
+imp_i Ha.
 con_i.
-exact H1.
-imp_e A.
+exact Ha.
+imp_e (A).
 exact P1.
-exact H1.
+exact Ha.
 Qed.

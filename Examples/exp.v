@@ -1,29 +1,29 @@
 Section PropositionalLogic.
 
-Variables P Q R : Prop.
+Variables A B C : Prop.
 
-Theorem exp : ((P /\ Q) -> R) <-> (P -> (Q -> R)).
+Theorem exp : ((A /\ B) -> C) <-> (A -> (B -> C)).
 Proof.
 unfold iff.
 split.
 -
-intro Hpqr.
-intro Hp.
-intro Hq.
-apply Hpqr.
+intro Habc.
+intro Ha.
+intro Hb.
+apply Habc.
 split.
 *
-exact Hp.
+exact Ha.
 *
-exact Hq.
+exact Hb.
 -
-intro Hpqr.
-intro Hpq.
-apply Hpqr.
-destruct Hpq as [Hp Hq].
-exact Hp.
-destruct Hpq as [Hp Hq].
-exact Hq.
+intro Habc.
+intro Hab.
+apply Habc.
+destruct Hab as [Ha Hb].
+exact Ha.
+destruct Hab as [Ha Hb].
+exact Hb.
 Qed.
 
 End PropositionalLogic.

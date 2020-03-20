@@ -1,24 +1,23 @@
 Section PropositionalLogic.
 
-Variables P Q : Prop.
+Variables A B : Prop.
 
-Theorem trans : (P -> Q) <-> (~Q -> ~P).
+Theorem trans : (A -> B) <-> (~B -> ~A).
 Proof.
 unfold iff.
 split.
 -
-intro Hpq.
+intro Hab.
 intro Hnq.
 unfold not.
-intro Hp.
+intro Ha.
 unfold not in Hnq.
 apply Hnq.
-apply Hpq.
-exact Hp.
+apply Hab.
+exact Ha.
 -
-intro Hnqnp.
-intro Hp.
-
+intro Hnbna.
+intro Ha.
 
 Qed.
 

@@ -1,20 +1,20 @@
 Section PropositionalLogic.
 
-Variables P : Prop.
+Variables A : Prop.
 
-Theorem taut : P <-> (P \/ P).
+Theorem taut_or : A <-> (A \/ A).
 Proof.
 unfold iff.
 split.
 -
-intro Hp.
+intro Ha.
 left.
-exact Hp.
+exact Ha.
 -
-intro Hpp.
-destruct Hpp as [Hp | Hp1].
-exact Hp.
-exact Hp1.
+intro Haa.
+destruct Haa as [Ha | Ha1].
+exact Ha.
+exact Ha1.
 Qed.
 
 End PropositionalLogic.
