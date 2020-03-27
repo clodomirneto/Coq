@@ -8,11 +8,10 @@ unfold iff.
 split.
 -
 intro Hab.
-intro Hnq.
 unfold not.
+intro Hbf.
 intro Ha.
-unfold not in Hnq.
-apply Hnq.
+apply Hbf.
 apply Hab.
 exact Ha.
 -

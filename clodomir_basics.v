@@ -1,8 +1,10 @@
+(* Capítulo 1 - Functional Programming in Coq    (Basics) *)
+
 (* Booleano *)
 
 Inductive bool : Type :=
-  | true
-  | false.
+  | true : bool
+  | false: bool.
 
 (* Negação *)
 
@@ -19,7 +21,8 @@ Notation "~ x" := (negb x).
 Compute (negb true).
 
 Example test_negb1 : (negb true) = false.
-Proof.
+Proof. 
+  simpl.
   reflexivity.
 Qed.
 
@@ -27,6 +30,7 @@ Compute (negb false).
 
 Example test_negb2 : (negb false) = true.
 Proof.
+  simpl.
   reflexivity.
 Qed.
 
@@ -42,20 +46,28 @@ Notation "x /\ y" := (andb x y).
 
 (* Tabela Verdade - Conjunção *)
 
+Compute (andb true true).
+
 Example test_andb1 : (andb true true) = true.
 Proof.
   reflexivity.
 Qed.
+
+Compute (andb true false).
 
 Example test_andb2 : (andb true false) = false.
 Proof.
   reflexivity.
 Qed.
 
+Compute (andb false true).
+
 Example test_andb3 : (andb false true) = false.
 Proof.
   reflexivity.
 Qed.
+
+Compute (andb false false).
 
 Example test_andb4 : (andb false false) = false.
 Proof.
@@ -74,20 +86,28 @@ Notation "x \/ y" := (orb x y).
 
 (* Tabela Verdade - Disjunção *)
 
+Compute (orb true true).
+
 Example test_orb1 : (orb true true) = true.
 Proof.
   reflexivity.
 Qed.
+
+Compute (orb true false).
 
 Example test_orb2 : (orb true false) = true.
 Proof.
   reflexivity.
 Qed.
 
+Compute (orb false true).
+
 Example test_orb3 : (orb false true) = true.
 Proof.
   reflexivity.
 Qed.
+
+Compute (orb false false).
 
 Example test_orb4 : (orb false false) = false.
 Proof.
@@ -106,20 +126,28 @@ Notation "x -> y" := (implb x y).
 
 (* Tabela Verdade - Implicação *)
 
+Compute (implb true true).
+
 Example test_implb1 : (implb true true) = true.
 Proof.
   reflexivity.
 Qed.
+
+Compute (implb true false).
 
 Example test_implb2 : (implb true false) = false.
 Proof.
   reflexivity.
 Qed.
 
+Compute (implb false true).
+
 Example test_implb3 : (implb false true) = true.
 Proof.
   reflexivity.
 Qed.
+
+Compute (implb false false).
 
 Example test_implb4 : (implb false false) = true.
 Proof.
@@ -139,20 +167,28 @@ Notation "x <-> y" := (biimplb x y).
 
 (* Tabela Verdade - Bi-implicação *)
 
+Compute (biimplb true true).
+
 Example test_biimplb1 : (biimplb true true) = true.
 Proof.
   reflexivity.
 Qed.
+
+Compute (biimplb true false).
 
 Example test_biimplb2 : (biimplb true false) = false.
 Proof.
   reflexivity.
 Qed.
 
+Compute (biimplb false true).
+
 Example test_biimplb3 : (biimplb false true) = false.
 Proof.
   reflexivity.
 Qed.
+
+Compute (biimplb false false).
 
 Example test_biimplb4 : (biimplb false false) = true.
 Proof.
@@ -167,20 +203,28 @@ Definition nandb (x y: bool) : bool :=
     | _ => true
   end.
 
+Compute (nandb true false).
+
 Example test_nandb1: (nandb true false) = true.
 Proof.
   reflexivity.
 Qed.
+
+Compute (nandb false false).
 
 Example test_nandb2: (nandb false false) = true.
 Proof.
   reflexivity.
 Qed.
 
+Compute (nandb false true).
+
 Example test_nandb3: (nandb false true) = true.
 Proof.
   reflexivity.
 Qed.
+
+Compute (nandb true true).
 
 Example test_nandb4: (nandb true true) = false.
 Proof.
@@ -195,20 +239,28 @@ Definition andb3 (x y z: bool) : bool :=
     | _ => false
   end.
 
+Compute (andb3 true true true).
+
 Example test_andb31: (andb3 true true true) = true.
 Proof.
   reflexivity.
 Qed.
+
+Compute (andb3 false true true).
 
 Example test_andb32: (andb3 false true true) = false.
 Proof.
   reflexivity.
 Qed.
 
+Compute (andb3 true false true).
+
 Example test_andb33: (andb3 true false true) = false.
 Proof.
   reflexivity.
 Qed.
+
+Compute (andb3 true true false).
 
 Example test_andb34: (andb3 true true false) = false.
 Proof.
@@ -224,11 +276,15 @@ Fixpoint evenb (x: nat) : bool :=
     | S (S x') => evenb x'
   end.
 
+Compute (evenb 2).
+
 Example test_evenb1 : (evenb 2) = true.
 Proof.
   simpl.
   reflexivity.
 Qed.
+
+Compute (evenb 3).
 
 Example test_evenb2 : (evenb 3) = false.
 Proof.
@@ -245,11 +301,15 @@ Fixpoint oddb (x: nat) : bool :=
     | S (S x') => oddb x'
   end.
 
+Compute (oddb 3).
+
 Example test_oddb1 : (oddb 3) = true.
 Proof.
   simpl.
   reflexivity.
 Qed.
+
+Compute (oddb 2).
 
 Example test_oddb2 : (oddb 2) = false.
 Proof.
@@ -265,7 +325,9 @@ Fixpoint plus (x y : nat) : nat :=
     | S x' => S (plus x' y)
   end.
 
-Notation "x + y" := (plus x y).
+Notation "x + y" := (plus x y) (at level 50, left associativity) : nat_scope.
+
+Compute (plus 2 3).
 
 Example test_plus1 : (plus 2 3) = 5.
 Proof.
@@ -282,7 +344,9 @@ Fixpoint minus (x y:nat) : nat :=
     | S x', S y' => minus x' y'
   end.
 
-Notation "x - y" := (minus x y).
+Notation "x - y" := (minus x y) (at level 50, left associativity) : nat_scope.
+
+Compute (minus 5 2).
 
 Example test_minus1 : (minus 5 2) = 3.
 Proof.
@@ -298,7 +362,9 @@ Fixpoint mult (x y : nat) : nat :=
     | S x' => plus y (mult x' y)
   end.
 
-Notation "x * y" := (mult x y).
+Notation "x * y" := (mult x y) (at level 40, left associativity) : nat_scope.
+
+Compute (mult 3 4).
 
 Example test_mult1: (mult 3 4) = 12.
 Proof.
@@ -316,6 +382,8 @@ Fixpoint exp (b p : nat) : nat :=
 
 Notation "x ^ y" := (exp x y).
 
+Compute (exp 3 2).
+
 Example test_exp1 : (exp 3 2) = 9.
 Proof.
   simpl.
@@ -330,11 +398,15 @@ Fixpoint factorial (x: nat) : nat :=
     | S x' => x * (factorial x')
   end.
 
+Compute (factorial 3).
+
 Example test_factorial1: (factorial 3) = 6.
 Proof.
   simpl.
   reflexivity.
 Qed.
+
+Compute (factorial 5).
 
 Example test_factorial2: (factorial 5) = (mult 10 12).
 Proof.
@@ -356,13 +428,17 @@ Fixpoint eqb (x y : nat) : bool :=
     end
   end.
 
-Notation "x = y" := (eqb x y).
+Notation "x = y" := (eqb x y) (at level 70) : nat_scope.
+
+Compute (eqb 3 3).
 
 Example test_eqb1 : (eqb 3 3) = true.
 Proof.
   simpl.
   reflexivity.
 Qed.
+
+Compute (eqb 2 3).
 
 Example test_eqb2 : (eqb 2 3) = false.
 Proof.
@@ -381,7 +457,9 @@ Fixpoint leb (x y : nat) : bool :=
       end
   end.
 
-Notation "x <= y" := (leb x y).
+Notation "x <= y" := (leb x y) (at level 70) : nat_scope.
+
+Compute (leb 2 2).
 
 Example test_leb1 : (leb 2 2) = true.
 Proof.
@@ -389,11 +467,15 @@ Proof.
   reflexivity.
 Qed.
 
+Compute (leb 2 4).
+
 Example test_leb2 : (leb 2 4) = true.
 Proof.
   simpl.
   reflexivity.
 Qed.
+
+Compute (leb 4 2).
 
 Example test_leb3 : (leb 4 2) = false.
 Proof.
@@ -401,24 +483,28 @@ Proof.
   reflexivity.
 Qed.
 
-(* Exercise: 1 star, standard (ltb) *)
-
-(* Função 'menor que' *)
+(* Exercise: 1 star, standard (ltb) -  Função 'menor que' *)
 
 Definition ltb (x y : nat) : bool :=
   (andb (leb x y) (negb (eqb x y))).
 
-Notation "x < y" := (ltb x y).
+Notation "x < y" := (ltb x y) (at level 70) : nat_scope.
+
+Compute (ltb 2 2).
 
 Example test_ltb1: (ltb 2 2) = false.
 Proof.
   reflexivity.
 Qed.
 
+Compute (ltb 2 4).
+
 Example test_ltb2: (ltb 2 4) = true.
 Proof.
   reflexivity.
 Qed.
+
+Compute (ltb 4 2).
 
 Example test_ltb3: (ltb 4 2) = false.
 Proof.
@@ -648,12 +734,68 @@ Proof.
   destruct x.
   - destruct y.
     + reflexivity.
-    + simpl in H.
+    + 
+      compute in H.
       rewrite -> H.
       reflexivity.
   - destruct y.
-    + simpl in H.
+    +
+      compute in H.
       rewrite -> H. 
       reflexivity.
     + reflexivity.
+Qed.
+
+(* Exercise: 3 stars, standard (binary) *)
+
+Inductive bin : Type :=
+  | Z : bin
+  | A : bin -> bin
+  | B : bin -> bin.
+
+Fixpoint incr (x : bin) : bin :=
+  match x with
+  | Z => B Z
+  | A x' => B x'
+  | B x' => A (incr x')
+  end.
+
+Fixpoint bin_to_nat (x : bin) : nat :=
+  match x with
+  | Z => O
+  | A x' => mult 2 (bin_to_nat x')
+  | B x' => S (mult 2 (bin_to_nat x'))
+  end.
+
+Example inc_three_four: (bin_to_nat (incr (B (B Z)))) = 4.
+Proof.
+  reflexivity.
+Qed.
+
+Example inc_nine_ten: (bin_to_nat (incr (B (A (A (B Z)))))) = 10.
+Proof.
+  reflexivity.
+Qed.
+
+Example zero_is_zero: (bin_to_nat Z) = 0.
+Proof.
+  reflexivity.
+Qed.
+
+Example five_is_five: (bin_to_nat (B (A (B Z)))) = 5.
+Proof.
+  reflexivity.
+Qed.
+
+Fixpoint incN (n:nat) (m:bin)  :=
+  match n with
+  | 0 => m
+  | S n' => incN n' (incr m)
+  end.
+
+Compute (incN 15 Z).
+
+Example SanityCheck: bin_to_nat (incN 15 Z) = 15.
+Proof.
+  reflexivity.
 Qed.

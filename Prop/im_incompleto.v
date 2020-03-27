@@ -7,7 +7,12 @@ Proof.
 unfold iff.
 split.
 -
-intro Hpq.
+unfold not.
+intro Hab.
+right.
+apply Hab.
+
+
 
 -
 
