@@ -1,12 +1,12 @@
-(* Capítulo 1 - Functional Programming in Coq    (Basics) *)
+(** Capítulo 1 - Functional Programming in Coq    (Basics) *)
 
-(* Booleano *)
+(** Booleano *)
 
 Inductive bool : Type :=
   | true : bool
   | false: bool.
 
-(* Negação *)
+(** Negação *)
 
 Definition negb (x: bool) : bool :=
   match x with
@@ -16,7 +16,7 @@ Definition negb (x: bool) : bool :=
 
 Notation "~ x" := (negb x).
 
-(* Tabela Verdade - Negação *)
+(** Tabela Verdade - Negação *)
 
 Compute (negb true).
 
@@ -34,7 +34,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Conjunção *)
+(** Conjunção *)
 
 Definition andb (x y: bool) : bool :=
   match (x, y) with
@@ -44,7 +44,7 @@ Definition andb (x y: bool) : bool :=
 
 Notation "x /\ y" := (andb x y).
 
-(* Tabela Verdade - Conjunção *)
+(** Tabela Verdade - Conjunção *)
 
 Compute (andb true true).
 
@@ -74,7 +74,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Disjunção *)
+(** Disjunção *)
 
 Definition orb (x y: bool) : bool :=
   match (x, y) with
@@ -84,7 +84,7 @@ Definition orb (x y: bool) : bool :=
 
 Notation "x \/ y" := (orb x y).
 
-(* Tabela Verdade - Disjunção *)
+(** Tabela Verdade - Disjunção *)
 
 Compute (orb true true).
 
@@ -114,7 +114,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Implicação *)
+(** Implicação *)
 
 Definition implb (x y: bool) : bool :=
   match (x, y) with
@@ -124,7 +124,7 @@ Definition implb (x y: bool) : bool :=
 
 Notation "x -> y" := (implb x y).
 
-(* Tabela Verdade - Implicação *)
+(** Tabela Verdade - Implicação *)
 
 Compute (implb true true).
 
@@ -154,7 +154,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Bi-implicação *)
+(** Bi-implicação *)
 
 Definition biimplb (x y: bool) : bool :=
   match (x, y) with
@@ -165,7 +165,7 @@ Definition biimplb (x y: bool) : bool :=
 
 Notation "x <-> y" := (biimplb x y).
 
-(* Tabela Verdade - Bi-implicação *)
+(** Tabela Verdade - Bi-implicação *)
 
 Compute (biimplb true true).
 
@@ -195,7 +195,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Exercise: 1 star, standard (nandb) *)
+(** Exercise: 1 star, standard (nandb) *)
 
 Definition nandb (x y: bool) : bool :=
   match (x, y) with
@@ -231,7 +231,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Exercise: 1 star, standard (andb3) *)
+(** Exercise: 1 star, standard (andb3) *)
 
 Definition andb3 (x y z: bool) : bool :=
   match (x, y, z) with
@@ -267,7 +267,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Par *)
+(** Par *)
 
 Fixpoint evenb (x: nat) : bool :=
   match x with
@@ -292,7 +292,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Ímpar *)
+(** Ímpar *)
 
 Fixpoint oddb (x: nat) : bool :=
   match x with
@@ -317,7 +317,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Adição *)
+(** Adição *)
 
 Fixpoint plus (x y : nat) : nat :=
   match x with
@@ -335,7 +335,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Subtração *)
+(** Subtração *)
 
 Fixpoint minus (x y:nat) : nat :=
   match x, y with
@@ -354,7 +354,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Multiplicação *)
+(** Multiplicação *)
 
 Fixpoint mult (x y : nat) : nat :=
   match x with
@@ -372,7 +372,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Potenciação *)
+(** Potenciação *)
 
 Fixpoint exp (b p : nat) : nat :=
   match p with
@@ -390,7 +390,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Exercise: 1 star, standard (factorial) *)
+(** Exercise: 1 star, standard (factorial) *)
 
 Fixpoint factorial (x: nat) : nat :=
   match x with
@@ -414,7 +414,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Função 'igual que' *)
+(** Função 'igual que' *)
 
 Fixpoint eqb (x y : nat) : bool :=
   match x with
@@ -446,7 +446,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Função 'menor ou igual que' *)
+(** Função 'menor ou igual que' *)
 
 Fixpoint leb (x y : nat) : bool :=
   match x with
@@ -483,7 +483,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Exercise: 1 star, standard (ltb) -  Função 'menor que' *)
+(** Exercise: 1 star, standard (ltb) -  Função 'menor que' *)
 
 Definition ltb (x y : nat) : bool :=
   (andb (leb x y) (negb (eqb x y))).
@@ -511,7 +511,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Exemplo rewrite *)
+(** Exemplo rewrite *)
 
 Theorem plus_id_example : forall x y:nat,
   x = y ->
@@ -531,7 +531,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Exercise: 1 star, standard (plus_id_exercise) *)
+(** Exercise: 1 star, standard (plus_id_exercise) *)
 
 Theorem plus_id_exercise : 
   forall x y z : nat,
@@ -545,7 +545,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Exercise: 2 stars, standard (mult_S_1) *)
+(** Exercise: 2 stars, standard (mult_S_1) *)
 
 Theorem mult_S_1 : 
   forall x y : nat,
@@ -558,7 +558,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Dupla Negação *)
+(** Dupla Negação *)
 
 Theorem negb_involutive : 
   forall x : bool,
@@ -588,7 +588,7 @@ Proof.
   { reflexivity. }
 Qed.
 
-(* Comutação *)
+(** Comutação *)
 
 Theorem andb_commutative : 
   forall x y, 
@@ -633,7 +633,7 @@ Proof.
   }
 Qed.
 
-(* Exercise: 2 stars, standard (andb_true_elim2) *)
+(** Exercise: 2 stars, standard (andb_true_elim2) *)
 
 Theorem andb_true_elim2 : 
   forall x y : bool,
@@ -675,7 +675,7 @@ Proof.
   }
 Qed.
 
-(* Exercise: 1 star (zero_nbeq_plus_1)  *)
+(** Exercise: 1 star (zero_nbeq_plus_1)  *)
 
 Theorem zero_nbeq_plus_1 : 
   forall x : nat,
@@ -696,7 +696,7 @@ Proof.
   { reflexivity. }
 Qed.
 
-(* Exercise: 2 stars (boolean_functions)  *)
+(** Exercise: 2 stars (boolean_functions)  *)
 
 Theorem identity_fn_applied_twice :
   forall (f : bool -> bool),
@@ -709,7 +709,7 @@ Proof.
   reflexivity.
 Qed.
 
-(* Exercise: 1 star, standard (negation_fn_applied_twice) *)
+(** Exercise: 1 star, standard (negation_fn_applied_twice) *)
 
 Theorem negation_fn_applied_twice :
   forall (f : bool -> bool),
@@ -723,7 +723,7 @@ Proof.
   reflexivity.
   Qed.
 
-(* Exercise: 2 stars (andb_eq_orb) *)
+(** Exercise: 2 stars (andb_eq_orb) *)
 
 Theorem andb_eq_orb :
   forall (x y : bool),
@@ -734,7 +734,7 @@ Proof.
   destruct x.
   - destruct y.
     + reflexivity.
-    + 
+    +
       compute in H.
       rewrite -> H.
       reflexivity.
@@ -746,7 +746,7 @@ Proof.
     + reflexivity.
 Qed.
 
-(* Exercise: 3 stars, standard (binary) *)
+(** Exercise: 3 stars, standard (binary) *)
 
 Inductive bin : Type :=
   | Z : bin

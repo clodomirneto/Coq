@@ -1,3 +1,5 @@
+Require Import Coq.Logic.Classical_Prop.
+
 Section PropositionalLogic.
 
 Variables A B : Prop.
@@ -17,7 +19,11 @@ exact Ha.
 -
 intro Hnbna.
 intro Ha.
-
+generalize(classic B); intro.
+destruct H.
+exact H.
+apply Hnbna in H.
+contradiction.
 Qed.
 
 End PropositionalLogic.

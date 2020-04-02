@@ -1,3 +1,5 @@
+Require Import Coq.Logic.Classical_Prop.
+
 Section PropositionalLogic.
 
 Variables A B : Prop.
@@ -17,8 +19,12 @@ split.
 *
 exact Ha.
 *
-
-
+generalize(classic B); intro.
+destruct H.
+exact H.
+unfold not in H.
+apply H.
+contradiction.
 
 -
 Qed.

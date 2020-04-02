@@ -1,3 +1,5 @@
+Require Import Coq.Logic.Classical_Prop.
+
 Section PropositionalLogic.
 
 Variables A B : Prop.
@@ -11,8 +13,8 @@ unfold not.
 intro Hab.
 right.
 apply Hab.
-
-
+generalize(classic B); intro.
+destruct H.
 
 -
 
