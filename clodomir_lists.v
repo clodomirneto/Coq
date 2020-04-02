@@ -9,7 +9,7 @@ Inductive natprod : Type :=
 
 Check (pair 3 5).
 
-(** Abscissa *)
+(** Projeção x *)
 
 Definition fst (p : natprod) : nat := 
   match p with
@@ -18,7 +18,7 @@ Definition fst (p : natprod) : nat :=
 
 Eval compute in (fst (pair 3 5)).
 
-(** Ordenada *)
+(** Projeção y *)
 
 Definition snd (p : natprod) : nat := 
   match p with
@@ -29,7 +29,7 @@ Eval compute in (snd (pair 3 5)).
 
 Notation "( x , y )" := (pair x y).
 
-(** Abscissa *)
+(** Projeção x *)
 
 Definition fst' (p : natprod) : nat := 
   match p with
@@ -38,7 +38,7 @@ Definition fst' (p : natprod) : nat :=
 
 Eval compute in (fst' (pair 3 5)).
 
-(** Ordenada *)
+(** Projeção y *)
 
 Definition snd' (p : natprod) : nat := 
   match p with
