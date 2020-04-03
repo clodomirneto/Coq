@@ -16,7 +16,7 @@ Definition fst (p : natprod) : nat :=
   | pair x y => x
   end.
 
-Eval compute in (fst (pair 3 5)).
+Compute fst (pair 3 5). 
 
 (** Projeção y *)
 
@@ -25,7 +25,7 @@ Definition snd (p : natprod) : nat :=
   | pair x y => y
   end.
 
-Eval compute in (snd (pair 3 5)).
+Compute snd (pair 3 5).
 
 Notation "( x , y )" := (pair x y).
 
@@ -36,7 +36,7 @@ Definition fst' (p : natprod) : nat :=
   | (x, y) => x
   end.
 
-Eval compute in (fst' (pair 3 5)).
+Compute fst' (pair 3 5).
 
 (** Projeção y *)
 
@@ -45,7 +45,7 @@ Definition snd' (p : natprod) : nat :=
   | (x, y) => y
   end.
 
-Eval compute in (snd' (pair 3 5)).
+Compute snd' (pair 3 5).
 
 (** Troca de Componentes *)
 
@@ -54,7 +54,7 @@ Definition swap_pair (p : natprod) : natprod :=
   | (x, y) => (y, x)
   end.
 
-Eval compute in (swap_pair (3, 5)).
+Compute swap_pair (3, 5).
 
 (** Sobrejetividade *)
 
@@ -96,9 +96,11 @@ Proof.
   reflexivity.
 Qed.
 
+(** Lista de Naturais *)
+
 Inductive natlist : Type :=
   | nil : natlist
-  | cons (n : nat) (l : natlist) : natlist.
+  | cons (x : nat) (l : natlist) : natlist.
 
 (** Notações *)
 
@@ -112,11 +114,19 @@ Notation "[ x ; .. ; y ]" := (cons x .. (cons y nil) ..).
 
 Definition mylist1 := cons 1 (cons 2 (cons 3 nil)).
 
+Print mylist1.
+
 Definition mylist2 := 1 :: (2 :: (3 :: nil)).
+
+Print mylist2.
 
 Definition mylist3 := 1 :: 2 :: 3 :: nil.
 
+Print mylist3.
+
 Definition mylist4 := [1; 2; 3].
+
+Print mylist4.
 
 (** Função Repetir *)
 
@@ -126,14 +136,7 @@ Fixpoint repeat (x count : nat) : natlist :=
   | S count' => x :: (repeat x count')
   end.
 
-(**  repeat 0 3
-   =>  repeat 0 (S (S (S O)))
-   =>  0::(repeat 0 (S (S O)))
-   => 0::0::(repeat 0 (S O))
-   => 0::0::0::(repeat 0 0)
-   => 0::0::0::[]
-   ~ [0,0,0]
-*)
+Compute repeat 3 3.
 
 (** Função Comprimento *)
 
@@ -143,12 +146,7 @@ Fixpoint length (l : natlist) : nat :=
   | h :: t => S (length t)
   end.
 
-(** length [1,2]
-   [1,2] = 1::[2] = 1::2::nil = cons 1 (cons 2 nil).
-   => S ( length [2] )
-   => S ( S (length nil))
-   => (S (S O)
-*)
+Compute length [1; 2; 3].
 
 (** Função Concatenar *)
 
@@ -158,7 +156,7 @@ Fixpoint app (l1 l2 : natlist) : natlist :=
   | h :: t => h :: (app t l2)
   end.
 
-(** app [1,2,3,4] [3,4] = [1,2,3,4] *)
+Compute app [1; 2; 3; 4; 5] [ 1; 3].
 
 Notation "x ++ y" := (app x y) (right associativity, at level 60).
 
@@ -279,9 +277,9 @@ Qed.
 Fixpoint alternate (l1 l2 : natlist) : natlist :=
   match l1, l2 with
   | nil, nil => nil
-  | nil, ys => ys
-  | xs, nil => xs
-  | x :: xs, y :: ys => x :: y :: alternate xs ys
+  | nil, yb => yb
+  | xb, nil => xb
+  | x :: xb, y :: yb => x :: y :: alternate xb yb
   end.
 
 Example test_alternate1: alternate [1; 2; 3] [4; 5; 6] = [1; 4; 2; 5; 3; 6].
@@ -308,14 +306,14 @@ Proof.
   reflexivity.
 Qed.
 
-(** Exercise: 3 stars, standard, recommended (bag_functions) *)
-
 Definition bag := natlist.
 
-Fixpoint count (v : nat) (s : bag) : nat :=
-  match s with
+(** Exercise: 3 stars, standard, recommended (bag_functions) *)
+
+Fixpoint count (x : nat) (b : bag) : nat :=
+  match b with
   | nil => O
-  | h :: t => if eqb v h then S (count v t) else count v t
+  | h :: t => if eqb x h then S (count x t) else count x t
   end.
 
 Example test_count1: count 1 [1; 2; 3; 1; 4; 1] = 3.
@@ -338,7 +336,7 @@ Proof.
   reflexivity.
 Qed.
 
-Definition add (v : nat) (s : bag) : bag := v :: s.
+Definition add (x : nat) (b : bag) : bag := x :: b.
 
 Example test_add1: count 1 (add 1 [1; 4; 1]) = 3.
 Proof.
@@ -352,8 +350,8 @@ Proof.
   reflexivity.
 Qed.
 
-Definition member (v : nat) (s : bag) : bool :=
-  match (count v s) with
+Definition member (x : nat) (b : bag) : bool :=
+  match (count x b) with
   | O => false
   | _ => true
   end.
@@ -370,10 +368,10 @@ Qed.
 
 (** Exercise: 3 stars, standard, optional (bag_more_functions) *)
 
-Fixpoint remove_one (v : nat) (s : bag) : bag :=
-  match s with
+Fixpoint remove_one (x : nat) (b : bag) : bag :=
+  match b with
   | nil => nil
-  | h :: t => if eqb v h then t else h :: remove_one v t
+  | h :: t => if eqb x h then t else h :: remove_one x t
   end.
 
 Example test_remove_one1: count 5 (remove_one 5 [2; 1; 5; 4; 1]) = 0.
@@ -400,10 +398,10 @@ Proof.
   reflexivity.
 Qed.
 
-Fixpoint remove_all (v : nat) (s : bag) : bag :=
-  match s with
+Fixpoint remove_all (x : nat) (b : bag) : bag :=
+  match b with
   | nil => nil
-  | h :: t => if eqb v h then remove_all v t else h :: remove_all v t
+  | h :: t => if eqb x h then remove_all x t else h :: remove_all x t
   end.
 
 Example test_remove_all1: count 5 (remove_all 5 [2; 1; 5; 4; 1]) = 0.
@@ -430,10 +428,10 @@ Proof.
   reflexivity.
 Qed.
 
-Fixpoint subset (s1 : bag) (s2 : bag) : bool :=
-  match s1 with
+Fixpoint subset (b1 : bag) (b2 : bag) : bool :=
+  match b1 with
   | nil => true
-  | h :: t => andb (member h s2) (subset t (remove_one h s2))
+  | h :: t => andb (member h b2) (subset t (remove_one h b2))
   end.
 
 Example test_subset1: subset [1; 2] [2; 1; 4; 1] = true.
@@ -450,13 +448,15 @@ Qed.
 
 (** Exercise: 2 stars, standard, recommended (bag_theorem) *)
 
-Theorem bag_theorem : forall (p : bag), forall (n : nat),
-  S (length p) = length (add n p).
+Theorem bag_theorem : forall (b : bag), forall (x : nat),
+  S (length b) = length (add x b).
 Proof.
-  intros p n.
+  intros b x.
   simpl.
   reflexivity.
 Qed.
+
+(** Raciocínio sobre listas *)
 
 Theorem nil_app : forall l : natlist,
   [] ++ l = l.
@@ -465,10 +465,10 @@ Proof.
   reflexivity.
 Qed.
 
-Theorem tl_length_pred : forall l:natlist,
+Theorem tl_length_pred : forall l : natlist,
   pred (length l) = length (tl l).
   Proof.
-    destruct l as [| n l'].
+    destruct l as [| x l'].
     simpl.
     reflexivity.
     simpl.
@@ -479,13 +479,13 @@ Theorem app_assoc : forall l1 l2 l3 : natlist,
   (l1 ++ l2) ++ l3 = l1 ++ (l2 ++ l3).
 Proof.
   intros l1 l2 l3.
-  induction l1 as [| n l1' IHl1'].
+  induction l1 as [| x l1' IHl1].
   -
     simpl.
     reflexivity.
   -
     simpl.
-    rewrite -> IHl1'.
+    rewrite -> IHl1.
     reflexivity.
 Qed.
 
@@ -511,13 +511,13 @@ Theorem app_length : forall l1 l2 : natlist,
   length (l1 ++ l2) = (length l1) + (length l2).
 Proof.
   intros l1 l2.
-  induction l1 as [|n l1' IHl1'].
+  induction l1 as [|x l1' IHl1].
   -
     simpl.
     reflexivity.
   -
   simpl.
-  rewrite -> IHl1'.
+  rewrite -> IHl1.
   reflexivity.
 Qed.
 
@@ -525,7 +525,7 @@ Theorem rev_length : forall l : natlist,
   length (rev l) = length l.
 Proof.
   intros l.
-  induction l as [| n l' IHl'].
+  induction l as [| x l' IHl].
   -
     simpl.
     reflexivity.
@@ -534,7 +534,7 @@ Proof.
     rewrite -> app_length.
     rewrite -> plus_comm.
     simpl.
-    rewrite -> IHl'.
+    rewrite -> IHl.
     reflexivity.
 Qed.
 
@@ -544,7 +544,7 @@ Theorem app_nil_r : forall l : natlist,
   l ++ [] = l.
 Proof.
   intros l.
-  induction l as [|n l' IHl].
+  induction l as [|x l' IHl].
   -
     simpl.
     reflexivity.
@@ -558,10 +558,10 @@ Theorem rev_app_distr: forall l1 l2 : natlist,
   rev (l1 ++ l2) = rev l2 ++ rev l1.
 Proof.
   intros l1 l2.
-  induction l1 as [|n l1' IHl].
+  induction l1 as [|x l1' IHl1].
   -
     simpl.
-    destruct l2 as [|m l2'].
+    destruct l2 as [|y l2'].
     +
       simpl.
       reflexivity.
@@ -572,7 +572,7 @@ Proof.
       reflexivity.
   -
     simpl.
-    rewrite -> IHl.
+    rewrite -> IHl1.
     rewrite -> app_assoc.
     reflexivity.
 Qed.
@@ -581,7 +581,7 @@ Theorem rev_involutive : forall l : natlist,
   rev (rev l) = l.
 Proof.
   intros l.
-  induction l as [|n l' IHl].
+  induction l as [|x l' IHl].
   -
     simpl.
     reflexivity.
@@ -606,12 +606,12 @@ Lemma nonzeros_app : forall l1 l2 : natlist,
   nonzeros (l1 ++ l2) = (nonzeros l1) ++ (nonzeros l2).
 Proof.
   intros l1 l2.
-  induction l1 as [|n l1' IHl1].
+  induction l1 as [|x l1' IHl1].
   -
     simpl.
     reflexivity.
   -
-    destruct n as [|n'].
+    destruct x as [|x'].
     +
       simpl.
       rewrite <- IHl1.
@@ -629,9 +629,7 @@ Fixpoint eqblist (l1 l2 : natlist) : bool :=
   | [], [] => true
   | _, [] => false
   | [], _ => false
-  | h1 :: t1, h2 :: t2 =>
-      if eqb h1 h2 then eqblist t1 t2
-      else false
+  | h1 :: t1, h2 :: t2 => if eqb h1 h2 then eqblist t1 t2 else false
   end.
 
 Example test_eqblist1 : (eqblist nil nil = true).
@@ -652,73 +650,75 @@ Proof.
   reflexivity.
 Qed.
 
-Theorem eqblist_refl : forall l:natlist,
+Theorem eqblist_refl : forall l : natlist,
   true = eqblist l l.
 Proof.
   intros l.
-  induction l as [|n l' IHl].
+  induction l as [|x l' IHl].
   -
     simpl.
     reflexivity.
   -
     simpl.
-    induction n as [|n' IHn].
+    induction x as [|x' IHx].
     +
       simpl.
       rewrite <- IHl.
       reflexivity.
     +
       simpl.
-      rewrite <- IHn.
+      rewrite <- IHx.
       reflexivity.
 Qed.
 
 (** Exercise: 1 star, standard (count_member_nonzero) *)
 
-Theorem count_member_nonzero : forall (s : bag),
-  leb 1 (count 1 (1 :: s)) = true.
+Theorem count_member_nonzero : forall (b : bag),
+  leb 1 (count 1 (1 :: b)) = true.
 Proof.
   simpl.
   reflexivity.
 Qed.
 
-Theorem leb_n_Sn : forall n,
-  leb n (S n) = true.
+Theorem leb_x_Sx : forall x,
+  leb x (S x) = true.
 Proof.
-  intros n.
-  induction n as [| n' IHn'].
+  intros x.
+  induction x as [| x' IHx].
   -
     simpl.
     reflexivity.
   -
     simpl.
-    rewrite IHn'.
+    rewrite IHx.
     reflexivity.
 Qed.
 
 (** Exercise: 3 stars, advanced (remove_does_not_increase_count) *)
 
-Theorem remove_does_not_increase_count: forall (s : bag),
-  leb (count 0 (remove_one 0 s)) (count 0 s) = true.
+Theorem remove_does_not_increase_count: forall (b : bag),
+  leb (count 0 (remove_one 0 b)) (count 0 b) = true.
 Proof.
-  intros s.
-  induction s as [|n s' IHs].
+  intros b.
+  induction b as [|x b' IHb].
   -
     simpl.
     reflexivity.
   -
     simpl.
-    destruct n as [|n'].
+    destruct x as [|x'].
     +
-      rewrite -> leb_n_Sn.
+      rewrite -> leb_x_Sx.
       reflexivity.
     +
       simpl.
-      rewrite -> IHs.
+      rewrite -> IHb.
       reflexivity.
 Qed.
 
 (** Exercise: 3 stars, standard, optional (bag_count_sum) *)
+
+(** Falta fazer *)
 
 (** Exercise: 4 stars, advanced (rev_injective) *)
 
@@ -732,57 +732,58 @@ Proof.
   reflexivity.
 Qed.
 
-Fixpoint nth_bad (l : natlist) (n : nat) : nat :=
+(** Opções *)
+
+Fixpoint xth_bad (l : natlist) (x : nat) : nat :=
   match l with
   | nil => 42  (** arbitrário *)
-  | a :: l' => match eqb n O with
-               | true => a
-               | false => nth_bad l' (pred n)
-               end
-  end.
-
-Inductive natoption : Type :=
-  | Some (n : nat) : natoption
-  | None : natoption.
-
-Fixpoint nth_error (l : natlist) (n : nat) : natoption :=
-  match l with
-  | nil => None
-    | a :: l' => match eqb n O with
-      | true => Some a
-      | false => nth_error l' (pred n)
+  | a :: l' => match eqb x O with
+    | true => a
+    | false => xth_bad l' (pred x)
     end
   end.
 
-Example test_nth_error1 : nth_error [4; 5; 6; 7] 0 = Some 4.
-Proof.
-  simpl.
-  reflexivity.
-Qed.
+Inductive natoption : Type :=
+  | Some (x : nat) : natoption
+  | None : natoption.
 
-Example test_nth_error2 : nth_error [4; 5; 6; 7] 3 = Some 7.
-Proof.
-  simpl.
-  reflexivity.
-Qed.
-
-Example test_nth_error3 : nth_error [4; 5; 6; 7] 9 = None.
-Proof.
-  simpl.
-  reflexivity.
-Qed.
-
-Fixpoint nth_error' (l : natlist) (n : nat) : natoption :=
+Fixpoint xth_error (l : natlist) (x : nat) : natoption :=
   match l with
   | nil => None
-  | a :: l' => if eqb n O then Some a
-    else nth_error' l' (pred n)
+    | a :: l' => match eqb x O with
+      | true => Some a
+      | false => xth_error l' (pred x)
+    end
   end.
 
-Definition option_elim (d : nat) (o : natoption) : nat :=
+Example test_xth_error1 : xth_error [4; 5; 6; 7] 0 = Some 4.
+Proof.
+  simpl.
+  reflexivity.
+Qed.
+
+Example test_xth_error2 : xth_error [4; 5; 6; 7] 3 = Some 7.
+Proof.
+  simpl.
+  reflexivity.
+Qed.
+
+Example test_xth_error3 : xth_error [4; 5; 6; 7] 9 = None.
+Proof.
+  simpl.
+  reflexivity.
+Qed.
+
+Fixpoint xth_error' (l : natlist) (x : nat) : natoption :=
+  match l with
+  | nil => None
+  | a :: l' => if eqb x O then Some a else xth_error' l' (pred x)
+  end.
+
+Definition option_elim (x : nat) (o : natoption) : nat :=
   match o with
   | Some n' => n'
-  | None => d
+  | None => x
   end.
 
 (** Exercise: 2 stars (hd_error)  *)
@@ -817,7 +818,7 @@ Theorem option_elim_hd : forall (l : natlist) (default : nat),
   hd default l = option_elim default (hd_error l).
 Proof.
   intros l default.
-  induction l as [| n l' IHl].
+  induction l as [| x l' IHl].
   -
     simpl.
     reflexivity.
@@ -829,7 +830,7 @@ Qed.
 (** Partial Maps *)
 
 Inductive id : Type :=
-  | Id (n : nat) : id.
+  | Id (x : nat) : id.
 
 Definition eqb_id (x1 x2 : id) :=
   match x1, x2 with
@@ -849,27 +850,23 @@ Qed.
 
 Inductive partial_map : Type :=
   | empty : partial_map
-  | record (i : id) (v : nat) (m : partial_map) : partial_map.
+  | record (i : id) (x : nat) (m : partial_map) : partial_map.
 
-Definition update (d : partial_map)
-                  (x : id) (value : nat)
-                  : partial_map :=
-  record x value d.
+Definition update (m : partial_map) (i : id) (x : nat) : partial_map :=
+  record i x m.
 
-Fixpoint find (x : id) (d : partial_map) : natoption :=
-  match d with
+Fixpoint find (i : id) (m : partial_map) : natoption :=
+  match m with
   | empty => None
-  | record y v d' => if eqb_id x y
-                     then Some v
-                     else find x d'
+  | record x y m' => if eqb_id i x then Some y else find i m'
   end.
 
 (** Exercise: 1 star (update_eq) *)
 
-Theorem update_eq : forall (d : partial_map) (x : id) (v: nat),
-    find x (update d x v) = Some v.
+Theorem update_eq : forall (m : partial_map) (i : id) (x: nat),
+    find i (update m i x) = Some x.
 Proof.
-  intros d x v.
+  intros m i x.
   simpl.
   rewrite <- eqb_id_refl.
   reflexivity.
@@ -877,10 +874,10 @@ Qed.
 
 (** **** Exercise: 1 star (update_neq)  *)
 
-Theorem update_neq : forall (d : partial_map) (x y : id) (o: nat),
-    eqb_id x y = false -> find x (update d y o) = find x d.
+Theorem update_neq : forall (m : partial_map) (x y : id) (n: nat),
+    eqb_id x y = false -> find x (update m y n) = find x m.
 Proof.
-  intros d x y o H.
+  intros m x y n H.
   simpl.
   rewrite -> H.
   reflexivity.
@@ -892,6 +889,6 @@ Inductive baz : Type :=
   | Baz1 (x : baz) : baz
   | Baz2 (y : baz) (b : bool) : baz.
 
+(** How _many_ elements does the type [baz] have? *)
 
-(** How _many_ elements does the type [baz] have?
-    (Explain your answer in words, preferrably English.) *)
+(** Falta fazer *)

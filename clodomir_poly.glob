@@ -1,1283 +1,191 @@
-DIGEST 4364c9af6970a2ff11e438756d3ff743
+DIGEST f02b280e2055cabe5232a2b36afd2906
 FLF.clodomir_poly
-R142:155 LF.clodomir_lists <> <> lib
-ind 169:172 <> list
-constr 197:199 <> nil
-constr 214:217 <> cons
-R203:206 LF.clodomir_poly <> list ind
-R208:208 LF.clodomir_poly <> X var
-R222:225 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R232:235 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R236:239 LF.clodomir_poly <> list ind
-R241:241 LF.clodomir_poly <> X var
-R226:229 LF.clodomir_poly <> list ind
-R231:231 LF.clodomir_poly <> X var
-R221:221 LF.clodomir_poly <> X var
-def 254:259 <> repeat
-R277:277 LF.clodomir_poly <> X var
-R289:291 Coq.Init.Datatypes <> nat ind
-R296:299 LF.clodomir_poly <> list ind
-R301:301 LF.clodomir_poly <> X var
-R314:318 LF.clodomir_poly <> count var
-R334:336 LF.clodomir_poly <> nil constr
-R338:338 LF.clodomir_poly <> X var
-R344:344 Coq.Init.Datatypes <> S constr
-R356:359 LF.clodomir_poly <> cons constr
-R366:371 LF.clodomir_poly <> repeat def
-R375:375 LF.clodomir_poly <> x var
-R373:373 LF.clodomir_poly <> X var
-R363:363 LF.clodomir_poly <> x var
-R361:361 LF.clodomir_poly <> X var
-def 401:412 <> test_repeat1
-R430:432 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R416:421 LF.clodomir_poly <> repeat def
-R423:425 Coq.Init.Datatypes <> nat ind
-R433:436 LF.clodomir_poly <> cons constr
-R445:448 LF.clodomir_poly <> cons constr
-R457:459 LF.clodomir_poly <> nil constr
-R461:463 Coq.Init.Datatypes <> nat ind
-R450:452 Coq.Init.Datatypes <> nat ind
-R438:440 Coq.Init.Datatypes <> nat ind
-def 513:524 <> test_repeat2
-R547:549 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R528:533 LF.clodomir_poly <> repeat def
-R540:544 LF.clodomir_basics <> false constr
-R535:538 LF.clodomir_basics <> bool ind
-R550:553 LF.clodomir_poly <> cons constr
-R567:569 LF.clodomir_poly <> nil constr
-R571:574 LF.clodomir_basics <> bool ind
-R560:564 LF.clodomir_basics <> false constr
-R555:558 LF.clodomir_basics <> bool ind
-ind 669:674 <> mumble
-constr 690:690 <> a
-constr 705:705 <> b
-constr 737:737 <> c
-R694:699 LF.clodomir_poly <> mumble ind
-R715:718 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R722:725 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R726:731 LF.clodomir_poly <> mumble ind
-R719:721 Coq.Init.Datatypes <> nat ind
-R709:714 LF.clodomir_poly <> mumble ind
-R741:746 LF.clodomir_poly <> mumble ind
-ind 760:766 <> grumble
-constr 791:791 <> d
-constr 819:819 <> e
-R801:804 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R805:811 LF.clodomir_poly <> grumble ind
-R813:813 LF.clodomir_poly <> X var
-R795:800 LF.clodomir_poly <> mumble ind
-R824:827 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R828:834 LF.clodomir_poly <> grumble ind
-R836:836 LF.clodomir_poly <> X var
-R823:823 LF.clodomir_poly <> X var
-R871:871 LF.clodomir_poly <> d constr
-R881:881 LF.clodomir_poly <> b constr
-R883:883 LF.clodomir_poly <> a constr
-R873:878 LF.clodomir_poly <> mumble ind
-R896:896 LF.clodomir_poly <> d constr
-R904:904 LF.clodomir_poly <> b constr
-R906:906 LF.clodomir_poly <> a constr
-R898:901 LF.clodomir_basics <> bool ind
-R919:919 LF.clodomir_poly <> e constr
-R926:929 LF.clodomir_basics <> true constr
-R921:924 LF.clodomir_basics <> bool ind
-R939:939 LF.clodomir_poly <> e constr
-R949:949 LF.clodomir_poly <> b constr
-R951:951 LF.clodomir_poly <> c constr
-R941:946 LF.clodomir_poly <> mumble ind
-R994:994 LF.clodomir_poly <> c constr
-def 1007:1013 <> repeat'
-R1027:1030 LF.clodomir_poly <> list ind
-R1032:1032 LF.clodomir_poly <> X var
-R1045:1049 LF.clodomir_poly <> count var
-R1065:1067 LF.clodomir_poly <> nil constr
-R1069:1069 LF.clodomir_poly <> X var
-R1075:1075 Coq.Init.Datatypes <> S constr
-R1087:1090 LF.clodomir_poly <> cons constr
-R1097:1103 LF.clodomir_poly <> repeat' def
-R1107:1107 LF.clodomir_poly <> x var
-R1105:1105 LF.clodomir_poly <> X var
-R1094:1094 LF.clodomir_poly <> x var
-R1092:1092 LF.clodomir_poly <> X var
-def 1134:1141 <> repeat''
-R1155:1158 LF.clodomir_poly <> list ind
-R1160:1160 LF.clodomir_poly <> X var
-R1173:1177 LF.clodomir_poly <> count var
-R1193:1195 LF.clodomir_poly <> nil constr
-R1203:1203 Coq.Init.Datatypes <> S constr
-R1215:1218 LF.clodomir_poly <> cons constr
-R1225:1232 LF.clodomir_poly <> repeat'' def
-R1236:1236 LF.clodomir_poly <> x var
-R1222:1222 LF.clodomir_poly <> x var
-def 1265:1271 <> list123
-R1276:1279 LF.clodomir_poly <> cons constr
-R1288:1291 LF.clodomir_poly <> cons constr
-R1300:1303 LF.clodomir_poly <> cons constr
-R1312:1314 LF.clodomir_poly <> nil constr
-R1316:1318 Coq.Init.Datatypes <> nat ind
-R1305:1307 Coq.Init.Datatypes <> nat ind
-R1293:1295 Coq.Init.Datatypes <> nat ind
-R1281:1283 Coq.Init.Datatypes <> nat ind
-def 1336:1343 <> list123'
-R1348:1351 LF.clodomir_poly <> cons constr
-R1358:1361 LF.clodomir_poly <> cons constr
-R1368:1371 LF.clodomir_poly <> cons constr
-R1378:1380 LF.clodomir_poly <> nil constr
-R1399:1401 LF.clodomir_poly <> nil constr
-R1399:1401 LF.clodomir_poly <> nil constr
-R1419:1422 LF.clodomir_poly <> cons constr
-R1419:1422 LF.clodomir_poly <> cons constr
-R1444:1449 LF.clodomir_poly <> repeat def
-R1444:1449 LF.clodomir_poly <> repeat def
-def 1476:1484 <> list123''
-R1489:1492 LF.clodomir_poly <> cons constr
-R1497:1500 LF.clodomir_poly <> cons constr
-R1505:1508 LF.clodomir_poly <> cons constr
-R1512:1514 LF.clodomir_poly <> nil constr
-def 1529:1537 <> repeat'''
-R1555:1555 LF.clodomir_poly <> X var
-R1567:1569 Coq.Init.Datatypes <> nat ind
-R1574:1577 LF.clodomir_poly <> list ind
-R1579:1579 LF.clodomir_poly <> X var
-R1592:1596 LF.clodomir_poly <> count var
-R1612:1614 LF.clodomir_poly <> nil constr
-R1620:1620 Coq.Init.Datatypes <> S constr
-R1632:1635 LF.clodomir_poly <> cons constr
-R1640:1648 LF.clodomir_poly <> repeat''' def
-R1650:1650 LF.clodomir_poly <> x var
-R1637:1637 LF.clodomir_poly <> x var
-ind 1678:1682 <> list'
-constr 1707:1710 <> nil'
-constr 1724:1728 <> cons'
-R1714:1718 LF.clodomir_poly <> list' ind
-R1714:1718 LF.clodomir_poly <> X var
-R1733:1736 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R1742:1745 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R1746:1750 LF.clodomir_poly <> list' ind
-R1746:1750 LF.clodomir_poly <> X var
-R1737:1741 LF.clodomir_poly <> list' ind
-R1737:1741 LF.clodomir_poly <> X var
-R1732:1732 LF.clodomir_poly <> X var
-def 1763:1765 <> app
-R1787:1790 LF.clodomir_poly <> list ind
-R1792:1792 LF.clodomir_poly <> X var
-R1798:1801 LF.clodomir_poly <> list ind
-R1803:1803 LF.clodomir_poly <> X var
-R1817:1818 LF.clodomir_poly <> l1 var
-R1829:1831 LF.clodomir_poly <> nil constr
-R1836:1837 LF.clodomir_poly <> l2 var
-R1843:1846 LF.clodomir_poly <> cons constr
-R1855:1858 LF.clodomir_poly <> cons constr
-R1863:1865 LF.clodomir_poly <> app def
-R1869:1870 LF.clodomir_poly <> l2 var
-def 1890:1892 <> rev
-R1906:1909 LF.clodomir_poly <> list ind
-R1911:1911 LF.clodomir_poly <> X var
-R1916:1919 LF.clodomir_poly <> list ind
-R1921:1921 LF.clodomir_poly <> X var
-R1934:1934 LF.clodomir_poly <> l var
-R1945:1947 LF.clodomir_poly <> nil constr
-R1952:1954 LF.clodomir_poly <> nil constr
-R1960:1963 LF.clodomir_poly <> cons constr
-R1972:1974 LF.clodomir_poly <> app def
-R1985:1988 LF.clodomir_poly <> cons constr
-R1992:1994 LF.clodomir_poly <> nil constr
-R1977:1979 LF.clodomir_poly <> rev def
-def 2014:2019 <> length
-R2037:2040 LF.clodomir_poly <> list ind
-R2042:2042 LF.clodomir_poly <> X var
-R2047:2049 Coq.Init.Datatypes <> nat ind
-R2062:2062 LF.clodomir_poly <> l var
-R2073:2075 LF.clodomir_poly <> nil constr
-R2086:2089 LF.clodomir_poly <> cons constr
-R2099:2099 Coq.Init.Datatypes <> S constr
-R2102:2107 LF.clodomir_poly <> length def
-def 2129:2137 <> test_rev1
-R2166:2169 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2189:2189 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2141:2143 LF.clodomir_poly <> rev def
-R2146:2149 LF.clodomir_poly <> cons constr
-R2154:2157 LF.clodomir_poly <> cons constr
-R2161:2163 LF.clodomir_poly <> nil constr
-R2170:2173 LF.clodomir_poly <> cons constr
-R2178:2181 LF.clodomir_poly <> cons constr
-R2185:2187 LF.clodomir_poly <> nil constr
-def 2237:2245 <> test_rev2
-R2267:2269 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2248:2250 LF.clodomir_poly <> rev def
-R2253:2256 LF.clodomir_poly <> cons constr
-R2263:2265 LF.clodomir_poly <> nil constr
-R2258:2261 LF.clodomir_basics <> true constr
-R2270:2273 LF.clodomir_poly <> cons constr
-R2280:2282 LF.clodomir_poly <> nil constr
-R2275:2278 LF.clodomir_basics <> true constr
-def 2330:2341 <> test_length1
-R2381:2383 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2344:2349 LF.clodomir_poly <> length def
-R2352:2355 LF.clodomir_poly <> cons constr
-R2360:2363 LF.clodomir_poly <> cons constr
-R2368:2371 LF.clodomir_poly <> cons constr
-R2375:2377 LF.clodomir_poly <> nil constr
-R2465:2468 LF.clodomir_poly <> cons constr
-not 2452:2452 <> :::x_'::'_x
-R2530:2532 LF.clodomir_poly <> nil constr
-not 2521:2521 <> :::'['_']'
-R2566:2569 LF.clodomir_poly <> cons constr
-R2577:2580 LF.clodomir_poly <> cons constr
-R2584:2585 LF.clodomir_poly <> :::'['_']' not
-not 2545:2545 <> :::'['_x_';'_'..'_';'_x_']'
-R2616:2618 LF.clodomir_poly <> app def
-not 2603:2603 <> :::x_'++'_x
-def 2673:2682 <> list123'''
-R2687:2687 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R2689:2690 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R2692:2693 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R2695:2695 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R2707:2716 LF.clodomir_poly <> list123''' def
-prf 2782:2790 <> app_nil_r
-R2820:2823 LF.clodomir_poly <> list ind
-R2825:2825 LF.clodomir_poly <> X var
-R2837:2839 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R2831:2834 LF.clodomir_poly <> :::x_'++'_x not
-R2830:2830 LF.clodomir_poly <> l var
-R2835:2836 LF.clodomir_poly <> :::'['_']' not
-R2840:2840 LF.clodomir_poly <> l var
-prf 2992:3000 <> app_assoc
-R3020:3023 LF.clodomir_poly <> list ind
-R3025:3025 LF.clodomir_poly <> A var
-R3042:3044 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3032:3035 LF.clodomir_poly <> :::x_'++'_x not
-R3031:3031 LF.clodomir_poly <> l var
-R3037:3040 LF.clodomir_poly <> :::x_'++'_x not
-R3036:3036 LF.clodomir_poly <> m var
-R3041:3041 LF.clodomir_poly <> n var
-R3045:3045 LF.clodomir_poly <> :::x_'++'_x not
-R3052:3056 LF.clodomir_poly <> :::x_'++'_x not
-R3047:3050 LF.clodomir_poly <> :::x_'++'_x not
-R3046:3046 LF.clodomir_poly <> l var
-R3051:3051 LF.clodomir_poly <> m var
-R3057:3057 LF.clodomir_poly <> n var
-prf 3211:3220 <> app_length
-R3249:3252 LF.clodomir_poly <> list ind
-R3254:3254 LF.clodomir_poly <> X var
-R3277:3279 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3260:3265 LF.clodomir_poly <> length def
-R3270:3273 LF.clodomir_poly <> :::x_'++'_x not
-R3268:3269 LF.clodomir_poly <> l1 var
-R3274:3275 LF.clodomir_poly <> l2 var
-R3289:3291 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
-R3280:3285 LF.clodomir_poly <> length def
-R3287:3288 LF.clodomir_poly <> l1 var
-R3292:3297 LF.clodomir_poly <> length def
-R3299:3300 LF.clodomir_poly <> l2 var
-prf 3517:3529 <> rev_app_distr
-R3550:3553 LF.clodomir_poly <> list ind
-R3555:3555 LF.clodomir_poly <> X var
-R3575:3577 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3561:3563 LF.clodomir_poly <> rev def
-R3568:3571 LF.clodomir_poly <> :::x_'++'_x not
-R3566:3567 LF.clodomir_poly <> l1 var
-R3572:3573 LF.clodomir_poly <> l2 var
-R3584:3587 LF.clodomir_poly <> :::x_'++'_x not
-R3578:3580 LF.clodomir_poly <> rev def
-R3582:3583 LF.clodomir_poly <> l2 var
-R3588:3590 LF.clodomir_poly <> rev def
-R3592:3593 LF.clodomir_poly <> l1 var
-R3683:3691 LF.clodomir_poly <> app_nil_r thm
-R3683:3691 LF.clodomir_poly <> app_nil_r thm
-R3683:3691 LF.clodomir_poly <> app_nil_r thm
-R3762:3770 LF.clodomir_poly <> app_assoc thm
-R3762:3770 LF.clodomir_poly <> app_assoc thm
-R3762:3770 LF.clodomir_poly <> app_assoc thm
-prf 3804:3817 <> rev_involutive
-R3849:3852 LF.clodomir_poly <> list ind
-R3854:3854 LF.clodomir_poly <> X var
-R3870:3872 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R3859:3861 LF.clodomir_poly <> rev def
-R3864:3866 LF.clodomir_poly <> rev def
-R3868:3868 LF.clodomir_poly <> l var
-R3873:3873 LF.clodomir_poly <> l var
-R3989:4001 LF.clodomir_poly <> rev_app_distr thm
-R3989:4001 LF.clodomir_poly <> rev_app_distr thm
-R3989:4001 LF.clodomir_poly <> rev_app_distr thm
-ind 4057:4060 <> prod
-constr 4071:4074 <> pair
-R4079:4082 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R4084:4087 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R4088:4091 LF.clodomir_poly <> prod ind
-R4095:4095 LF.clodomir_poly <> Y var
-R4093:4093 LF.clodomir_poly <> X var
-R4083:4083 LF.clodomir_poly <> Y var
-R4078:4078 LF.clodomir_poly <> X var
-R4109:4112 LF.clodomir_poly <> pair constr
-R4109:4112 LF.clodomir_poly <> pair constr
-R4172:4175 LF.clodomir_poly <> pair constr
-not 4156:4156 <> :::'('_x_','_x_')'
-R4205:4208 LF.clodomir_poly <> prod ind
-not 4193:4193 <> ::type_scope:x_'*'_x
-def 4241:4243 <> fst
-R4264:4266 LF.clodomir_poly <> ::type_scope:x_'*'_x not
-R4263:4263 LF.clodomir_poly <> X var
-R4267:4267 LF.clodomir_poly <> Y var
-R4272:4272 LF.clodomir_poly <> X var
-R4285:4285 LF.clodomir_poly <> p var
-R4296:4296 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4298:4299 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4301:4301 LF.clodomir_poly <> :::'('_x_','_x_')' not
-def 4327:4329 <> snd
-R4350:4352 LF.clodomir_poly <> ::type_scope:x_'*'_x not
-R4349:4349 LF.clodomir_poly <> X var
-R4353:4353 LF.clodomir_poly <> Y var
-R4358:4358 LF.clodomir_poly <> Y var
-R4371:4371 LF.clodomir_poly <> p var
-R4382:4382 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4384:4385 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4387:4387 LF.clodomir_poly <> :::'('_x_','_x_')' not
-def 4411:4417 <> combine
-R4438:4441 LF.clodomir_poly <> list ind
-R4443:4443 LF.clodomir_poly <> X var
-R4452:4455 LF.clodomir_poly <> list ind
-R4457:4457 LF.clodomir_poly <> Y var
-R4473:4476 LF.clodomir_poly <> list ind
-R4480:4480 LF.clodomir_poly <> ::type_scope:x_'*'_x not
-R4479:4479 LF.clodomir_poly <> X var
-R4481:4481 LF.clodomir_poly <> Y var
-R4499:4500 LF.clodomir_poly <> ly var
-R4495:4496 LF.clodomir_poly <> lx var
-R4511:4512 LF.clodomir_poly <> :::'['_']' not
-R4520:4521 LF.clodomir_poly <> :::'['_']' not
-R4530:4531 LF.clodomir_poly <> :::'['_']' not
-R4536:4537 LF.clodomir_poly <> :::'['_']' not
-R4544:4547 LF.clodomir_poly <> :::x_'::'_x not
-R4553:4556 LF.clodomir_poly <> :::x_'::'_x not
-R4569:4573 LF.clodomir_poly <> :::x_'::'_x not
-R4587:4587 LF.clodomir_poly <> :::x_'::'_x not
-R4563:4563 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4565:4566 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4568:4568 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4574:4580 LF.clodomir_poly <> combine def
-R4657:4663 LF.clodomir_poly <> combine def
-R4675:4681 LF.clodomir_poly <> combine def
-R4689:4689 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R4695:4695 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R4701:4701 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R4706:4706 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R4711:4711 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R4690:4694 LF.clodomir_basics <> false constr
-R4696:4700 LF.clodomir_basics <> false constr
-R4702:4705 LF.clodomir_basics <> true constr
-R4707:4710 LF.clodomir_basics <> true constr
-R4683:4683 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R4685:4685 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R4687:4687 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-def 4773:4777 <> split
-R4797:4800 LF.clodomir_poly <> list ind
-R4804:4804 LF.clodomir_poly <> ::type_scope:x_'*'_x not
-R4803:4803 LF.clodomir_poly <> X var
-R4805:4805 LF.clodomir_poly <> Y var
-R4826:4826 LF.clodomir_poly <> ::type_scope:x_'*'_x not
-R4833:4837 LF.clodomir_poly <> ::type_scope:x_'*'_x not
-R4844:4844 LF.clodomir_poly <> ::type_scope:x_'*'_x not
-R4827:4830 LF.clodomir_poly <> list ind
-R4832:4832 LF.clodomir_poly <> X var
-R4838:4841 LF.clodomir_poly <> list ind
-R4843:4843 LF.clodomir_poly <> Y var
-R4857:4857 LF.clodomir_poly <> l var
-R4868:4869 LF.clodomir_poly <> :::'['_']' not
-R4874:4874 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4877:4878 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4881:4881 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4875:4876 LF.clodomir_poly <> :::'['_']' not
-R4879:4880 LF.clodomir_poly <> :::'['_']' not
-R4893:4896 LF.clodomir_poly <> :::x_'::'_x not
-R4887:4887 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4889:4890 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4892:4892 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4928:4932 LF.clodomir_poly <> split def
-R4945:4946 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4960:4963 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4977:4978 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R4948:4951 LF.clodomir_poly <> :::x_'::'_x not
-R4952:4954 LF.clodomir_poly <> fst def
-R4956:4959 LF.clodomir_poly <> rest var
-R4965:4968 LF.clodomir_poly <> :::x_'::'_x not
-R4969:4971 LF.clodomir_poly <> snd def
-R4973:4976 LF.clodomir_poly <> rest var
-def 4996:5005 <> test_split
-R5035:5037 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5008:5012 LF.clodomir_poly <> split def
-R5014:5014 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R5024:5024 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R5034:5034 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R5015:5015 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R5017:5017 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R5023:5023 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R5018:5022 LF.clodomir_basics <> false constr
-R5025:5025 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R5027:5027 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R5033:5033 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R5028:5032 LF.clodomir_basics <> false constr
-R5038:5038 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R5044:5044 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R5058:5058 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R5039:5039 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R5041:5041 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R5043:5043 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R5045:5045 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R5051:5051 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R5057:5057 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R5046:5050 LF.clodomir_basics <> false constr
-R5052:5056 LF.clodomir_basics <> false constr
-mod 5120:5135 <> OptionPlayground
-ind 5149:5154 OptionPlayground option
-constr 5180:5183 OptionPlayground Some
-constr 5198:5201 OptionPlayground None
-R5190:5190 LF.clodomir_poly <> X var
-R5193:5193 LF.clodomir_poly <> option ind
-R5193:5193 LF.clodomir_poly <> X var
-R5202:5202 LF.clodomir_poly <> option ind
-R5202:5202 LF.clodomir_poly <> X var
-R5215:5218 LF.clodomir_poly OptionPlayground Some constr
-R5215:5218 LF.clodomir_poly OptionPlayground Some constr
-R5238:5241 LF.clodomir_poly OptionPlayground None constr
-R5238:5241 LF.clodomir_poly OptionPlayground None constr
-R5254:5269 LF.clodomir_poly OptionPlayground <> mod
-def 6138:6147 <> doit3times
-R6162:6163 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R6164:6164 LF.clodomir_poly <> X var
-R6161:6161 LF.clodomir_poly <> X var
-R6170:6170 LF.clodomir_poly <> X var
-R6175:6175 LF.clodomir_poly <> X var
-R6182:6182 LF.clodomir_poly <> f var
-R6185:6185 LF.clodomir_poly <> f var
-R6188:6188 LF.clodomir_poly <> f var
-R6190:6190 LF.clodomir_poly <> n var
-R6203:6212 LF.clodomir_poly <> doit3times def
-def 6224:6239 <> test_doit3times'
-R6262:6264 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6242:6251 LF.clodomir_poly <> doit3times def
-R6258:6261 LF.clodomir_basics <> true constr
-R6253:6256 LF.clodomir_basics <> negb def
-R6265:6269 LF.clodomir_basics <> false constr
-def 6309:6314 <> filter
-R6336:6339 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R6340:6343 LF.clodomir_basics <> bool ind
-R6335:6335 LF.clodomir_poly <> X var
-R6351:6354 LF.clodomir_poly <> list ind
-R6356:6356 LF.clodomir_poly <> X var
-R6362:6365 LF.clodomir_poly <> list ind
-R6367:6367 LF.clodomir_poly <> X var
-R6381:6381 LF.clodomir_poly <> l var
-R6392:6393 LF.clodomir_poly <> :::'['_']' not
-R6402:6403 LF.clodomir_poly <> :::'['_']' not
-R6410:6413 LF.clodomir_poly <> :::x_'::'_x not
-R6422:6425 LF.clodomir_poly <> test var
-R6472:6477 LF.clodomir_poly <> filter def
-R6479:6482 LF.clodomir_poly <> test var
-R6435:6439 LF.clodomir_poly <> :::x_'::'_x not
-R6453:6453 LF.clodomir_poly <> :::x_'::'_x not
-R6440:6445 LF.clodomir_poly <> filter def
-R6447:6450 LF.clodomir_poly <> test var
-def 6502:6513 <> test_filter1
-R6538:6540 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6516:6521 LF.clodomir_poly <> filter def
-R6529:6529 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6531:6531 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6533:6533 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6535:6535 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6537:6537 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6523:6527 LF.clodomir_basics <> evenb def
-R6541:6541 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6543:6543 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6545:6545 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-def 6596:6606 <> length_is_1
-R6624:6627 LF.clodomir_poly <> list ind
-R6629:6629 LF.clodomir_poly <> X var
-R6634:6637 LF.clodomir_basics <> bool ind
-R6642:6644 LF.clodomir_basics <> eqb def
-R6647:6652 LF.clodomir_poly <> length def
-R6654:6654 LF.clodomir_poly <> l var
-def 6669:6680 <> test_filter2
-R6740:6742 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6683:6688 LF.clodomir_poly <> filter def
-R6702:6703 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6710:6711 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6715:6716 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6720:6721 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6729:6730 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6733:6734 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6738:6739 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6704:6704 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6706:6707 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6709:6709 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6712:6712 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6714:6714 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6717:6717 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6719:6719 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6722:6722 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6724:6724 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6726:6726 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6728:6728 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6731:6732 LF.clodomir_poly <> :::'['_']' not
-R6735:6735 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6737:6737 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6690:6700 LF.clodomir_poly <> length_is_1 def
-R6743:6744 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6748:6749 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6753:6754 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6758:6759 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6745:6745 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6747:6747 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6750:6750 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6752:6752 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6755:6755 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6757:6757 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-def 6810:6825 <> countoddmembers'
-R6830:6833 LF.clodomir_poly <> list ind
-R6835:6837 Coq.Init.Datatypes <> nat ind
-R6842:6844 Coq.Init.Datatypes <> nat ind
-R6851:6856 LF.clodomir_poly <> length def
-R6859:6864 LF.clodomir_poly <> filter def
-R6871:6871 LF.clodomir_poly <> l var
-R6866:6869 LF.clodomir_basics <> oddb def
-def 6884:6905 <> test_countoddmembers'1
-R6940:6942 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6910:6925 LF.clodomir_poly <> countoddmembers' def
-R6927:6927 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6929:6929 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6931:6931 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6933:6933 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6935:6935 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6937:6937 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R6939:6939 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-def 6982:7003 <> test_countoddmembers'2
-R7032:7034 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7008:7023 LF.clodomir_poly <> countoddmembers' def
-R7025:7025 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7027:7027 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7029:7029 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7031:7031 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-def 7074:7095 <> test_countoddmembers'3
-R7120:7122 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7100:7115 LF.clodomir_poly <> countoddmembers' def
-R7117:7119 LF.clodomir_poly <> nil constr
-def 7162:7175 <> test_anon_fun'
-R7207:7209 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7178:7187 LF.clodomir_poly <> doit3times def
-R7200:7202 LF.clodomir_basics <> ::nat_scope:x_'*'_x not
-R7199:7199 LF.clodomir_poly <> n var
-R7203:7203 LF.clodomir_poly <> n var
-def 7251:7263 <> test_filter2'
-R7339:7341 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7266:7271 LF.clodomir_poly <> filter def
-R7301:7302 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7309:7310 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7314:7315 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7319:7320 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7328:7329 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7332:7333 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7337:7338 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7303:7303 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7305:7306 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7308:7308 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7311:7311 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7313:7313 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7316:7316 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7318:7318 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7321:7321 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7323:7323 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7325:7325 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7327:7327 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7330:7331 LF.clodomir_poly <> :::'['_']' not
-R7334:7334 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7336:7336 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7283:7285 LF.clodomir_basics <> eqb def
-R7288:7293 LF.clodomir_poly <> length def
-R7295:7295 LF.clodomir_poly <> l var
-R7342:7343 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7347:7348 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7352:7353 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7357:7358 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7344:7344 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7346:7346 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7349:7349 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7351:7351 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7354:7354 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7356:7356 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-def 7454:7468 <> filter_even_gt7
-R7475:7478 LF.clodomir_poly <> list ind
-R7480:7482 Coq.Init.Datatypes <> nat ind
-R7487:7490 LF.clodomir_poly <> list ind
-R7492:7494 Coq.Init.Datatypes <> nat ind
-R7499:7504 LF.clodomir_poly <> filter def
-R7549:7549 LF.clodomir_poly <> l var
-R7516:7519 LF.clodomir_basics <> andb def
-R7532:7535 LF.clodomir_basics <> negb def
-R7538:7540 LF.clodomir_basics <> leb def
-R7542:7542 LF.clodomir_poly <> n var
-R7522:7526 LF.clodomir_basics <> evenb def
-R7528:7528 LF.clodomir_poly <> n var
-def 7561:7582 <> test_filter_even_gt7_1
-R7621:7623 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7586:7600 LF.clodomir_poly <> filter_even_gt7 def
-R7602:7602 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7604:7604 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7606:7606 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7608:7608 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7610:7610 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7613:7613 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7615:7615 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7618:7618 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7620:7620 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7624:7624 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7627:7627 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7630:7630 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7632:7632 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-def 7671:7692 <> test_filter_even_gt7_2
-R7726:7728 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7696:7710 LF.clodomir_poly <> filter_even_gt7 def
-R7712:7712 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7714:7714 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7716:7716 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7718:7718 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7721:7721 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7725:7725 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7729:7730 LF.clodomir_poly <> :::'['_']' not
-def 7811:7819 <> partition
-R7841:7844 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R7845:7848 LF.clodomir_basics <> bool ind
-R7840:7840 LF.clodomir_poly <> X var
-R7856:7859 LF.clodomir_poly <> list ind
-R7861:7861 LF.clodomir_poly <> X var
-R7872:7874 LF.clodomir_poly <> ::type_scope:x_'*'_x not
-R7866:7869 LF.clodomir_poly <> list ind
-R7871:7871 LF.clodomir_poly <> X var
-R7875:7878 LF.clodomir_poly <> list ind
-R7880:7880 LF.clodomir_poly <> X var
-R7887:7887 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R7901:7902 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R7936:7936 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R7888:7893 LF.clodomir_poly <> filter def
-R7900:7900 LF.clodomir_poly <> l var
-R7895:7898 LF.clodomir_poly <> test var
-R7903:7908 LF.clodomir_poly <> filter def
-R7935:7935 LF.clodomir_poly <> l var
-R7920:7923 LF.clodomir_basics <> negb def
-R7926:7929 LF.clodomir_poly <> test var
-R7931:7931 LF.clodomir_poly <> n var
-def 7948:7962 <> test_partition1
-R7991:7993 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7965:7973 LF.clodomir_poly <> partition def
-R7980:7980 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7982:7982 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7984:7984 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7986:7986 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7988:7988 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7990:7990 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7975:7978 LF.clodomir_basics <> oddb def
-R7994:7994 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R8002:8003 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R8009:8009 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R7995:7995 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7997:7997 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R7999:7999 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8001:8001 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8004:8004 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8006:8006 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8008:8008 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-def 8048:8062 <> test_partition2
-R8099:8101 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8065:8073 LF.clodomir_poly <> partition def
-R8092:8092 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8094:8094 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8096:8096 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8098:8098 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8085:8089 LF.clodomir_basics <> false constr
-R8102:8102 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R8105:8106 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R8114:8114 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R8103:8104 LF.clodomir_poly <> :::'['_']' not
-R8107:8107 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8109:8109 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8111:8111 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8113:8113 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-def 8154:8156 <> map
-R8174:8175 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R8176:8176 LF.clodomir_poly <> Y var
-R8173:8173 LF.clodomir_poly <> X var
-R8182:8185 LF.clodomir_poly <> list ind
-R8187:8187 LF.clodomir_poly <> X var
-R8193:8196 LF.clodomir_poly <> list ind
-R8198:8198 LF.clodomir_poly <> Y var
-R8212:8212 LF.clodomir_poly <> l var
-R8223:8224 LF.clodomir_poly <> :::'['_']' not
-R8233:8234 LF.clodomir_poly <> :::'['_']' not
-R8241:8244 LF.clodomir_poly <> :::x_'::'_x not
-R8250:8250 LF.clodomir_poly <> :::x_'::'_x not
-R8254:8259 LF.clodomir_poly <> :::x_'::'_x not
-R8267:8267 LF.clodomir_poly <> :::x_'::'_x not
-R8251:8251 LF.clodomir_poly <> f var
-R8260:8262 LF.clodomir_poly <> map def
-R8264:8264 LF.clodomir_poly <> f var
-def 8285:8293 <> test_map1
-R8327:8329 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8296:8298 LF.clodomir_poly <> map def
-R8320:8320 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8322:8322 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8324:8324 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8326:8326 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8310:8313 LF.clodomir_basics <> plus def
-R8317:8317 LF.clodomir_poly <> x var
-R8330:8330 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8332:8332 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8334:8334 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8336:8336 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-def 8384:8392 <> test_map2
-R8413:8415 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8395:8397 LF.clodomir_poly <> map def
-R8404:8404 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8406:8406 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8408:8408 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8410:8410 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8412:8412 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8399:8402 LF.clodomir_basics <> oddb def
-R8416:8416 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8422:8422 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8427:8427 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8433:8433 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8438:8438 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8417:8421 LF.clodomir_basics <> false constr
-R8423:8426 LF.clodomir_basics <> true constr
-R8428:8432 LF.clodomir_basics <> false constr
-R8434:8437 LF.clodomir_basics <> true constr
-def 8486:8494 <> test_map3
-R8538:8540 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8497:8499 LF.clodomir_poly <> map def
-R8529:8529 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8531:8531 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8533:8533 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8535:8535 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8537:8537 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8511:8511 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8519:8519 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8526:8526 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8512:8516 LF.clodomir_basics <> evenb def
-R8518:8518 LF.clodomir_poly <> n var
-R8520:8523 LF.clodomir_basics <> oddb def
-R8525:8525 LF.clodomir_poly <> n var
-R8541:8541 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8554:8554 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8567:8567 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8580:8580 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8593:8593 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8542:8542 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8547:8547 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8553:8553 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8543:8546 LF.clodomir_basics <> true constr
-R8548:8552 LF.clodomir_basics <> false constr
-R8555:8555 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8561:8561 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8566:8566 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8556:8560 LF.clodomir_basics <> false constr
-R8562:8565 LF.clodomir_basics <> true constr
-R8568:8568 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8573:8573 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8579:8579 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8569:8572 LF.clodomir_basics <> true constr
-R8574:8578 LF.clodomir_basics <> false constr
-R8581:8581 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8587:8587 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8592:8592 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R8582:8586 LF.clodomir_basics <> false constr
-R8588:8591 LF.clodomir_basics <> true constr
-prf 8678:8696 <> map_list_eq_map_app
-R8732:8735 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R8736:8736 LF.clodomir_poly <> Y var
-R8731:8731 LF.clodomir_poly <> X var
-R8752:8755 LF.clodomir_poly <> list ind
-R8757:8757 LF.clodomir_poly <> X var
-R8781:8783 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8765:8767 LF.clodomir_poly <> map def
-R8774:8777 LF.clodomir_poly <> :::x_'++'_x not
-R8772:8773 LF.clodomir_poly <> l1 var
-R8778:8779 LF.clodomir_poly <> l2 var
-R8769:8769 LF.clodomir_poly <> f var
-R8792:8795 LF.clodomir_poly <> :::x_'++'_x not
-R8784:8786 LF.clodomir_poly <> map def
-R8790:8791 LF.clodomir_poly <> l1 var
-R8788:8788 LF.clodomir_poly <> f var
-R8796:8798 LF.clodomir_poly <> map def
-R8802:8803 LF.clodomir_poly <> l2 var
-R8800:8800 LF.clodomir_poly <> f var
-prf 8967:8973 <> map_rev
-R9003:9006 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R9007:9007 LF.clodomir_poly <> Y var
-R9002:9002 LF.clodomir_poly <> X var
-R9015:9018 LF.clodomir_poly <> list ind
-R9020:9020 LF.clodomir_poly <> X var
-R9039:9041 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R9026:9028 LF.clodomir_poly <> map def
-R9033:9035 LF.clodomir_poly <> rev def
-R9037:9037 LF.clodomir_poly <> l var
-R9030:9030 LF.clodomir_poly <> f var
-R9042:9044 LF.clodomir_poly <> rev def
-R9047:9049 LF.clodomir_poly <> map def
-R9053:9053 LF.clodomir_poly <> l var
-R9051:9051 LF.clodomir_poly <> f var
-R9194:9212 LF.clodomir_poly <> map_list_eq_map_app thm
-R9194:9212 LF.clodomir_poly <> map_list_eq_map_app thm
-R9194:9212 LF.clodomir_poly <> map_list_eq_map_app thm
-def 9298:9305 <> flat_map
-R9324:9327 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R9328:9331 LF.clodomir_poly <> list ind
-R9333:9333 LF.clodomir_poly <> Y var
-R9323:9323 LF.clodomir_poly <> X var
-R9340:9343 LF.clodomir_poly <> list ind
-R9345:9345 LF.clodomir_poly <> X var
-R9370:9373 LF.clodomir_poly <> list ind
-R9375:9375 LF.clodomir_poly <> Y var
-R9389:9389 LF.clodomir_poly <> l var
-R9400:9402 LF.clodomir_poly <> nil constr
-R9407:9409 LF.clodomir_poly <> nil constr
-R9416:9419 LF.clodomir_poly <> :::x_'::'_x not
-R9428:9431 LF.clodomir_poly <> :::x_'++'_x not
-R9425:9425 LF.clodomir_poly <> f var
-R9432:9439 LF.clodomir_poly <> flat_map def
-R9441:9441 LF.clodomir_poly <> f var
-def 9461:9474 <> test_flat_map1
-R9512:9514 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R9477:9484 LF.clodomir_poly <> flat_map def
-R9505:9505 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9507:9507 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9509:9509 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9511:9511 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9496:9496 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9498:9498 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9500:9500 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9502:9502 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9497:9497 LF.clodomir_poly <> n var
-R9499:9499 LF.clodomir_poly <> n var
-R9501:9501 LF.clodomir_poly <> n var
-R9515:9515 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9517:9518 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9520:9521 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9523:9524 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9526:9527 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9529:9530 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9532:9533 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9535:9536 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9538:9539 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R9541:9541 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-def 9643:9649 <> filter'
-R9668:9669 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R9670:9673 LF.clodomir_basics <> bool ind
-R9667:9667 LF.clodomir_poly <> X var
-R9679:9682 LF.clodomir_poly <> list ind
-R9684:9684 LF.clodomir_poly <> X var
-R9706:9709 LF.clodomir_poly <> list ind
-R9711:9711 LF.clodomir_poly <> X var
-R9725:9725 LF.clodomir_poly <> l var
-R9736:9737 LF.clodomir_poly <> :::'['_']' not
-R9746:9747 LF.clodomir_poly <> :::'['_']' not
-R9754:9757 LF.clodomir_poly <> :::x_'::'_x not
-R9766:9769 LF.clodomir_poly <> test var
-R9819:9825 LF.clodomir_poly <> filter' def
-R9829:9832 LF.clodomir_poly <> test var
-R9779:9783 LF.clodomir_poly <> :::x_'::'_x not
-R9800:9800 LF.clodomir_poly <> :::x_'::'_x not
-R9784:9790 LF.clodomir_poly <> filter' def
-R9794:9797 LF.clodomir_poly <> test var
-def 9853:9856 <> map'
-R9877:9880 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R9881:9881 LF.clodomir_poly <> Y var
-R9876:9876 LF.clodomir_poly <> X var
-R9889:9892 LF.clodomir_poly <> list ind
-R9894:9894 LF.clodomir_poly <> X var
-R9916:9919 LF.clodomir_poly <> list ind
-R9921:9921 LF.clodomir_poly <> Y var
-R9935:9935 LF.clodomir_poly <> l var
-R9946:9948 LF.clodomir_poly <> nil constr
-R9953:9955 LF.clodomir_poly <> nil constr
-R9962:9965 LF.clodomir_poly <> :::x_'::'_x not
-R9974:9977 LF.clodomir_poly <> :::x_'::'_x not
-R9971:9971 LF.clodomir_poly <> f var
-R9978:9981 LF.clodomir_poly <> map' def
-R9987:9987 LF.clodomir_poly <> f var
-def 10008:10011 <> fold
-R10030:10031 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R10033:10034 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R10035:10035 LF.clodomir_poly <> Y var
-R10032:10032 LF.clodomir_poly <> Y var
-R10029:10029 LF.clodomir_poly <> X var
-R10042:10045 LF.clodomir_poly <> list ind
-R10047:10047 LF.clodomir_poly <> X var
-R10054:10054 LF.clodomir_poly <> Y var
-R10084:10084 LF.clodomir_poly <> Y var
-R10097:10097 LF.clodomir_poly <> l var
-R10108:10110 LF.clodomir_poly <> nil constr
-R10115:10115 LF.clodomir_poly <> b var
-R10122:10125 LF.clodomir_poly <> :::x_'::'_x not
-R10131:10131 LF.clodomir_poly <> f var
-R10136:10139 LF.clodomir_poly <> fold def
-R10145:10145 LF.clodomir_poly <> b var
-R10141:10141 LF.clodomir_poly <> f var
-R10165:10168 LF.clodomir_poly <> fold def
-R10175:10175 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10177:10177 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10179:10179 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10181:10181 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10183:10183 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10170:10173 LF.clodomir_basics <> plus def
-def 10197:10209 <> fold_example1
-R10234:10236 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10213:10216 LF.clodomir_poly <> fold def
-R10223:10223 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10225:10225 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10227:10227 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10229:10229 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10231:10231 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10218:10221 LF.clodomir_basics <> mult def
-def 10286:10298 <> fold_example2
-R10339:10341 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10302:10305 LF.clodomir_poly <> fold def
-R10335:10338 LF.clodomir_basics <> true constr
-R10312:10312 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10317:10317 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10322:10322 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10328:10328 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10333:10333 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10313:10316 LF.clodomir_basics <> true constr
-R10318:10321 LF.clodomir_basics <> true constr
-R10323:10327 LF.clodomir_basics <> false constr
-R10329:10332 LF.clodomir_basics <> true constr
-R10307:10310 LF.clodomir_basics <> andb def
-R10342:10346 LF.clodomir_basics <> false constr
-def 10394:10406 <> fold_example3
-R10441:10443 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10410:10413 LF.clodomir_poly <> fold def
-R10439:10440 LF.clodomir_poly <> :::'['_']' not
-R10420:10420 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10424:10424 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10427:10427 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10433:10433 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10437:10437 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10421:10421 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10423:10423 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10425:10426 LF.clodomir_poly <> :::'['_']' not
-R10428:10428 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10430:10430 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10432:10432 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10434:10434 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10436:10436 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10415:10417 LF.clodomir_poly <> app def
-R10444:10444 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10446:10446 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10448:10448 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10450:10450 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R10452:10452 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-def 10562:10569 <> constfun
-R10585:10585 LF.clodomir_poly <> X var
-R10593:10594 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R10595:10595 LF.clodomir_poly <> X var
-R10590:10592 Coq.Init.Datatypes <> nat ind
-R10609:10611 Coq.Init.Datatypes <> nat ind
-R10617:10617 LF.clodomir_poly <> x var
-def 10632:10636 <> ftrue
-R10641:10648 LF.clodomir_poly <> constfun def
-R10650:10653 LF.clodomir_basics <> true constr
-def 10665:10681 <> constfun_example1
-R10692:10694 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10685:10689 LF.clodomir_poly <> ftrue def
-R10695:10698 LF.clodomir_basics <> true constr
-def 10737:10753 <> constfun_example2
-R10772:10774 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10758:10765 LF.clodomir_poly <> constfun def
-R10812:10815 LF.clodomir_basics <> plus def
-def 10830:10834 <> plus3
-R10839:10842 LF.clodomir_basics <> plus def
-R10854:10858 LF.clodomir_poly <> plus3 def
-def 10870:10879 <> test_plus3
-R10893:10895 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10886:10890 LF.clodomir_poly <> plus3 def
-def 10935:10945 <> test_plus3'
-R10969:10971 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10951:10960 LF.clodomir_poly <> doit3times def
-R10962:10966 LF.clodomir_poly <> plus3 def
-def 11011:11022 <> test_plus3''
-R11048:11050 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R11027:11036 LF.clodomir_poly <> doit3times def
-R11039:11042 LF.clodomir_basics <> plus def
-def 11134:11144 <> fold_length
-R11162:11165 LF.clodomir_poly <> list ind
-R11167:11167 LF.clodomir_poly <> X var
-R11172:11174 Coq.Init.Datatypes <> nat ind
-R11181:11184 LF.clodomir_poly <> fold def
-R11203:11203 LF.clodomir_poly <> l var
-R11198:11198 Coq.Init.Datatypes <> S constr
-R11200:11200 LF.clodomir_poly <> n var
-def 11217:11233 <> test_fold_length1
-R11256:11258 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R11237:11247 LF.clodomir_poly <> fold_length def
-R11249:11249 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R11251:11251 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R11253:11253 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R11255:11255 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-prf 11343:11361 <> fold_length_correct
-R11379:11382 LF.clodomir_poly <> list ind
-R11384:11384 LF.clodomir_poly <> X var
-R11403:11405 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R11390:11400 LF.clodomir_poly <> fold_length def
-R11402:11402 LF.clodomir_poly <> l var
-R11406:11411 LF.clodomir_poly <> length def
-R11413:11413 LF.clodomir_poly <> l var
-def 11607:11614 <> fold_map
-R11633:11636 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R11637:11637 LF.clodomir_poly <> Y var
-R11632:11632 LF.clodomir_poly <> X var
-R11644:11647 LF.clodomir_poly <> list ind
-R11649:11649 LF.clodomir_poly <> X var
-R11654:11657 LF.clodomir_poly <> list ind
-R11659:11659 LF.clodomir_poly <> Y var
-R11666:11669 LF.clodomir_poly <> fold def
-R11705:11706 LF.clodomir_poly <> :::'['_']' not
-R11703:11703 LF.clodomir_poly <> l var
-R11694:11697 LF.clodomir_poly <> :::x_'::'_x not
-R11688:11688 LF.clodomir_poly <> f var
-R11690:11693 LF.clodomir_poly <> next var
-R11698:11700 LF.clodomir_poly <> acc var
-prf 11718:11733 <> fold_map_correct
-R11763:11766 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R11767:11767 LF.clodomir_poly <> Y var
-R11762:11762 LF.clodomir_poly <> X var
-R11775:11778 LF.clodomir_poly <> list ind
-R11780:11780 LF.clodomir_poly <> X var
-R11798:11800 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R11786:11793 LF.clodomir_poly <> fold_map def
-R11797:11797 LF.clodomir_poly <> l var
-R11795:11795 LF.clodomir_poly <> f var
-R11801:11803 LF.clodomir_poly <> map def
-R11807:11807 LF.clodomir_poly <> l var
-R11805:11805 LF.clodomir_poly <> f var
-def 12014:12023 <> prod_curry
-R12052:12055 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12056:12056 LF.clodomir_poly <> Z var
-R12048:12050 LF.clodomir_poly <> ::type_scope:x_'*'_x not
-R12047:12047 LF.clodomir_poly <> X var
-R12051:12051 LF.clodomir_poly <> Y var
-R12064:12064 LF.clodomir_poly <> X var
-R12072:12072 LF.clodomir_poly <> Y var
-R12077:12077 LF.clodomir_poly <> Z var
-R12082:12082 LF.clodomir_poly <> f var
-R12084:12084 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R12086:12087 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R12089:12089 LF.clodomir_poly <> :::'('_x_','_x_')' not
-R12085:12085 LF.clodomir_poly <> x var
-R12088:12088 LF.clodomir_poly <> y var
-def 12104:12115 <> prod_uncurry
-R12140:12143 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12145:12148 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12149:12149 LF.clodomir_poly <> Z var
-R12144:12144 LF.clodomir_poly <> Y var
-R12139:12139 LF.clodomir_poly <> X var
-R12158:12160 LF.clodomir_poly <> ::type_scope:x_'*'_x not
-R12157:12157 LF.clodomir_poly <> X var
-R12161:12161 LF.clodomir_poly <> Y var
-R12166:12166 LF.clodomir_poly <> Z var
-R12171:12171 LF.clodomir_poly <> f var
-R12182:12184 LF.clodomir_poly <> snd def
-R12186:12186 LF.clodomir_poly <> p var
-R12174:12176 LF.clodomir_poly <> fst def
-R12178:12178 LF.clodomir_poly <> p var
-def 12199:12208 <> test_map1'
-R12231:12233 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R12211:12213 LF.clodomir_poly <> map def
-R12224:12224 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R12226:12226 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R12228:12228 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R12230:12230 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R12216:12219 LF.clodomir_basics <> plus def
-R12234:12234 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R12236:12236 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R12238:12238 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R12240:12240 LF.clodomir_poly <> :::'['_x_';'_'..'_';'_x_']' not
-R12287:12296 LF.clodomir_poly <> prod_curry def
-R12307:12318 LF.clodomir_poly <> prod_uncurry def
-prf 12330:12342 <> uncurry_curry
-R12374:12377 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12379:12382 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12383:12383 LF.clodomir_poly <> Z var
-R12378:12378 LF.clodomir_poly <> Y var
-R12373:12373 LF.clodomir_poly <> X var
-R12424:12426 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R12393:12402 LF.clodomir_poly <> prod_curry def
-R12423:12423 LF.clodomir_poly <> y var
-R12421:12421 LF.clodomir_poly <> x var
-R12405:12416 LF.clodomir_poly <> prod_uncurry def
-R12418:12418 LF.clodomir_poly <> f var
-R12427:12427 LF.clodomir_poly <> f var
-R12431:12431 LF.clodomir_poly <> y var
-R12429:12429 LF.clodomir_poly <> x var
-prf 12470:12482 <> curry_uncurry
-R12513:12513 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12519:12523 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12524:12524 LF.clodomir_poly <> Z var
-R12515:12517 LF.clodomir_poly <> ::type_scope:x_'*'_x not
-R12514:12514 LF.clodomir_poly <> X var
-R12518:12518 LF.clodomir_poly <> Y var
-R12533:12535 LF.clodomir_poly <> ::type_scope:x_'*'_x not
-R12532:12532 LF.clodomir_poly <> X var
-R12536:12536 LF.clodomir_poly <> Y var
-R12571:12573 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R12542:12553 LF.clodomir_poly <> prod_uncurry def
-R12570:12570 LF.clodomir_poly <> p var
-R12556:12565 LF.clodomir_poly <> prod_curry def
-R12567:12567 LF.clodomir_poly <> f var
-R12574:12574 LF.clodomir_poly <> f var
-R12576:12576 LF.clodomir_poly <> p var
-mod 12713:12718 <> Church
-def 12733:12736 Church cnat
-R12758:12758 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12765:12769 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12771:12774 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12775:12775 LF.clodomir_poly <> X var
-R12770:12770 LF.clodomir_poly <> X var
-R12760:12763 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12764:12764 LF.clodomir_poly <> X var
-R12759:12759 LF.clodomir_poly <> X var
-def 12790:12793 Church zero
-R12797:12800 LF.clodomir_poly Church cnat def
-R12828:12831 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12832:12832 LF.clodomir_poly <> X var
-R12827:12827 LF.clodomir_poly <> X var
-R12840:12840 LF.clodomir_poly <> X var
-R12846:12846 LF.clodomir_poly <> x var
-def 12861:12863 Church one
-R12867:12870 LF.clodomir_poly Church cnat def
-R12898:12901 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12902:12902 LF.clodomir_poly <> X var
-R12897:12897 LF.clodomir_poly <> X var
-R12910:12910 LF.clodomir_poly <> X var
-R12916:12916 LF.clodomir_poly <> f var
-R12918:12918 LF.clodomir_poly <> x var
-def 12933:12935 Church two
-R12939:12942 LF.clodomir_poly Church cnat def
-R12970:12973 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R12974:12974 LF.clodomir_poly <> X var
-R12969:12969 LF.clodomir_poly <> X var
-R12982:12982 LF.clodomir_poly <> X var
-R12988:12988 LF.clodomir_poly <> f var
-R12991:12991 LF.clodomir_poly <> f var
-R12993:12993 LF.clodomir_poly <> x var
-def 13009:13013 Church three
-R13017:13020 LF.clodomir_poly Church cnat def
-R13026:13035 LF.clodomir_poly <> doit3times def
-def 13099:13102 Church succ
-R13109:13112 LF.clodomir_poly Church cnat def
-R13117:13120 LF.clodomir_poly Church cnat def
-R13148:13151 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R13152:13152 LF.clodomir_poly <> X var
-R13147:13147 LF.clodomir_poly <> X var
-R13160:13160 LF.clodomir_poly <> X var
-R13166:13166 LF.clodomir_poly <> f var
-R13169:13169 LF.clodomir_poly <> n var
-R13175:13175 LF.clodomir_poly <> x var
-R13173:13173 LF.clodomir_poly <> f var
-R13171:13171 LF.clodomir_poly <> X var
-def 13189:13194 Church succ_1
-R13207:13209 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R13198:13201 LF.clodomir_poly Church succ def
-R13203:13206 LF.clodomir_poly Church zero def
-R13210:13212 LF.clodomir_poly Church one def
-def 13251:13256 Church succ_2
-R13268:13270 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R13260:13263 LF.clodomir_poly Church succ def
-R13265:13267 LF.clodomir_poly Church one def
-R13271:13273 LF.clodomir_poly Church two def
-def 13312:13317 Church succ_3
-R13329:13331 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R13321:13324 LF.clodomir_poly Church succ def
-R13326:13328 LF.clodomir_poly Church two def
-R13332:13336 LF.clodomir_poly Church three def
-def 13375:13380 Church succ_4
-R13399:13401 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R13384:13387 LF.clodomir_poly Church succ def
-R13390:13393 LF.clodomir_poly Church succ def
-R13395:13397 LF.clodomir_poly Church two def
-R13402:13405 LF.clodomir_poly Church succ def
-R13407:13411 LF.clodomir_poly Church three def
-def 13502:13505 Church plus
-R13514:13517 LF.clodomir_poly Church cnat def
-R13522:13525 LF.clodomir_poly Church cnat def
-R13553:13556 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R13557:13557 LF.clodomir_poly <> X var
-R13552:13552 LF.clodomir_poly <> X var
-R13565:13565 LF.clodomir_poly <> X var
-R13571:13571 LF.clodomir_poly <> n var
-R13578:13578 LF.clodomir_poly <> m var
-R13584:13584 LF.clodomir_poly <> x var
-R13582:13582 LF.clodomir_poly <> f var
-R13580:13580 LF.clodomir_poly <> X var
-R13575:13575 LF.clodomir_poly <> f var
-R13573:13573 LF.clodomir_poly <> X var
-def 13597:13602 Church plus_1
-R13619:13621 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R13606:13609 LF.clodomir_poly Church plus def
-R13616:13618 LF.clodomir_poly Church one def
-R13611:13614 LF.clodomir_poly Church zero def
-R13622:13624 LF.clodomir_poly Church one def
-def 13663:13668 Church plus_2
-R13686:13688 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R13672:13675 LF.clodomir_poly Church plus def
-R13681:13685 LF.clodomir_poly Church three def
-R13677:13679 LF.clodomir_poly Church two def
-R13689:13692 LF.clodomir_poly Church plus def
-R13700:13702 LF.clodomir_poly Church two def
-R13694:13698 LF.clodomir_poly Church three def
-def 13741:13746 Church plus_3
-R13775:13777 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R13750:13753 LF.clodomir_poly Church plus def
-R13770:13774 LF.clodomir_poly Church three def
-R13756:13759 LF.clodomir_poly Church plus def
-R13765:13767 LF.clodomir_poly Church two def
-R13761:13763 LF.clodomir_poly Church two def
-R13778:13781 LF.clodomir_poly Church plus def
-R13788:13791 LF.clodomir_poly Church plus def
-R13799:13803 LF.clodomir_poly Church three def
-R13793:13797 LF.clodomir_poly Church three def
-R13783:13785 LF.clodomir_poly Church one def
-def 13896:13899 Church mult
-R13908:13911 LF.clodomir_poly Church cnat def
-R13916:13919 LF.clodomir_poly Church cnat def
-R13947:13950 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R13951:13951 LF.clodomir_poly <> X var
-R13946:13946 LF.clodomir_poly <> X var
-R13959:13959 LF.clodomir_poly <> X var
-R13965:13965 LF.clodomir_poly <> n var
-R13977:13977 LF.clodomir_poly <> x var
-R13970:13970 LF.clodomir_poly <> m var
-R13974:13974 LF.clodomir_poly <> f var
-R13972:13972 LF.clodomir_poly <> X var
-R13967:13967 LF.clodomir_poly <> X var
-def 13989:13994 Church mult_1
-R14010:14012 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R13998:14001 LF.clodomir_poly Church mult def
-R14007:14009 LF.clodomir_poly Church one def
-R14003:14005 LF.clodomir_poly Church one def
-R14013:14015 LF.clodomir_poly Church one def
-def 14054:14059 Church mult_2
-R14091:14093 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R14063:14066 LF.clodomir_poly Church mult def
-R14074:14077 LF.clodomir_poly Church plus def
-R14085:14089 LF.clodomir_poly Church three def
-R14079:14083 LF.clodomir_poly Church three def
-R14068:14071 LF.clodomir_poly Church zero def
-R14094:14097 LF.clodomir_poly Church zero def
-def 14136:14141 Church mult_3
-R14159:14161 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R14145:14148 LF.clodomir_poly Church mult def
-R14154:14158 LF.clodomir_poly Church three def
-R14150:14152 LF.clodomir_poly Church two def
-R14162:14165 LF.clodomir_poly Church plus def
-R14173:14177 LF.clodomir_poly Church three def
-R14167:14171 LF.clodomir_poly Church three def
-R14687:14692 LF.clodomir_poly Church <> mod
+R139:152 LF.clodomir_lists <> <> lib
+ind 195:198 <> list
+constr 225:227 <> nil
+constr 242:245 <> cons
+R231:234 LF.clodomir_poly <> list ind
+R236:236 LF.clodomir_poly <> X var
+R250:253 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R260:263 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R264:267 LF.clodomir_poly <> list ind
+R269:269 LF.clodomir_poly <> X var
+R254:257 LF.clodomir_poly <> list ind
+R259:259 LF.clodomir_poly <> X var
+R249:249 LF.clodomir_poly <> X var
+def 307:312 <> repeat
+R330:330 LF.clodomir_poly <> X var
+R342:344 Coq.Init.Datatypes <> nat ind
+R349:352 LF.clodomir_poly <> list ind
+R354:354 LF.clodomir_poly <> X var
+R367:371 LF.clodomir_poly <> count var
+R387:389 LF.clodomir_poly <> nil constr
+R391:391 LF.clodomir_poly <> X var
+R397:397 Coq.Init.Datatypes <> S constr
+R409:412 LF.clodomir_poly <> cons constr
+R419:424 LF.clodomir_poly <> repeat def
+R428:428 LF.clodomir_poly <> x var
+R426:426 LF.clodomir_poly <> X var
+R416:416 LF.clodomir_poly <> x var
+R414:414 LF.clodomir_poly <> X var
+def 454:465 <> test_repeat1
+R483:485 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R469:474 LF.clodomir_poly <> repeat def
+R476:478 Coq.Init.Datatypes <> nat ind
+R486:489 LF.clodomir_poly <> cons constr
+R498:501 LF.clodomir_poly <> cons constr
+R510:512 LF.clodomir_poly <> nil constr
+R514:516 Coq.Init.Datatypes <> nat ind
+R503:505 Coq.Init.Datatypes <> nat ind
+R491:493 Coq.Init.Datatypes <> nat ind
+def 566:577 <> test_repeat2
+R600:602 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R581:586 LF.clodomir_poly <> repeat def
+R593:597 LF.clodomir_basics <> false constr
+R588:591 LF.clodomir_basics <> bool ind
+R603:606 LF.clodomir_poly <> cons constr
+R620:622 LF.clodomir_poly <> nil constr
+R624:627 LF.clodomir_basics <> bool ind
+R613:617 LF.clodomir_basics <> false constr
+R608:611 LF.clodomir_basics <> bool ind
+ind 722:727 <> mumble
+constr 743:743 <> a
+constr 758:758 <> b
+constr 790:790 <> c
+R747:752 LF.clodomir_poly <> mumble ind
+R768:771 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R775:778 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R779:784 LF.clodomir_poly <> mumble ind
+R772:774 Coq.Init.Datatypes <> nat ind
+R762:767 LF.clodomir_poly <> mumble ind
+R794:799 LF.clodomir_poly <> mumble ind
+ind 813:819 <> grumble
+constr 846:846 <> d
+constr 874:874 <> e
+R856:859 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R860:866 LF.clodomir_poly <> grumble ind
+R868:868 LF.clodomir_poly <> X var
+R850:855 LF.clodomir_poly <> mumble ind
+R879:882 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R883:889 LF.clodomir_poly <> grumble ind
+R891:891 LF.clodomir_poly <> X var
+R878:878 LF.clodomir_poly <> X var
+R926:926 LF.clodomir_poly <> d constr
+R936:936 LF.clodomir_poly <> b constr
+R938:938 LF.clodomir_poly <> a constr
+R928:933 LF.clodomir_poly <> mumble ind
+R951:951 LF.clodomir_poly <> d constr
+R959:959 LF.clodomir_poly <> b constr
+R961:961 LF.clodomir_poly <> a constr
+R953:956 LF.clodomir_basics <> bool ind
+R974:974 LF.clodomir_poly <> e constr
+R981:984 LF.clodomir_basics <> true constr
+R976:979 LF.clodomir_basics <> bool ind
+R994:994 LF.clodomir_poly <> e constr
+R1004:1004 LF.clodomir_poly <> b constr
+R1006:1006 LF.clodomir_poly <> c constr
+R996:1001 LF.clodomir_poly <> mumble ind
+R1049:1049 LF.clodomir_poly <> c constr
+def 1087:1093 <> repeat'
+R1107:1110 LF.clodomir_poly <> list ind
+R1112:1112 LF.clodomir_poly <> X var
+R1125:1129 LF.clodomir_poly <> count var
+R1145:1147 LF.clodomir_poly <> nil constr
+R1149:1149 LF.clodomir_poly <> X var
+R1155:1155 Coq.Init.Datatypes <> S constr
+R1167:1170 LF.clodomir_poly <> cons constr
+R1177:1183 LF.clodomir_poly <> repeat' def
+R1187:1187 LF.clodomir_poly <> x var
+R1185:1185 LF.clodomir_poly <> X var
+R1174:1174 LF.clodomir_poly <> x var
+R1172:1172 LF.clodomir_poly <> X var
+def 1213:1225 <> test_repeat'1
+R1244:1246 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1229:1235 LF.clodomir_poly <> repeat' def
+R1237:1239 Coq.Init.Datatypes <> nat ind
+R1247:1250 LF.clodomir_poly <> cons constr
+R1259:1262 LF.clodomir_poly <> cons constr
+R1271:1273 LF.clodomir_poly <> nil constr
+R1275:1277 Coq.Init.Datatypes <> nat ind
+R1264:1266 Coq.Init.Datatypes <> nat ind
+R1252:1254 Coq.Init.Datatypes <> nat ind
+def 1327:1339 <> test_repeat'2
+R1363:1365 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1343:1349 LF.clodomir_poly <> repeat' def
+R1356:1360 LF.clodomir_basics <> false constr
+R1351:1354 LF.clodomir_basics <> bool ind
+R1366:1369 LF.clodomir_poly <> cons constr
+R1383:1385 LF.clodomir_poly <> nil constr
+R1387:1390 LF.clodomir_basics <> bool ind
+R1376:1380 LF.clodomir_basics <> false constr
+R1371:1374 LF.clodomir_basics <> bool ind
+def 1440:1447 <> repeat''
+R1461:1464 LF.clodomir_poly <> list ind
+R1466:1466 LF.clodomir_poly <> X var
+R1479:1483 LF.clodomir_poly <> count var
+R1499:1501 LF.clodomir_poly <> nil constr
+R1509:1509 Coq.Init.Datatypes <> S constr
+R1521:1524 LF.clodomir_poly <> cons constr
+R1531:1538 LF.clodomir_poly <> repeat'' def
+R1542:1542 LF.clodomir_poly <> x var
+R1528:1528 LF.clodomir_poly <> x var
+def 1568:1581 <> test_repeat''1
+R1601:1603 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1585:1592 LF.clodomir_poly <> repeat'' def
+R1594:1596 Coq.Init.Datatypes <> nat ind
+R1604:1607 LF.clodomir_poly <> cons constr
+R1616:1619 LF.clodomir_poly <> cons constr
+R1628:1630 LF.clodomir_poly <> nil constr
+R1632:1634 Coq.Init.Datatypes <> nat ind
+R1621:1623 Coq.Init.Datatypes <> nat ind
+R1609:1611 Coq.Init.Datatypes <> nat ind
+def 1684:1697 <> test_repeat''2
+R1722:1724 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1701:1708 LF.clodomir_poly <> repeat'' def
+R1715:1719 LF.clodomir_basics <> false constr
+R1710:1713 LF.clodomir_basics <> bool ind
+R1725:1728 LF.clodomir_poly <> cons constr
+R1742:1744 LF.clodomir_poly <> nil constr
+R1746:1749 LF.clodomir_basics <> bool ind
+R1735:1739 LF.clodomir_basics <> false constr
+R1730:1733 LF.clodomir_basics <> bool ind
+def 1822:1828 <> list123
+R1833:1836 LF.clodomir_poly <> cons constr
+R1845:1848 LF.clodomir_poly <> cons constr
+R1857:1860 LF.clodomir_poly <> cons constr
+R1869:1871 LF.clodomir_poly <> nil constr
+R1873:1875 Coq.Init.Datatypes <> nat ind
+R1862:1864 Coq.Init.Datatypes <> nat ind
+R1850:1852 Coq.Init.Datatypes <> nat ind
+R1838:1840 Coq.Init.Datatypes <> nat ind
+R1890:1896 LF.clodomir_poly <> list123 def
+def 1911:1918 <> list123'
+R1923:1926 LF.clodomir_poly <> cons constr
+R1933:1936 LF.clodomir_poly <> cons constr
+R1943:1946 LF.clodomir_poly <> cons constr
+R1953:1955 LF.clodomir_poly <> nil constr
+R1972:1979 LF.clodomir_poly <> list123' def
+R2012:2014 LF.clodomir_poly <> nil constr
+R2012:2014 LF.clodomir_poly <> nil constr
+R2032:2035 LF.clodomir_poly <> cons constr
+R2032:2035 LF.clodomir_poly <> cons constr
+R2057:2062 LF.clodomir_poly <> repeat def
+R2057:2062 LF.clodomir_poly <> repeat def
+def 2089:2097 <> list123''
+R2102:2105 LF.clodomir_poly <> cons constr
+R2110:2113 LF.clodomir_poly <> cons constr
+R2118:2121 LF.clodomir_poly <> cons constr
+R2125:2127 LF.clodomir_poly <> nil constr
+R2141:2149 LF.clodomir_poly <> list123'' def
+def 2187:2195 <> repeat'''
+R2213:2213 LF.clodomir_poly <> X var
+R2225:2227 Coq.Init.Datatypes <> nat ind
+R2232:2235 LF.clodomir_poly <> list ind
+R2237:2237 LF.clodomir_poly <> X var
+R2250:2254 LF.clodomir_poly <> count var
+R2270:2272 LF.clodomir_poly <> nil constr
+R2278:2278 Coq.Init.Datatypes <> S constr
+R2290:2293 LF.clodomir_poly <> cons constr
+R2298:2306 LF.clodomir_poly <> repeat''' def
+R2308:2308 LF.clodomir_poly <> x var
+R2295:2295 LF.clodomir_poly <> x var
