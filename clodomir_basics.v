@@ -267,6 +267,15 @@ Proof.
   reflexivity.
 Qed.
 
+(** Naturais *)
+
+Definition minustwo (x : nat) : nat :=
+  match x with
+    | O => O
+    | S O => O
+    | S (S n') => n'
+  end.
+
 (** Par *)
 
 Fixpoint evenb (x: nat) : bool :=

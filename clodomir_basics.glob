@@ -1,4 +1,4 @@
-DIGEST de1afa965518d8838ae20d8adaeea9dd
+DIGEST b7d49a64f0b22817f17d9225d63a5129
 FLF.clodomir_basics
 ind 91:94 <> bool
 constr 110:113 <> true
@@ -387,517 +387,528 @@ R4226:4230 LF.clodomir_basics <> false constr
 R4221:4224 LF.clodomir_basics <> true constr
 R4216:4219 LF.clodomir_basics <> true constr
 R4235:4239 LF.clodomir_basics <> false constr
-def 4291:4295 <> evenb
-R4301:4303 Coq.Init.Datatypes <> nat ind
-R4308:4311 LF.clodomir_basics <> bool ind
-R4324:4324 LF.clodomir_basics <> x var
-R4337:4337 Coq.Init.Datatypes <> O constr
-R4342:4345 LF.clodomir_basics <> true constr
-R4353:4353 Coq.Init.Datatypes <> S constr
-R4355:4355 Coq.Init.Datatypes <> O constr
-R4360:4364 LF.clodomir_basics <> false constr
-R4372:4372 Coq.Init.Datatypes <> S constr
+def 4298:4305 <> minustwo
+R4312:4314 Coq.Init.Datatypes <> nat ind
+R4319:4321 Coq.Init.Datatypes <> nat ind
+R4334:4334 LF.clodomir_basics <> x var
+R4347:4347 Coq.Init.Datatypes <> O constr
+R4352:4352 Coq.Init.Datatypes <> O constr
+R4360:4360 Coq.Init.Datatypes <> S constr
+R4362:4362 Coq.Init.Datatypes <> O constr
+R4367:4367 Coq.Init.Datatypes <> O constr
 R4375:4375 Coq.Init.Datatypes <> S constr
-R4384:4388 LF.clodomir_basics <> evenb def
-R4410:4414 LF.clodomir_basics <> evenb def
-def 4429:4439 <> test_evenb1
-R4443:4443 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4451:4454 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4444:4448 LF.clodomir_basics <> evenb def
-R4455:4458 LF.clodomir_basics <> true constr
-R4507:4511 LF.clodomir_basics <> evenb def
-def 4526:4536 <> test_evenb2
-R4540:4540 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4548:4551 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4541:4545 LF.clodomir_basics <> evenb def
-R4552:4556 LF.clodomir_basics <> false constr
-def 4620:4623 <> oddb
-R4629:4631 Coq.Init.Datatypes <> nat ind
-R4636:4639 LF.clodomir_basics <> bool ind
-R4652:4652 LF.clodomir_basics <> x var
-R4665:4665 Coq.Init.Datatypes <> O constr
-R4670:4674 LF.clodomir_basics <> false constr
-R4682:4682 Coq.Init.Datatypes <> S constr
-R4684:4684 Coq.Init.Datatypes <> O constr
-R4689:4692 LF.clodomir_basics <> true constr
-R4700:4700 Coq.Init.Datatypes <> S constr
-R4703:4703 Coq.Init.Datatypes <> S constr
-R4712:4715 LF.clodomir_basics <> oddb def
-R4737:4740 LF.clodomir_basics <> oddb def
-def 4755:4764 <> test_oddb1
-R4768:4768 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4775:4778 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4769:4772 LF.clodomir_basics <> oddb def
-R4779:4782 LF.clodomir_basics <> true constr
-R4831:4834 LF.clodomir_basics <> oddb def
-def 4849:4858 <> test_oddb2
-R4862:4862 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4869:4872 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R4863:4866 LF.clodomir_basics <> oddb def
-R4873:4877 LF.clodomir_basics <> false constr
-def 4943:4946 <> plus
-R4955:4957 Coq.Init.Datatypes <> nat ind
-R4962:4964 Coq.Init.Datatypes <> nat ind
-R4977:4977 LF.clodomir_basics <> x var
-R4990:4990 Coq.Init.Datatypes <> O constr
-R4995:4995 LF.clodomir_basics <> y var
-R5003:5003 Coq.Init.Datatypes <> S constr
-R5011:5011 Coq.Init.Datatypes <> S constr
-R5014:5017 LF.clodomir_basics <> plus def
-R5022:5022 LF.clodomir_basics <> y var
-R5054:5057 LF.clodomir_basics <> plus def
-not 5042:5042 <> ::nat_scope:x_'+'_x
-R5121:5124 LF.clodomir_basics <> plus def
-def 5141:5150 <> test_plus1
-R5154:5154 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5163:5166 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5155:5158 LF.clodomir_basics <> plus def
-def 5236:5240 <> minus
-R5247:5249 Coq.Init.Datatypes <> nat ind
-R5254:5256 Coq.Init.Datatypes <> nat ind
-R5272:5272 LF.clodomir_basics <> y var
-R5269:5269 LF.clodomir_basics <> x var
-R5285:5285 Coq.Init.Datatypes <> O constr
-R5293:5293 Coq.Init.Datatypes <> O constr
-R5301:5301 Coq.Init.Datatypes <> S constr
-R5307:5307 Coq.Init.Datatypes <> O constr
-R5312:5312 LF.clodomir_basics <> x var
-R5320:5320 Coq.Init.Datatypes <> S constr
-R5326:5326 Coq.Init.Datatypes <> S constr
-R5334:5338 LF.clodomir_basics <> minus def
-R5375:5379 LF.clodomir_basics <> minus def
-not 5363:5363 <> ::nat_scope:x_'-'_x
-R5443:5447 LF.clodomir_basics <> minus def
-def 5464:5474 <> test_minus1
-R5478:5478 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5488:5491 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5479:5483 LF.clodomir_basics <> minus def
-def 5565:5568 <> mult
-R5577:5579 Coq.Init.Datatypes <> nat ind
-R5584:5586 Coq.Init.Datatypes <> nat ind
-R5599:5599 LF.clodomir_basics <> x var
-R5612:5612 Coq.Init.Datatypes <> O constr
-R5617:5617 Coq.Init.Datatypes <> O constr
-R5625:5625 Coq.Init.Datatypes <> S constr
-R5633:5636 LF.clodomir_basics <> plus def
-R5641:5644 LF.clodomir_basics <> mult def
-R5649:5649 LF.clodomir_basics <> y var
-R5638:5638 LF.clodomir_basics <> y var
-R5681:5684 LF.clodomir_basics <> mult def
-not 5669:5669 <> ::nat_scope:x_'*'_x
-R5748:5751 LF.clodomir_basics <> mult def
-def 5768:5777 <> test_mult1
-R5780:5780 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5789:5792 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R5781:5784 LF.clodomir_basics <> mult def
-def 5865:5867 <> exp
-R5876:5878 Coq.Init.Datatypes <> nat ind
-R5883:5885 Coq.Init.Datatypes <> nat ind
-R5898:5898 LF.clodomir_basics <> p var
-R5911:5911 Coq.Init.Datatypes <> O constr
-R5916:5916 Coq.Init.Datatypes <> S constr
-R5918:5918 Coq.Init.Datatypes <> O constr
-R5926:5926 Coq.Init.Datatypes <> S constr
-R5934:5937 LF.clodomir_basics <> mult def
-R5942:5944 LF.clodomir_basics <> exp def
-R5946:5946 LF.clodomir_basics <> b var
-R5939:5939 LF.clodomir_basics <> b var
-R5981:5983 LF.clodomir_basics <> exp def
-not 5969:5969 <> :::x_'^'_x
-R6001:6003 LF.clodomir_basics <> exp def
-def 6020:6028 <> test_exp1
-R6032:6032 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6040:6043 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6033:6035 LF.clodomir_basics <> exp def
-def 6140:6148 <> factorial
-R6154:6156 Coq.Init.Datatypes <> nat ind
-R6161:6163 Coq.Init.Datatypes <> nat ind
-R6176:6176 LF.clodomir_basics <> x var
-R6189:6189 Coq.Init.Datatypes <> O constr
-R6202:6202 Coq.Init.Datatypes <> S constr
-R6211:6214 LF.clodomir_basics <> ::nat_scope:x_'*'_x not
-R6227:6227 LF.clodomir_basics <> ::nat_scope:x_'*'_x not
-R6210:6210 LF.clodomir_basics <> x var
-R6215:6223 LF.clodomir_basics <> factorial def
-R6246:6254 LF.clodomir_basics <> factorial def
-def 6269:6283 <> test_factorial1
-R6286:6286 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6298:6301 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6287:6295 LF.clodomir_basics <> factorial def
-R6351:6359 LF.clodomir_basics <> factorial def
-def 6374:6388 <> test_factorial2
-R6391:6391 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6403:6407 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6418:6418 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6392:6400 LF.clodomir_basics <> factorial def
-R6408:6411 LF.clodomir_basics <> mult def
-def 6496:6498 <> eqb
-R6507:6509 Coq.Init.Datatypes <> nat ind
-R6514:6517 LF.clodomir_basics <> bool ind
-R6530:6530 LF.clodomir_basics <> x var
-R6543:6543 Coq.Init.Datatypes <> O constr
-R6554:6554 LF.clodomir_basics <> y var
-R6569:6569 Coq.Init.Datatypes <> O constr
-R6574:6577 LF.clodomir_basics <> true constr
-R6587:6587 Coq.Init.Datatypes <> S constr
-R6595:6599 LF.clodomir_basics <> false constr
-R6615:6615 Coq.Init.Datatypes <> S constr
-R6629:6629 LF.clodomir_basics <> y var
-R6644:6644 Coq.Init.Datatypes <> O constr
-R6649:6653 LF.clodomir_basics <> false constr
-R6663:6663 Coq.Init.Datatypes <> S constr
-R6671:6673 LF.clodomir_basics <> eqb def
-R6718:6720 LF.clodomir_basics <> eqb def
-not 6706:6706 <> ::nat_scope:x_'='_x
-R6764:6766 LF.clodomir_basics <> eqb def
-def 6783:6791 <> test_eqb1
-R6795:6795 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6803:6806 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6796:6798 LF.clodomir_basics <> eqb def
-R6807:6810 LF.clodomir_basics <> true constr
-R6859:6861 LF.clodomir_basics <> eqb def
-def 6878:6886 <> test_eqb2
-R6890:6890 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6898:6901 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R6891:6893 LF.clodomir_basics <> eqb def
-R6902:6906 LF.clodomir_basics <> false constr
-def 6993:6995 <> leb
-R7004:7006 Coq.Init.Datatypes <> nat ind
-R7011:7014 LF.clodomir_basics <> bool ind
-R7027:7027 LF.clodomir_basics <> x var
-R7040:7040 Coq.Init.Datatypes <> O constr
-R7045:7048 LF.clodomir_basics <> true constr
-R7056:7056 Coq.Init.Datatypes <> S constr
-R7070:7070 LF.clodomir_basics <> y var
-R7085:7085 Coq.Init.Datatypes <> O constr
-R7090:7094 LF.clodomir_basics <> false constr
-R7104:7104 Coq.Init.Datatypes <> S constr
-R7112:7114 LF.clodomir_basics <> leb def
-R7162:7164 LF.clodomir_basics <> leb def
-not 7149:7149 <> ::nat_scope:x_'<='_x
-R7208:7210 LF.clodomir_basics <> leb def
-def 7227:7235 <> test_leb1
-R7239:7239 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7247:7250 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4378:4378 Coq.Init.Datatypes <> S constr
+def 4419:4423 <> evenb
+R4429:4431 Coq.Init.Datatypes <> nat ind
+R4436:4439 LF.clodomir_basics <> bool ind
+R4452:4452 LF.clodomir_basics <> x var
+R4465:4465 Coq.Init.Datatypes <> O constr
+R4470:4473 LF.clodomir_basics <> true constr
+R4481:4481 Coq.Init.Datatypes <> S constr
+R4483:4483 Coq.Init.Datatypes <> O constr
+R4488:4492 LF.clodomir_basics <> false constr
+R4500:4500 Coq.Init.Datatypes <> S constr
+R4503:4503 Coq.Init.Datatypes <> S constr
+R4512:4516 LF.clodomir_basics <> evenb def
+R4538:4542 LF.clodomir_basics <> evenb def
+def 4557:4567 <> test_evenb1
+R4571:4571 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4579:4582 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4572:4576 LF.clodomir_basics <> evenb def
+R4583:4586 LF.clodomir_basics <> true constr
+R4635:4639 LF.clodomir_basics <> evenb def
+def 4654:4664 <> test_evenb2
+R4668:4668 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4676:4679 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4669:4673 LF.clodomir_basics <> evenb def
+R4680:4684 LF.clodomir_basics <> false constr
+def 4748:4751 <> oddb
+R4757:4759 Coq.Init.Datatypes <> nat ind
+R4764:4767 LF.clodomir_basics <> bool ind
+R4780:4780 LF.clodomir_basics <> x var
+R4793:4793 Coq.Init.Datatypes <> O constr
+R4798:4802 LF.clodomir_basics <> false constr
+R4810:4810 Coq.Init.Datatypes <> S constr
+R4812:4812 Coq.Init.Datatypes <> O constr
+R4817:4820 LF.clodomir_basics <> true constr
+R4828:4828 Coq.Init.Datatypes <> S constr
+R4831:4831 Coq.Init.Datatypes <> S constr
+R4840:4843 LF.clodomir_basics <> oddb def
+R4865:4868 LF.clodomir_basics <> oddb def
+def 4883:4892 <> test_oddb1
+R4896:4896 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4903:4906 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4897:4900 LF.clodomir_basics <> oddb def
+R4907:4910 LF.clodomir_basics <> true constr
+R4959:4962 LF.clodomir_basics <> oddb def
+def 4977:4986 <> test_oddb2
+R4990:4990 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4997:5000 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4991:4994 LF.clodomir_basics <> oddb def
+R5001:5005 LF.clodomir_basics <> false constr
+def 5071:5074 <> plus
+R5083:5085 Coq.Init.Datatypes <> nat ind
+R5090:5092 Coq.Init.Datatypes <> nat ind
+R5105:5105 LF.clodomir_basics <> x var
+R5118:5118 Coq.Init.Datatypes <> O constr
+R5123:5123 LF.clodomir_basics <> y var
+R5131:5131 Coq.Init.Datatypes <> S constr
+R5139:5139 Coq.Init.Datatypes <> S constr
+R5142:5145 LF.clodomir_basics <> plus def
+R5150:5150 LF.clodomir_basics <> y var
+R5182:5185 LF.clodomir_basics <> plus def
+not 5170:5170 <> ::nat_scope:x_'+'_x
+R5249:5252 LF.clodomir_basics <> plus def
+def 5269:5278 <> test_plus1
+R5282:5282 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5291:5294 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5283:5286 LF.clodomir_basics <> plus def
+def 5364:5368 <> minus
+R5375:5377 Coq.Init.Datatypes <> nat ind
+R5382:5384 Coq.Init.Datatypes <> nat ind
+R5400:5400 LF.clodomir_basics <> y var
+R5397:5397 LF.clodomir_basics <> x var
+R5413:5413 Coq.Init.Datatypes <> O constr
+R5421:5421 Coq.Init.Datatypes <> O constr
+R5429:5429 Coq.Init.Datatypes <> S constr
+R5435:5435 Coq.Init.Datatypes <> O constr
+R5440:5440 LF.clodomir_basics <> x var
+R5448:5448 Coq.Init.Datatypes <> S constr
+R5454:5454 Coq.Init.Datatypes <> S constr
+R5462:5466 LF.clodomir_basics <> minus def
+R5503:5507 LF.clodomir_basics <> minus def
+not 5491:5491 <> ::nat_scope:x_'-'_x
+R5571:5575 LF.clodomir_basics <> minus def
+def 5592:5602 <> test_minus1
+R5606:5606 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5616:5619 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5607:5611 LF.clodomir_basics <> minus def
+def 5693:5696 <> mult
+R5705:5707 Coq.Init.Datatypes <> nat ind
+R5712:5714 Coq.Init.Datatypes <> nat ind
+R5727:5727 LF.clodomir_basics <> x var
+R5740:5740 Coq.Init.Datatypes <> O constr
+R5745:5745 Coq.Init.Datatypes <> O constr
+R5753:5753 Coq.Init.Datatypes <> S constr
+R5761:5764 LF.clodomir_basics <> plus def
+R5769:5772 LF.clodomir_basics <> mult def
+R5777:5777 LF.clodomir_basics <> y var
+R5766:5766 LF.clodomir_basics <> y var
+R5809:5812 LF.clodomir_basics <> mult def
+not 5797:5797 <> ::nat_scope:x_'*'_x
+R5876:5879 LF.clodomir_basics <> mult def
+def 5896:5905 <> test_mult1
+R5908:5908 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5917:5920 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5909:5912 LF.clodomir_basics <> mult def
+def 5993:5995 <> exp
+R6004:6006 Coq.Init.Datatypes <> nat ind
+R6011:6013 Coq.Init.Datatypes <> nat ind
+R6026:6026 LF.clodomir_basics <> p var
+R6039:6039 Coq.Init.Datatypes <> O constr
+R6044:6044 Coq.Init.Datatypes <> S constr
+R6046:6046 Coq.Init.Datatypes <> O constr
+R6054:6054 Coq.Init.Datatypes <> S constr
+R6062:6065 LF.clodomir_basics <> mult def
+R6070:6072 LF.clodomir_basics <> exp def
+R6074:6074 LF.clodomir_basics <> b var
+R6067:6067 LF.clodomir_basics <> b var
+R6109:6111 LF.clodomir_basics <> exp def
+not 6097:6097 <> :::x_'^'_x
+R6129:6131 LF.clodomir_basics <> exp def
+def 6148:6156 <> test_exp1
+R6160:6160 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6168:6171 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6161:6163 LF.clodomir_basics <> exp def
+def 6268:6276 <> factorial
+R6282:6284 Coq.Init.Datatypes <> nat ind
+R6289:6291 Coq.Init.Datatypes <> nat ind
+R6304:6304 LF.clodomir_basics <> x var
+R6317:6317 Coq.Init.Datatypes <> O constr
+R6330:6330 Coq.Init.Datatypes <> S constr
+R6339:6342 LF.clodomir_basics <> ::nat_scope:x_'*'_x not
+R6355:6355 LF.clodomir_basics <> ::nat_scope:x_'*'_x not
+R6338:6338 LF.clodomir_basics <> x var
+R6343:6351 LF.clodomir_basics <> factorial def
+R6374:6382 LF.clodomir_basics <> factorial def
+def 6397:6411 <> test_factorial1
+R6414:6414 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6426:6429 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6415:6423 LF.clodomir_basics <> factorial def
+R6479:6487 LF.clodomir_basics <> factorial def
+def 6502:6516 <> test_factorial2
+R6519:6519 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6531:6535 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6546:6546 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6520:6528 LF.clodomir_basics <> factorial def
+R6536:6539 LF.clodomir_basics <> mult def
+def 6624:6626 <> eqb
+R6635:6637 Coq.Init.Datatypes <> nat ind
+R6642:6645 LF.clodomir_basics <> bool ind
+R6658:6658 LF.clodomir_basics <> x var
+R6671:6671 Coq.Init.Datatypes <> O constr
+R6682:6682 LF.clodomir_basics <> y var
+R6697:6697 Coq.Init.Datatypes <> O constr
+R6702:6705 LF.clodomir_basics <> true constr
+R6715:6715 Coq.Init.Datatypes <> S constr
+R6723:6727 LF.clodomir_basics <> false constr
+R6743:6743 Coq.Init.Datatypes <> S constr
+R6757:6757 LF.clodomir_basics <> y var
+R6772:6772 Coq.Init.Datatypes <> O constr
+R6777:6781 LF.clodomir_basics <> false constr
+R6791:6791 Coq.Init.Datatypes <> S constr
+R6799:6801 LF.clodomir_basics <> eqb def
+R6846:6848 LF.clodomir_basics <> eqb def
+not 6834:6834 <> ::nat_scope:x_'='_x
+R6892:6894 LF.clodomir_basics <> eqb def
+def 6911:6919 <> test_eqb1
+R6923:6923 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6931:6934 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6924:6926 LF.clodomir_basics <> eqb def
+R6935:6938 LF.clodomir_basics <> true constr
+R6987:6989 LF.clodomir_basics <> eqb def
+def 7006:7014 <> test_eqb2
+R7018:7018 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7026:7029 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7019:7021 LF.clodomir_basics <> eqb def
+R7030:7034 LF.clodomir_basics <> false constr
+def 7121:7123 <> leb
+R7132:7134 Coq.Init.Datatypes <> nat ind
+R7139:7142 LF.clodomir_basics <> bool ind
+R7155:7155 LF.clodomir_basics <> x var
+R7168:7168 Coq.Init.Datatypes <> O constr
+R7173:7176 LF.clodomir_basics <> true constr
+R7184:7184 Coq.Init.Datatypes <> S constr
+R7198:7198 LF.clodomir_basics <> y var
+R7213:7213 Coq.Init.Datatypes <> O constr
+R7218:7222 LF.clodomir_basics <> false constr
+R7232:7232 Coq.Init.Datatypes <> S constr
 R7240:7242 LF.clodomir_basics <> leb def
-R7251:7254 LF.clodomir_basics <> true constr
-R7303:7305 LF.clodomir_basics <> leb def
-def 7322:7330 <> test_leb2
-R7334:7334 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7342:7345 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7335:7337 LF.clodomir_basics <> leb def
-R7346:7349 LF.clodomir_basics <> true constr
-R7398:7400 LF.clodomir_basics <> leb def
-def 7417:7425 <> test_leb3
-R7429:7429 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7437:7440 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7430:7432 LF.clodomir_basics <> leb def
-R7441:7445 LF.clodomir_basics <> false constr
-def 7561:7563 <> ltb
-R7572:7574 Coq.Init.Datatypes <> nat ind
-R7579:7582 LF.clodomir_basics <> bool ind
-R7590:7593 LF.clodomir_basics <> andb def
-R7606:7609 LF.clodomir_basics <> negb def
-R7612:7614 LF.clodomir_basics <> eqb def
-R7618:7618 LF.clodomir_basics <> y var
-R7616:7616 LF.clodomir_basics <> x var
-R7596:7598 LF.clodomir_basics <> leb def
-R7602:7602 LF.clodomir_basics <> y var
-R7600:7600 LF.clodomir_basics <> x var
-R7646:7648 LF.clodomir_basics <> ltb def
-not 7634:7634 <> ::nat_scope:x_'<'_x
-R7692:7694 LF.clodomir_basics <> ltb def
-def 7711:7719 <> test_ltb1
-R7722:7722 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7730:7733 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7723:7725 LF.clodomir_basics <> ltb def
-R7734:7738 LF.clodomir_basics <> false constr
-R7778:7780 LF.clodomir_basics <> ltb def
-def 7797:7805 <> test_ltb2
-R7808:7808 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7816:7819 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7809:7811 LF.clodomir_basics <> ltb def
-R7820:7823 LF.clodomir_basics <> true constr
-R7863:7865 LF.clodomir_basics <> ltb def
-def 7882:7890 <> test_ltb3
-R7893:7893 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7901:7904 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R7894:7896 LF.clodomir_basics <> ltb def
-R7905:7909 LF.clodomir_basics <> false constr
-prf 7972:7986 <> plus_id_example
-R8001:8003 Coq.Init.Datatypes <> nat ind
-R8013:8018 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R8024:8026 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8020:8022 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
-R8019:8019 LF.clodomir_basics <> x var
-R8023:8023 LF.clodomir_basics <> x var
-R8028:8030 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
-R8027:8027 LF.clodomir_basics <> y var
-R8031:8031 LF.clodomir_basics <> y var
-R8009:8011 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8008:8008 LF.clodomir_basics <> x var
-R8012:8012 LF.clodomir_basics <> y var
-prf 8102:8117 <> plus_id_example'
-R8132:8134 Coq.Init.Datatypes <> nat ind
-R8144:8149 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R8155:8157 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8151:8153 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
-R8150:8150 LF.clodomir_basics <> x var
-R8154:8154 LF.clodomir_basics <> x var
-R8159:8161 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
-R8158:8158 LF.clodomir_basics <> y var
-R8162:8162 LF.clodomir_basics <> y var
-R8140:8142 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8139:8139 LF.clodomir_basics <> x var
-R8143:8143 LF.clodomir_basics <> y var
-prf 8287:8302 <> plus_id_exercise
-R8324:8326 Coq.Init.Datatypes <> nat ind
-R8336:8341 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R8347:8352 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R8358:8360 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8354:8356 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
-R8353:8353 LF.clodomir_basics <> x var
-R8357:8357 LF.clodomir_basics <> y var
-R8362:8364 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
-R8361:8361 LF.clodomir_basics <> y var
-R8365:8365 LF.clodomir_basics <> z var
-R8343:8345 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8342:8342 LF.clodomir_basics <> y var
-R8346:8346 LF.clodomir_basics <> z var
-R8332:8334 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8331:8331 LF.clodomir_basics <> x var
-R8335:8335 LF.clodomir_basics <> y var
-prf 8507:8514 <> mult_S_1
-R8534:8536 Coq.Init.Datatypes <> nat ind
-R8548:8553 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R8565:8567 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8555:8558 LF.clodomir_basics <> ::nat_scope:x_'*'_x not
-R8564:8564 LF.clodomir_basics <> ::nat_scope:x_'*'_x not
-R8554:8554 LF.clodomir_basics <> y var
-R8560:8562 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
-R8563:8563 LF.clodomir_basics <> x var
-R8569:8571 LF.clodomir_basics <> ::nat_scope:x_'*'_x not
-R8568:8568 LF.clodomir_basics <> y var
-R8572:8572 LF.clodomir_basics <> y var
-R8542:8544 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8541:8541 LF.clodomir_basics <> y var
-R8545:8545 Coq.Init.Datatypes <> S constr
-R8547:8547 LF.clodomir_basics <> x var
-prf 8676:8690 <> negb_involutive
-R8708:8711 LF.clodomir_basics <> bool ind
-R8729:8731 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8716:8719 LF.clodomir_basics <> negb def
-R8722:8725 LF.clodomir_basics <> negb def
-R8727:8727 LF.clodomir_basics <> x var
-R8732:8732 LF.clodomir_basics <> x var
-prf 8816:8831 <> negb_involutive'
-R8849:8852 LF.clodomir_basics <> bool ind
-R8870:8872 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8857:8860 LF.clodomir_basics <> negb def
-R8863:8866 LF.clodomir_basics <> negb def
-R8868:8868 LF.clodomir_basics <> x var
-R8873:8873 LF.clodomir_basics <> x var
-prf 8944:8960 <> negb_involutive''
-R8978:8981 LF.clodomir_basics <> bool ind
-R8999:9001 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R8986:8989 LF.clodomir_basics <> negb def
-R8992:8995 LF.clodomir_basics <> negb def
-R8997:8997 LF.clodomir_basics <> x var
-R9002:9002 LF.clodomir_basics <> x var
-prf 9097:9112 <> andb_commutative
-R9142:9144 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R9134:9137 LF.clodomir_basics <> andb def
-R9141:9141 LF.clodomir_basics <> y var
-R9139:9139 LF.clodomir_basics <> x var
-R9145:9148 LF.clodomir_basics <> andb def
-R9152:9152 LF.clodomir_basics <> x var
-R9150:9150 LF.clodomir_basics <> y var
-prf 9312:9328 <> andb_commutative'
-R9357:9359 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R9349:9352 LF.clodomir_basics <> andb def
-R9356:9356 LF.clodomir_basics <> y var
-R9354:9354 LF.clodomir_basics <> x var
-R9360:9363 LF.clodomir_basics <> andb def
-R9367:9367 LF.clodomir_basics <> x var
-R9365:9365 LF.clodomir_basics <> y var
-prf 9475:9492 <> andb_commutative''
-R9521:9523 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R9513:9516 LF.clodomir_basics <> andb def
-R9520:9520 LF.clodomir_basics <> y var
-R9518:9518 LF.clodomir_basics <> x var
-R9524:9527 LF.clodomir_basics <> andb def
-R9531:9531 LF.clodomir_basics <> x var
-R9529:9529 LF.clodomir_basics <> y var
-prf 9769:9783 <> andb_true_elim2
-R9803:9806 LF.clodomir_basics <> bool ind
-R9826:9831 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R9833:9835 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R9832:9832 LF.clodomir_basics <> y var
-R9836:9839 LF.clodomir_basics <> true constr
-R9819:9821 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R9811:9814 LF.clodomir_basics <> andb def
-R9818:9818 LF.clodomir_basics <> y var
-R9816:9816 LF.clodomir_basics <> x var
-R9822:9825 LF.clodomir_basics <> true constr
-prf 10009:10024 <> andb_true_elim2'
-R10044:10047 LF.clodomir_basics <> bool ind
-R10067:10072 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R10074:10076 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10073:10073 LF.clodomir_basics <> y var
-R10077:10080 LF.clodomir_basics <> true constr
-R10060:10062 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10052:10055 LF.clodomir_basics <> andb def
-R10059:10059 LF.clodomir_basics <> y var
-R10057:10057 LF.clodomir_basics <> x var
-R10063:10066 LF.clodomir_basics <> true constr
-prf 10365:10380 <> zero_nbeq_plus_1
-R10398:10400 Coq.Init.Datatypes <> nat ind
-R10405:10405 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10415:10418 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10407:10409 LF.clodomir_basics <> ::nat_scope:x_'='_x not
-R10411:10413 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
-R10410:10410 LF.clodomir_basics <> x var
-R10419:10423 LF.clodomir_basics <> false constr
-prf 10494:10510 <> zero_nbeq_plus_1'
-R10528:10530 Coq.Init.Datatypes <> nat ind
-R10535:10535 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10545:10548 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10537:10539 LF.clodomir_basics <> ::nat_scope:x_'='_x not
-R10541:10543 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
-R10540:10540 LF.clodomir_basics <> x var
-R10549:10553 LF.clodomir_basics <> false constr
-prf 10688:10712 <> identity_fn_applied_twice
-R10734:10737 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R10738:10741 LF.clodomir_basics <> bool ind
-R10730:10733 LF.clodomir_basics <> bool ind
-R10747:10747 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R10774:10780 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R10793:10796 LF.clodomir_basics <> bool ind
-R10807:10809 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10800:10800 LF.clodomir_basics <> f var
-R10803:10803 LF.clodomir_basics <> f var
-R10805:10805 LF.clodomir_basics <> b var
-R10810:10810 LF.clodomir_basics <> b var
-R10760:10763 LF.clodomir_basics <> bool ind
-R10770:10772 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R10767:10767 LF.clodomir_basics <> f var
-R10769:10769 LF.clodomir_basics <> x var
-R10773:10773 LF.clodomir_basics <> x var
-prf 10960:10984 <> negation_fn_applied_twice
-R11006:11009 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R11010:11013 LF.clodomir_basics <> bool ind
-R11002:11005 LF.clodomir_basics <> bool ind
-R11019:11019 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R11051:11057 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R11070:11073 LF.clodomir_basics <> bool ind
-R11084:11086 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R11077:11077 LF.clodomir_basics <> f var
-R11080:11080 LF.clodomir_basics <> f var
-R11082:11082 LF.clodomir_basics <> b var
-R11087:11087 LF.clodomir_basics <> b var
-R11032:11035 LF.clodomir_basics <> bool ind
-R11042:11044 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R11039:11039 LF.clodomir_basics <> f var
-R11041:11041 LF.clodomir_basics <> x var
-R11045:11048 LF.clodomir_basics <> negb def
-R11050:11050 LF.clodomir_basics <> x var
-R11158:11172 LF.clodomir_basics <> negb_involutive thm
-R11158:11172 LF.clodomir_basics <> negb_involutive thm
-R11158:11172 LF.clodomir_basics <> negb_involutive thm
-prf 11246:11256 <> andb_eq_orb
-R11276:11279 LF.clodomir_basics <> bool ind
-R11285:11285 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R11304:11310 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R11312:11314 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R11311:11311 LF.clodomir_basics <> x var
-R11315:11315 LF.clodomir_basics <> y var
-R11294:11296 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R11286:11289 LF.clodomir_basics <> andb def
-R11293:11293 LF.clodomir_basics <> y var
-R11291:11291 LF.clodomir_basics <> x var
-R11297:11299 LF.clodomir_basics <> orb def
-R11303:11303 LF.clodomir_basics <> y var
-R11301:11301 LF.clodomir_basics <> x var
-ind 11617:11619 <> bin
-constr 11635:11635 <> Z
-constr 11647:11647 <> A
-constr 11666:11666 <> B
-R11639:11641 LF.clodomir_basics <> bin ind
-R11654:11657 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R11658:11660 LF.clodomir_basics <> bin ind
-R11651:11653 LF.clodomir_basics <> bin ind
-R11673:11676 Coq.Init.Logic <> ::type_scope:x_'->'_x not
-R11677:11679 LF.clodomir_basics <> bin ind
-R11670:11672 LF.clodomir_basics <> bin ind
-def 11692:11695 <> incr
-R11702:11704 LF.clodomir_basics <> bin ind
-R11709:11711 LF.clodomir_basics <> bin ind
-R11724:11724 LF.clodomir_basics <> x var
-R11735:11735 LF.clodomir_basics <> Z constr
-R11740:11740 LF.clodomir_basics <> B constr
-R11742:11742 LF.clodomir_basics <> Z constr
-R11748:11748 LF.clodomir_basics <> A constr
-R11756:11756 LF.clodomir_basics <> B constr
-R11765:11765 LF.clodomir_basics <> B constr
-R11773:11773 LF.clodomir_basics <> A constr
-R11776:11779 LF.clodomir_basics <> incr def
-def 11802:11811 <> bin_to_nat
-R11818:11820 LF.clodomir_basics <> bin ind
-R11825:11827 Coq.Init.Datatypes <> nat ind
-R11840:11840 LF.clodomir_basics <> x var
-R11851:11851 LF.clodomir_basics <> Z constr
-R11856:11856 Coq.Init.Datatypes <> O constr
-R11862:11862 LF.clodomir_basics <> A constr
-R11870:11873 LF.clodomir_basics <> mult def
-R11878:11887 LF.clodomir_basics <> bin_to_nat def
-R11897:11897 LF.clodomir_basics <> B constr
-R11905:11905 Coq.Init.Datatypes <> S constr
-R11908:11911 LF.clodomir_basics <> mult def
-R11916:11925 LF.clodomir_basics <> bin_to_nat def
-def 11948:11961 <> inc_three_four
-R11964:11964 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R11992:11995 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R11965:11974 LF.clodomir_basics <> bin_to_nat def
-R11977:11980 LF.clodomir_basics <> incr def
-R11983:11983 LF.clodomir_basics <> B constr
-R11986:11986 LF.clodomir_basics <> B constr
-R11988:11988 LF.clodomir_basics <> Z constr
-def 12035:12046 <> inc_nine_ten
-R12049:12049 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R12085:12088 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R12050:12059 LF.clodomir_basics <> bin_to_nat def
-R12062:12065 LF.clodomir_basics <> incr def
-R12068:12068 LF.clodomir_basics <> B constr
-R12071:12071 LF.clodomir_basics <> A constr
-R12074:12074 LF.clodomir_basics <> A constr
-R12077:12077 LF.clodomir_basics <> B constr
-R12079:12079 LF.clodomir_basics <> Z constr
-def 12129:12140 <> zero_is_zero
-R12143:12143 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R12156:12159 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R12144:12153 LF.clodomir_basics <> bin_to_nat def
-R12155:12155 LF.clodomir_basics <> Z constr
-def 12199:12210 <> five_is_five
-R12213:12213 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R12238:12241 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R12214:12223 LF.clodomir_basics <> bin_to_nat def
-R12226:12226 LF.clodomir_basics <> B constr
-R12229:12229 LF.clodomir_basics <> A constr
-R12232:12232 LF.clodomir_basics <> B constr
-R12234:12234 LF.clodomir_basics <> Z constr
-def 12282:12285 <> incN
-R12290:12292 Coq.Init.Datatypes <> nat ind
-R12298:12300 LF.clodomir_basics <> bin ind
-R12315:12315 LF.clodomir_basics <> n var
-R12331:12331 LF.clodomir_basics <> m var
-R12337:12337 Coq.Init.Datatypes <> S constr
-R12345:12348 LF.clodomir_basics <> incN def
-R12354:12357 LF.clodomir_basics <> incr def
-R12359:12359 LF.clodomir_basics <> m var
-R12379:12382 LF.clodomir_basics <> incN def
-R12387:12387 LF.clodomir_basics <> Z constr
-def 12400:12410 <> SanityCheck
-R12435:12437 Coq.Init.Logic <> ::type_scope:x_'='_x not
-R12413:12422 LF.clodomir_basics <> bin_to_nat def
-R12425:12428 LF.clodomir_basics <> incN def
-R12433:12433 LF.clodomir_basics <> Z constr
+R7290:7292 LF.clodomir_basics <> leb def
+not 7277:7277 <> ::nat_scope:x_'<='_x
+R7336:7338 LF.clodomir_basics <> leb def
+def 7355:7363 <> test_leb1
+R7367:7367 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7375:7378 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7368:7370 LF.clodomir_basics <> leb def
+R7379:7382 LF.clodomir_basics <> true constr
+R7431:7433 LF.clodomir_basics <> leb def
+def 7450:7458 <> test_leb2
+R7462:7462 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7470:7473 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7463:7465 LF.clodomir_basics <> leb def
+R7474:7477 LF.clodomir_basics <> true constr
+R7526:7528 LF.clodomir_basics <> leb def
+def 7545:7553 <> test_leb3
+R7557:7557 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7565:7568 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7558:7560 LF.clodomir_basics <> leb def
+R7569:7573 LF.clodomir_basics <> false constr
+def 7689:7691 <> ltb
+R7700:7702 Coq.Init.Datatypes <> nat ind
+R7707:7710 LF.clodomir_basics <> bool ind
+R7718:7721 LF.clodomir_basics <> andb def
+R7734:7737 LF.clodomir_basics <> negb def
+R7740:7742 LF.clodomir_basics <> eqb def
+R7746:7746 LF.clodomir_basics <> y var
+R7744:7744 LF.clodomir_basics <> x var
+R7724:7726 LF.clodomir_basics <> leb def
+R7730:7730 LF.clodomir_basics <> y var
+R7728:7728 LF.clodomir_basics <> x var
+R7774:7776 LF.clodomir_basics <> ltb def
+not 7762:7762 <> ::nat_scope:x_'<'_x
+R7820:7822 LF.clodomir_basics <> ltb def
+def 7839:7847 <> test_ltb1
+R7850:7850 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7858:7861 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7851:7853 LF.clodomir_basics <> ltb def
+R7862:7866 LF.clodomir_basics <> false constr
+R7906:7908 LF.clodomir_basics <> ltb def
+def 7925:7933 <> test_ltb2
+R7936:7936 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7944:7947 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7937:7939 LF.clodomir_basics <> ltb def
+R7948:7951 LF.clodomir_basics <> true constr
+R7991:7993 LF.clodomir_basics <> ltb def
+def 8010:8018 <> test_ltb3
+R8021:8021 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8029:8032 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8022:8024 LF.clodomir_basics <> ltb def
+R8033:8037 LF.clodomir_basics <> false constr
+prf 8100:8114 <> plus_id_example
+R8129:8131 Coq.Init.Datatypes <> nat ind
+R8141:8146 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R8152:8154 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8148:8150 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
+R8147:8147 LF.clodomir_basics <> x var
+R8151:8151 LF.clodomir_basics <> x var
+R8156:8158 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
+R8155:8155 LF.clodomir_basics <> y var
+R8159:8159 LF.clodomir_basics <> y var
+R8137:8139 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8136:8136 LF.clodomir_basics <> x var
+R8140:8140 LF.clodomir_basics <> y var
+prf 8230:8245 <> plus_id_example'
+R8260:8262 Coq.Init.Datatypes <> nat ind
+R8272:8277 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R8283:8285 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8279:8281 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
+R8278:8278 LF.clodomir_basics <> x var
+R8282:8282 LF.clodomir_basics <> x var
+R8287:8289 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
+R8286:8286 LF.clodomir_basics <> y var
+R8290:8290 LF.clodomir_basics <> y var
+R8268:8270 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8267:8267 LF.clodomir_basics <> x var
+R8271:8271 LF.clodomir_basics <> y var
+prf 8415:8430 <> plus_id_exercise
+R8452:8454 Coq.Init.Datatypes <> nat ind
+R8464:8469 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R8475:8480 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R8486:8488 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8482:8484 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
+R8481:8481 LF.clodomir_basics <> x var
+R8485:8485 LF.clodomir_basics <> y var
+R8490:8492 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
+R8489:8489 LF.clodomir_basics <> y var
+R8493:8493 LF.clodomir_basics <> z var
+R8471:8473 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8470:8470 LF.clodomir_basics <> y var
+R8474:8474 LF.clodomir_basics <> z var
+R8460:8462 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8459:8459 LF.clodomir_basics <> x var
+R8463:8463 LF.clodomir_basics <> y var
+prf 8635:8642 <> mult_S_1
+R8662:8664 Coq.Init.Datatypes <> nat ind
+R8676:8681 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R8693:8695 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8683:8686 LF.clodomir_basics <> ::nat_scope:x_'*'_x not
+R8692:8692 LF.clodomir_basics <> ::nat_scope:x_'*'_x not
+R8682:8682 LF.clodomir_basics <> y var
+R8688:8690 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
+R8691:8691 LF.clodomir_basics <> x var
+R8697:8699 LF.clodomir_basics <> ::nat_scope:x_'*'_x not
+R8696:8696 LF.clodomir_basics <> y var
+R8700:8700 LF.clodomir_basics <> y var
+R8670:8672 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8669:8669 LF.clodomir_basics <> y var
+R8673:8673 Coq.Init.Datatypes <> S constr
+R8675:8675 LF.clodomir_basics <> x var
+prf 8804:8818 <> negb_involutive
+R8836:8839 LF.clodomir_basics <> bool ind
+R8857:8859 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8844:8847 LF.clodomir_basics <> negb def
+R8850:8853 LF.clodomir_basics <> negb def
+R8855:8855 LF.clodomir_basics <> x var
+R8860:8860 LF.clodomir_basics <> x var
+prf 8944:8959 <> negb_involutive'
+R8977:8980 LF.clodomir_basics <> bool ind
+R8998:9000 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8985:8988 LF.clodomir_basics <> negb def
+R8991:8994 LF.clodomir_basics <> negb def
+R8996:8996 LF.clodomir_basics <> x var
+R9001:9001 LF.clodomir_basics <> x var
+prf 9072:9088 <> negb_involutive''
+R9106:9109 LF.clodomir_basics <> bool ind
+R9127:9129 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9114:9117 LF.clodomir_basics <> negb def
+R9120:9123 LF.clodomir_basics <> negb def
+R9125:9125 LF.clodomir_basics <> x var
+R9130:9130 LF.clodomir_basics <> x var
+prf 9225:9240 <> andb_commutative
+R9270:9272 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9262:9265 LF.clodomir_basics <> andb def
+R9269:9269 LF.clodomir_basics <> y var
+R9267:9267 LF.clodomir_basics <> x var
+R9273:9276 LF.clodomir_basics <> andb def
+R9280:9280 LF.clodomir_basics <> x var
+R9278:9278 LF.clodomir_basics <> y var
+prf 9440:9456 <> andb_commutative'
+R9485:9487 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9477:9480 LF.clodomir_basics <> andb def
+R9484:9484 LF.clodomir_basics <> y var
+R9482:9482 LF.clodomir_basics <> x var
+R9488:9491 LF.clodomir_basics <> andb def
+R9495:9495 LF.clodomir_basics <> x var
+R9493:9493 LF.clodomir_basics <> y var
+prf 9603:9620 <> andb_commutative''
+R9649:9651 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9641:9644 LF.clodomir_basics <> andb def
+R9648:9648 LF.clodomir_basics <> y var
+R9646:9646 LF.clodomir_basics <> x var
+R9652:9655 LF.clodomir_basics <> andb def
+R9659:9659 LF.clodomir_basics <> x var
+R9657:9657 LF.clodomir_basics <> y var
+prf 9897:9911 <> andb_true_elim2
+R9931:9934 LF.clodomir_basics <> bool ind
+R9954:9959 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R9961:9963 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9960:9960 LF.clodomir_basics <> y var
+R9964:9967 LF.clodomir_basics <> true constr
+R9947:9949 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9939:9942 LF.clodomir_basics <> andb def
+R9946:9946 LF.clodomir_basics <> y var
+R9944:9944 LF.clodomir_basics <> x var
+R9950:9953 LF.clodomir_basics <> true constr
+prf 10137:10152 <> andb_true_elim2'
+R10172:10175 LF.clodomir_basics <> bool ind
+R10195:10200 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10202:10204 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10201:10201 LF.clodomir_basics <> y var
+R10205:10208 LF.clodomir_basics <> true constr
+R10188:10190 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10180:10183 LF.clodomir_basics <> andb def
+R10187:10187 LF.clodomir_basics <> y var
+R10185:10185 LF.clodomir_basics <> x var
+R10191:10194 LF.clodomir_basics <> true constr
+prf 10493:10508 <> zero_nbeq_plus_1
+R10526:10528 Coq.Init.Datatypes <> nat ind
+R10533:10533 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10543:10546 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10535:10537 LF.clodomir_basics <> ::nat_scope:x_'='_x not
+R10539:10541 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
+R10538:10538 LF.clodomir_basics <> x var
+R10547:10551 LF.clodomir_basics <> false constr
+prf 10622:10638 <> zero_nbeq_plus_1'
+R10656:10658 Coq.Init.Datatypes <> nat ind
+R10663:10663 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10673:10676 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10665:10667 LF.clodomir_basics <> ::nat_scope:x_'='_x not
+R10669:10671 LF.clodomir_basics <> ::nat_scope:x_'+'_x not
+R10668:10668 LF.clodomir_basics <> x var
+R10677:10681 LF.clodomir_basics <> false constr
+prf 10816:10840 <> identity_fn_applied_twice
+R10862:10865 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10866:10869 LF.clodomir_basics <> bool ind
+R10858:10861 LF.clodomir_basics <> bool ind
+R10875:10875 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10902:10908 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10921:10924 LF.clodomir_basics <> bool ind
+R10935:10937 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10928:10928 LF.clodomir_basics <> f var
+R10931:10931 LF.clodomir_basics <> f var
+R10933:10933 LF.clodomir_basics <> b var
+R10938:10938 LF.clodomir_basics <> b var
+R10888:10891 LF.clodomir_basics <> bool ind
+R10898:10900 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10895:10895 LF.clodomir_basics <> f var
+R10897:10897 LF.clodomir_basics <> x var
+R10901:10901 LF.clodomir_basics <> x var
+prf 11088:11112 <> negation_fn_applied_twice
+R11134:11137 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11138:11141 LF.clodomir_basics <> bool ind
+R11130:11133 LF.clodomir_basics <> bool ind
+R11147:11147 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11179:11185 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11198:11201 LF.clodomir_basics <> bool ind
+R11212:11214 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11205:11205 LF.clodomir_basics <> f var
+R11208:11208 LF.clodomir_basics <> f var
+R11210:11210 LF.clodomir_basics <> b var
+R11215:11215 LF.clodomir_basics <> b var
+R11160:11163 LF.clodomir_basics <> bool ind
+R11170:11172 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11167:11167 LF.clodomir_basics <> f var
+R11169:11169 LF.clodomir_basics <> x var
+R11173:11176 LF.clodomir_basics <> negb def
+R11178:11178 LF.clodomir_basics <> x var
+R11286:11300 LF.clodomir_basics <> negb_involutive thm
+R11286:11300 LF.clodomir_basics <> negb_involutive thm
+R11286:11300 LF.clodomir_basics <> negb_involutive thm
+prf 11374:11384 <> andb_eq_orb
+R11404:11407 LF.clodomir_basics <> bool ind
+R11413:11413 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11432:11438 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11440:11442 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11439:11439 LF.clodomir_basics <> x var
+R11443:11443 LF.clodomir_basics <> y var
+R11422:11424 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11414:11417 LF.clodomir_basics <> andb def
+R11421:11421 LF.clodomir_basics <> y var
+R11419:11419 LF.clodomir_basics <> x var
+R11425:11427 LF.clodomir_basics <> orb def
+R11431:11431 LF.clodomir_basics <> y var
+R11429:11429 LF.clodomir_basics <> x var
+ind 11745:11747 <> bin
+constr 11763:11763 <> Z
+constr 11775:11775 <> A
+constr 11794:11794 <> B
+R11767:11769 LF.clodomir_basics <> bin ind
+R11782:11785 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11786:11788 LF.clodomir_basics <> bin ind
+R11779:11781 LF.clodomir_basics <> bin ind
+R11801:11804 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11805:11807 LF.clodomir_basics <> bin ind
+R11798:11800 LF.clodomir_basics <> bin ind
+def 11820:11823 <> incr
+R11830:11832 LF.clodomir_basics <> bin ind
+R11837:11839 LF.clodomir_basics <> bin ind
+R11852:11852 LF.clodomir_basics <> x var
+R11863:11863 LF.clodomir_basics <> Z constr
+R11868:11868 LF.clodomir_basics <> B constr
+R11870:11870 LF.clodomir_basics <> Z constr
+R11876:11876 LF.clodomir_basics <> A constr
+R11884:11884 LF.clodomir_basics <> B constr
+R11893:11893 LF.clodomir_basics <> B constr
+R11901:11901 LF.clodomir_basics <> A constr
+R11904:11907 LF.clodomir_basics <> incr def
+def 11930:11939 <> bin_to_nat
+R11946:11948 LF.clodomir_basics <> bin ind
+R11953:11955 Coq.Init.Datatypes <> nat ind
+R11968:11968 LF.clodomir_basics <> x var
+R11979:11979 LF.clodomir_basics <> Z constr
+R11984:11984 Coq.Init.Datatypes <> O constr
+R11990:11990 LF.clodomir_basics <> A constr
+R11998:12001 LF.clodomir_basics <> mult def
+R12006:12015 LF.clodomir_basics <> bin_to_nat def
+R12025:12025 LF.clodomir_basics <> B constr
+R12033:12033 Coq.Init.Datatypes <> S constr
+R12036:12039 LF.clodomir_basics <> mult def
+R12044:12053 LF.clodomir_basics <> bin_to_nat def
+def 12076:12089 <> inc_three_four
+R12092:12092 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12120:12123 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12093:12102 LF.clodomir_basics <> bin_to_nat def
+R12105:12108 LF.clodomir_basics <> incr def
+R12111:12111 LF.clodomir_basics <> B constr
+R12114:12114 LF.clodomir_basics <> B constr
+R12116:12116 LF.clodomir_basics <> Z constr
+def 12163:12174 <> inc_nine_ten
+R12177:12177 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12213:12216 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12178:12187 LF.clodomir_basics <> bin_to_nat def
+R12190:12193 LF.clodomir_basics <> incr def
+R12196:12196 LF.clodomir_basics <> B constr
+R12199:12199 LF.clodomir_basics <> A constr
+R12202:12202 LF.clodomir_basics <> A constr
+R12205:12205 LF.clodomir_basics <> B constr
+R12207:12207 LF.clodomir_basics <> Z constr
+def 12257:12268 <> zero_is_zero
+R12271:12271 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12284:12287 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12272:12281 LF.clodomir_basics <> bin_to_nat def
+R12283:12283 LF.clodomir_basics <> Z constr
+def 12327:12338 <> five_is_five
+R12341:12341 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12366:12369 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12342:12351 LF.clodomir_basics <> bin_to_nat def
+R12354:12354 LF.clodomir_basics <> B constr
+R12357:12357 LF.clodomir_basics <> A constr
+R12360:12360 LF.clodomir_basics <> B constr
+R12362:12362 LF.clodomir_basics <> Z constr
+def 12410:12413 <> incN
+R12418:12420 Coq.Init.Datatypes <> nat ind
+R12426:12428 LF.clodomir_basics <> bin ind
+R12443:12443 LF.clodomir_basics <> n var
+R12459:12459 LF.clodomir_basics <> m var
+R12465:12465 Coq.Init.Datatypes <> S constr
+R12473:12476 LF.clodomir_basics <> incN def
+R12482:12485 LF.clodomir_basics <> incr def
+R12487:12487 LF.clodomir_basics <> m var
+R12507:12510 LF.clodomir_basics <> incN def
+R12515:12515 LF.clodomir_basics <> Z constr
+def 12528:12538 <> SanityCheck
+R12563:12565 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12541:12550 LF.clodomir_basics <> bin_to_nat def
+R12553:12556 LF.clodomir_basics <> incN def
+R12561:12561 LF.clodomir_basics <> Z constr
