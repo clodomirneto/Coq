@@ -1,4 +1,4 @@
-Section PropositionalLogic.
+Section PL.
 
 Variables A B : Prop.
 
@@ -8,11 +8,10 @@ Theorem abs : A -> (A /\ B).
 Proof.
 intro Ha.
 split.
-- 
-exact Ha.
+- exact Ha.
 -
 apply P1.
 exact Ha.
 Qed.
 
-End PropositionalLogic.
+End PL.

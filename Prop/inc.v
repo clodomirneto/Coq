@@ -1,4 +1,4 @@
-Section PropositionalLogic.
+Section PL.
 
 Variables A B : Prop.
 
@@ -10,4 +10,4 @@ Proof.
 contradiction.
 Qed.
 
-End PropositionalLogic.
+End PL.

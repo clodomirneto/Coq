@@ -1,4 +1,4 @@
-Section PropositionalLogic.
+Section PL.
 
 Variables A B C : Prop.
 
@@ -12,8 +12,7 @@ split.
 *
 destruct Habc as [Ha Hbc].
 split.
-+
-exact Ha.
++ exact Ha.
 +
 destruct Hbc as [Hb Hc].
 exact Hb.
@@ -39,4 +38,4 @@ destruct Habc as [Hab Hc].
 exact Hc.
 Qed.
 
-End PropositionalLogic.
+End PL.
