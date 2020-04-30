@@ -1,6 +1,6 @@
 (** Capítulo 2 - Proof by Induction    (Induction) *)
 
-From LF Require Export clodomir_basics.
+From LF Require Export c01_basics.
 
 (** Exemplos induction *)
 

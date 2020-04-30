@@ -1,4 +1,4 @@
-(** Capítulo 1 - Functional Programming in Coq    (Basics) *)
+(** Capítulo 1 - Functional Programming in Coq (Basics) *)
 
 (** Booleano *)
 

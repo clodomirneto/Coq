@@ -1,6 +1,6 @@
 (** Capítulo 3 - Working with Structured Data    (Lists) *)
 
-From LF Require Export clodomir_induction.
+From LF Require Export c02_induction.
 
 (** Par Ordenado *)
 

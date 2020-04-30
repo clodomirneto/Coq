@@ -2,7 +2,7 @@
 
 Set Warnings "-notation-overridden,-parsing".
 
-From LF Require Export clodomir_tactics.
+From LF Require Export c05_tactics.
 
 Theorem plus_2_2_is_4 :
   2 + 2 = 4.
