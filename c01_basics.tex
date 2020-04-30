@@ -1,0 +1,255 @@
+\documentclass[12pt]{report}
+\usepackage[]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fullpage}
+\usepackage{coqdoc}
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This file has been automatically generated with the command
+%% coqdoc -q -g --latex -o c01_basics.tex c01_basics.v 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\coqlibrary{c01 basics}{Library }{c01\_basics}
+
+\begin{coqdoccode}
+\end{coqdoccode}
+Capítulo 1 - Functional Programming in Coq (Basics) \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Require} \coqdockw{Import} \coqdocvar{Notations}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Require} \coqdockw{Import} \coqdocvar{Nat}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Local Open} \coqdockw{Scope} \coqdocvar{nat\_scope}.\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+Exercise: 1 star, standard (nandb) \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Definition} \coqdocvar{nandb} (\coqdocvar{b1} \coqdocvar{b2}: \coqdocvar{bool}) : \coqdocvar{bool} :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{match} (\coqdocvar{b1}, \coqdocvar{b2}) \coqdockw{with}\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} (\coqdocvar{true}, \coqdocvar{true}) \ensuremath{\Rightarrow} \coqdocvar{false}\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} \coqdocvar{\_} \ensuremath{\Rightarrow} \coqdocvar{true}\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{end}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_nandb1}: (\coqdocvar{nandb} \coqdocvar{true} \coqdocvar{false}) = \coqdocvar{true}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_nandb2}: (\coqdocvar{nandb} \coqdocvar{false} \coqdocvar{false}) = \coqdocvar{true}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_nandb3}: (\coqdocvar{nandb} \coqdocvar{false} \coqdocvar{true}) = \coqdocvar{true}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_nandb4}: (\coqdocvar{nandb} \coqdocvar{true} \coqdocvar{true}) = \coqdocvar{false}.\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+Exercise: 1 star, standard (andb3) \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Definition} \coqdocvar{andb3} (\coqdocvar{b1} \coqdocvar{b2} \coqdocvar{b3}: \coqdocvar{bool}) : \coqdocvar{bool} :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{match} (\coqdocvar{b1}, \coqdocvar{b2}, \coqdocvar{b3}) \coqdockw{with}\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} (\coqdocvar{true}, \coqdocvar{true}, \coqdocvar{true}) \ensuremath{\Rightarrow} \coqdocvar{true}\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} \coqdocvar{\_} \ensuremath{\Rightarrow} \coqdocvar{false}\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{end}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_andb31}: (\coqdocvar{andb3} \coqdocvar{true} \coqdocvar{true} \coqdocvar{true}) = \coqdocvar{true}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_andb32}: (\coqdocvar{andb3} \coqdocvar{false} \coqdocvar{true} \coqdocvar{true}) = \coqdocvar{false}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_andb33}: (\coqdocvar{andb3} \coqdocvar{true} \coqdocvar{false} \coqdocvar{true}) = \coqdocvar{false}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_andb34}: (\coqdocvar{andb3} \coqdocvar{true} \coqdocvar{true} \coqdocvar{false}) = \coqdocvar{false}.\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+Exercise: 1 star, standard (factorial) \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Fixpoint} \coqdocvar{factorial} (\coqdocvar{n}: \coqdocvar{nat}) : \coqdocvar{nat} :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{match} \coqdocvar{n} \coqdockw{with}\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} \coqdocvar{O} \ensuremath{\Rightarrow} 1\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} \coqdocvar{S} \coqdocvar{n'} \ensuremath{\Rightarrow} \coqdocvar{n} \ensuremath{\times} (\coqdocvar{factorial} \coqdocvar{n'})\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{end}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_factorial1}: (\coqdocvar{factorial} 3) = 6.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_factorial2}: (\coqdocvar{factorial} 5) = (\coqdocvar{mult} 10 12).\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+Exercise: 1 star, standard (ltb) \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Definition} \coqdocvar{ltb} (\coqdocvar{n} \coqdocvar{m} : \coqdocvar{nat}) : \coqdocvar{bool} :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{andb} (\coqdocvar{leb} \coqdocvar{n} \coqdocvar{m}) (\coqdocvar{negb} (\coqdocvar{eqb} \coqdocvar{n} \coqdocvar{m})).\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_ltb1}: (\coqdocvar{ltb} 2 2) = \coqdocvar{false}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_ltb2}: (\coqdocvar{ltb} 2 4) = \coqdocvar{true}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{test\_ltb3}: (\coqdocvar{ltb} 4 2) = \coqdocvar{false}.\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+Exercise: 1 star, standard (plus\_id\_exercise) \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Theorem} \coqdocvar{plus\_id\_exercise} : \coqdockw{\ensuremath{\forall}} \coqdocvar{n} \coqdocvar{m} \coqdocvar{o} : \coqdocvar{nat},\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{n} = \coqdocvar{m} \ensuremath{\rightarrow} \coqdocvar{m} = \coqdocvar{o} \ensuremath{\rightarrow}\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{n} + \coqdocvar{m} = \coqdocvar{m} + \coqdocvar{o}.\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+Exercise: 2 stars, standard (mult\_S\_1) \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Theorem} \coqdocvar{mult\_S\_1} : \coqdockw{\ensuremath{\forall}} \coqdocvar{n} \coqdocvar{m} : \coqdocvar{nat},\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{m} = \coqdocvar{S} \coqdocvar{n} \ensuremath{\rightarrow}\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{m} \ensuremath{\times} (1 + \coqdocvar{n}) = \coqdocvar{m} \ensuremath{\times} \coqdocvar{m}.\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+Exercise: 2 stars, standard (andb\_true\_elim2) \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Theorem} \coqdocvar{andb\_true\_elim2} : \coqdockw{\ensuremath{\forall}} \coqdocvar{b} \coqdocvar{c} : \coqdocvar{bool},\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{andb} \coqdocvar{b} \coqdocvar{c} = \coqdocvar{true} \ensuremath{\rightarrow}\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{c} = \coqdocvar{true}.\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+Exercise: 1 star (zero\_nbeq\_plus\_1)  \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Theorem} \coqdocvar{zero\_nbeq\_plus\_1} : \coqdockw{\ensuremath{\forall}} \coqdocvar{n} : \coqdocvar{nat},\coqdoceol
+\coqdocindent{1.00em}
+0 =? (\coqdocvar{n} + 1) = \coqdocvar{false}.\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+Exercise: 1 star, standard (indentity\_fn\_applied\_twice)  \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Theorem} \coqdocvar{identity\_fn\_applied\_twice} :\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{\ensuremath{\forall}} (\coqdocvar{f} : \coqdocvar{bool} \ensuremath{\rightarrow} \coqdocvar{bool}), (\coqdockw{\ensuremath{\forall}} (\coqdocvar{x} : \coqdocvar{bool}), \coqdocvar{f} \coqdocvar{x} = \coqdocvar{x}) \ensuremath{\rightarrow}\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{\ensuremath{\forall}} (\coqdocvar{b} : \coqdocvar{bool}), \coqdocvar{f} (\coqdocvar{f} \coqdocvar{b}) = \coqdocvar{b}.\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+Exercise: 1 star, standard (negation\_fn\_applied\_twice) \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Theorem} \coqdocvar{negb\_involutive} : \coqdockw{\ensuremath{\forall}} \coqdocvar{b} : \coqdocvar{bool},\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{negb} (\coqdocvar{negb} \coqdocvar{b}) = \coqdocvar{b}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Theorem} \coqdocvar{negation\_fn\_applied\_twice} :\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{\ensuremath{\forall}} (\coqdocvar{f} : \coqdocvar{bool} \ensuremath{\rightarrow} \coqdocvar{bool}), (\coqdockw{\ensuremath{\forall}} (\coqdocvar{x} : \coqdocvar{bool}), \coqdocvar{f} \coqdocvar{x} = \coqdocvar{negb} \coqdocvar{x}) \ensuremath{\rightarrow}\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{\ensuremath{\forall}} (\coqdocvar{b} : \coqdocvar{bool}), \coqdocvar{f} (\coqdocvar{f} \coqdocvar{b}) = \coqdocvar{b}.\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+Exercise: 2 stars (andb\_eq\_orb) \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Theorem} \coqdocvar{andb\_eq\_orb} : \coqdockw{\ensuremath{\forall}} (\coqdocvar{b} \coqdocvar{c} : \coqdocvar{bool}),\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{andb} \coqdocvar{b} \coqdocvar{c} = \coqdocvar{orb} \coqdocvar{b} \coqdocvar{c} \ensuremath{\rightarrow}\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{b} = \coqdocvar{c}.\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+Exercise: 3 stars, standard (binary) \begin{coqdoccode}
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Inductive} \coqdocvar{bin} : \coqdockw{Type} :=\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{Z} : \coqdocvar{bin}\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{A} : \coqdocvar{bin} \ensuremath{\rightarrow} \coqdocvar{bin}\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{B} : \coqdocvar{bin} \ensuremath{\rightarrow} \coqdocvar{bin}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Fixpoint} \coqdocvar{incr} (\coqdocvar{m} : \coqdocvar{bin}) : \coqdocvar{bin} :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{match} \coqdocvar{m} \coqdockw{with}\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{Z} \ensuremath{\Rightarrow} \coqdocvar{B} \coqdocvar{Z}\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{A} \coqdocvar{m'} \ensuremath{\Rightarrow} \coqdocvar{B} \coqdocvar{m'}\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{B} \coqdocvar{m'} \ensuremath{\Rightarrow} \coqdocvar{A} (\coqdocvar{incr} \coqdocvar{m'})\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{end}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Fixpoint} \coqdocvar{bin\_to\_nat} (\coqdocvar{m} : \coqdocvar{bin}) : \coqdocvar{nat} :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{match} \coqdocvar{m} \coqdockw{with}\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{Z} \ensuremath{\Rightarrow} \coqdocvar{O}\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{A} \coqdocvar{m'} \ensuremath{\Rightarrow} \coqdocvar{mult} 2 (\coqdocvar{bin\_to\_nat} \coqdocvar{m'})\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{B} \coqdocvar{m'} \ensuremath{\Rightarrow} \coqdocvar{S} (\coqdocvar{mult} 2 (\coqdocvar{bin\_to\_nat} \coqdocvar{m'}))\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{end}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{inc\_three\_four}: (\coqdocvar{bin\_to\_nat} (\coqdocvar{incr} (\coqdocvar{B} (\coqdocvar{B} \coqdocvar{Z})))) = 4.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{inc\_nine\_ten}: (\coqdocvar{bin\_to\_nat} (\coqdocvar{incr} (\coqdocvar{B} (\coqdocvar{A} (\coqdocvar{A} (\coqdocvar{B} \coqdocvar{Z})))))) = 10.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{zero\_is\_zero}: (\coqdocvar{bin\_to\_nat} \coqdocvar{Z}) = 0.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{five\_is\_five}: (\coqdocvar{bin\_to\_nat} (\coqdocvar{B} (\coqdocvar{A} (\coqdocvar{B} \coqdocvar{Z})))) = 5.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Fixpoint} \coqdocvar{incN} (\coqdocvar{n} : \coqdocvar{nat}) (\coqdocvar{m} : \coqdocvar{bin})  :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{match} \coqdocvar{n} \coqdockw{with}\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} 0 \ensuremath{\Rightarrow} \coqdocvar{m}\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{S} \coqdocvar{n'} \ensuremath{\Rightarrow} \coqdocvar{incN} \coqdocvar{n'} (\coqdocvar{incr} \coqdocvar{m})\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{end}.\coqdoceol
+\coqdocemptyline
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Example} \coqdocvar{SanityCheck}: \coqdocvar{bin\_to\_nat} (\coqdocvar{incN} 15 \coqdocvar{Z}) = 15.\coqdoceol
+\end{coqdoccode}
+\end{document}
