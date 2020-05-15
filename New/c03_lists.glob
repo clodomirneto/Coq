@@ -1,0 +1,1200 @@
+DIGEST 3c74721b6d7be3f60f0a1d7d42204291
+FLF.c03_lists
+R85:97 LF.c02_induction <> <> lib
+ind 132:138 <> natprod
+constr 154:157 <> pair
+R166:168 Coq.Init.Datatypes <> nat ind
+R173:179 LF.c03_lists <> natprod ind
+R190:193 LF.c03_lists <> pair constr
+def 234:236 <> fst
+R243:249 LF.c03_lists <> natprod ind
+R254:256 Coq.Init.Datatypes <> nat ind
+R270:270 LF.c03_lists <> p var
+R281:284 LF.c03_lists <> pair constr
+R311:313 LF.c03_lists <> fst def
+R316:319 LF.c03_lists <> pair constr
+def 361:363 <> snd
+R370:376 LF.c03_lists <> natprod ind
+R381:383 Coq.Init.Datatypes <> nat ind
+R397:397 LF.c03_lists <> p var
+R408:411 LF.c03_lists <> pair constr
+R438:440 LF.c03_lists <> snd def
+R443:446 LF.c03_lists <> pair constr
+R480:483 LF.c03_lists <> pair constr
+not 464:464 <> :::'('_x_','_x_')'
+def 524:527 <> fst'
+R534:540 LF.c03_lists <> natprod ind
+R545:547 Coq.Init.Datatypes <> nat ind
+R561:561 LF.c03_lists <> p var
+R572:572 LF.c03_lists <> :::'('_x_','_x_')' not
+R574:575 LF.c03_lists <> :::'('_x_','_x_')' not
+R577:577 LF.c03_lists <> :::'('_x_','_x_')' not
+R600:603 LF.c03_lists <> fst' def
+R606:609 LF.c03_lists <> pair constr
+def 650:653 <> snd'
+R660:666 LF.c03_lists <> natprod ind
+R671:673 Coq.Init.Datatypes <> nat ind
+R687:687 LF.c03_lists <> p var
+R698:698 LF.c03_lists <> :::'('_x_','_x_')' not
+R700:701 LF.c03_lists <> :::'('_x_','_x_')' not
+R703:703 LF.c03_lists <> :::'('_x_','_x_')' not
+R726:729 LF.c03_lists <> snd' def
+R732:735 LF.c03_lists <> pair constr
+def 784:792 <> swap_pair
+R799:805 LF.c03_lists <> natprod ind
+R810:816 LF.c03_lists <> natprod ind
+R830:830 LF.c03_lists <> p var
+R841:841 LF.c03_lists <> :::'('_x_','_x_')' not
+R843:844 LF.c03_lists <> :::'('_x_','_x_')' not
+R846:846 LF.c03_lists <> :::'('_x_','_x_')' not
+R851:851 LF.c03_lists <> :::'('_x_','_x_')' not
+R853:854 LF.c03_lists <> :::'('_x_','_x_')' not
+R856:856 LF.c03_lists <> :::'('_x_','_x_')' not
+R874:882 LF.c03_lists <> swap_pair def
+R884:884 LF.c03_lists <> :::'('_x_','_x_')' not
+R886:887 LF.c03_lists <> :::'('_x_','_x_')' not
+R889:889 LF.c03_lists <> :::'('_x_','_x_')' not
+prf 925:943 <> surjective_pairing'
+R961:963 Coq.Init.Datatypes <> nat ind
+R975:977 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R969:969 LF.c03_lists <> :::'('_x_','_x_')' not
+R971:972 LF.c03_lists <> :::'('_x_','_x_')' not
+R974:974 LF.c03_lists <> :::'('_x_','_x_')' not
+R970:970 LF.c03_lists <> x var
+R973:973 LF.c03_lists <> y var
+R978:978 LF.c03_lists <> :::'('_x_','_x_')' not
+R989:990 LF.c03_lists <> :::'('_x_','_x_')' not
+R1001:1001 LF.c03_lists <> :::'('_x_','_x_')' not
+R979:981 LF.c03_lists <> fst def
+R983:983 LF.c03_lists <> :::'('_x_','_x_')' not
+R985:986 LF.c03_lists <> :::'('_x_','_x_')' not
+R988:988 LF.c03_lists <> :::'('_x_','_x_')' not
+R984:984 LF.c03_lists <> x var
+R987:987 LF.c03_lists <> y var
+R991:993 LF.c03_lists <> snd def
+R995:995 LF.c03_lists <> :::'('_x_','_x_')' not
+R997:998 LF.c03_lists <> :::'('_x_','_x_')' not
+R1000:1000 LF.c03_lists <> :::'('_x_','_x_')' not
+R996:996 LF.c03_lists <> x var
+R999:999 LF.c03_lists <> y var
+prf 1049:1066 <> surjective_pairing
+R1082:1088 LF.c03_lists <> natprod ind
+R1095:1097 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1094:1094 LF.c03_lists <> p var
+R1098:1098 LF.c03_lists <> :::'('_x_','_x_')' not
+R1104:1105 LF.c03_lists <> :::'('_x_','_x_')' not
+R1111:1111 LF.c03_lists <> :::'('_x_','_x_')' not
+R1099:1101 LF.c03_lists <> fst def
+R1103:1103 LF.c03_lists <> p var
+R1106:1108 LF.c03_lists <> snd def
+R1110:1110 LF.c03_lists <> p var
+prf 1247:1261 <> snd_fst_is_swap
+R1277:1283 LF.c03_lists <> natprod ind
+R1303:1305 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1289:1289 LF.c03_lists <> :::'('_x_','_x_')' not
+R1295:1296 LF.c03_lists <> :::'('_x_','_x_')' not
+R1302:1302 LF.c03_lists <> :::'('_x_','_x_')' not
+R1290:1292 LF.c03_lists <> snd def
+R1294:1294 LF.c03_lists <> p var
+R1297:1299 LF.c03_lists <> fst def
+R1301:1301 LF.c03_lists <> p var
+R1306:1314 LF.c03_lists <> swap_pair def
+R1316:1316 LF.c03_lists <> p var
+prf 1462:1476 <> fst_swap_is_snd
+R1492:1498 LF.c03_lists <> natprod ind
+R1521:1523 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R1504:1506 LF.c03_lists <> fst def
+R1509:1517 LF.c03_lists <> swap_pair def
+R1519:1519 LF.c03_lists <> p var
+R1524:1526 LF.c03_lists <> snd def
+R1528:1528 LF.c03_lists <> p var
+ind 1639:1645 <> natlist
+constr 1661:1663 <> nil
+constr 1679:1682 <> cons
+R1667:1673 LF.c03_lists <> natlist ind
+R1689:1691 Coq.Init.Datatypes <> nat ind
+R1699:1705 LF.c03_lists <> natlist ind
+R1710:1716 LF.c03_lists <> natlist ind
+R1761:1764 LF.c03_lists <> cons constr
+not 1748:1748 <> :::x_'::'_x
+R1826:1828 LF.c03_lists <> nil constr
+not 1817:1817 <> :::'['_']'
+R1862:1865 LF.c03_lists <> cons constr
+R1873:1876 LF.c03_lists <> cons constr
+R1880:1882 LF.c03_lists <> nil constr
+not 1841:1841 <> :::'['_x_';'_'..'_';'_x_']'
+def 1936:1942 <> mylist1
+R1947:1950 LF.c03_lists <> cons constr
+R1955:1958 LF.c03_lists <> cons constr
+R1963:1966 LF.c03_lists <> cons constr
+R1970:1972 LF.c03_lists <> nil constr
+R1984:1990 LF.c03_lists <> mylist1 def
+def 2005:2011 <> mylist2
+R2017:2021 LF.c03_lists <> :::x_'::'_x not
+R2037:2037 LF.c03_lists <> :::x_'::'_x not
+R2023:2027 LF.c03_lists <> :::x_'::'_x not
+R2036:2036 LF.c03_lists <> :::x_'::'_x not
+R2029:2032 LF.c03_lists <> :::x_'::'_x not
+R2033:2035 LF.c03_lists <> nil constr
+R2047:2053 LF.c03_lists <> mylist2 def
+def 2068:2074 <> mylist3
+R2080:2083 LF.c03_lists <> :::x_'::'_x not
+R2085:2088 LF.c03_lists <> :::x_'::'_x not
+R2090:2093 LF.c03_lists <> :::x_'::'_x not
+R2094:2096 LF.c03_lists <> nil constr
+R2106:2112 LF.c03_lists <> mylist3 def
+def 2127:2133 <> mylist4
+R2138:2138 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2140:2141 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2143:2144 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2146:2146 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2156:2162 LF.c03_lists <> mylist4 def
+def 2200:2205 <> repeat
+R2218:2220 Coq.Init.Datatypes <> nat ind
+R2225:2231 LF.c03_lists <> natlist ind
+R2245:2249 LF.c03_lists <> count var
+R2260:2260 Coq.Init.Datatypes <> O constr
+R2265:2267 LF.c03_lists <> nil constr
+R2273:2273 Coq.Init.Datatypes <> S constr
+R2286:2290 LF.c03_lists <> :::x_'::'_x not
+R2306:2306 LF.c03_lists <> :::x_'::'_x not
+R2285:2285 LF.c03_lists <> x var
+R2291:2296 LF.c03_lists <> repeat def
+R2298:2298 LF.c03_lists <> x var
+R2324:2329 LF.c03_lists <> repeat def
+def 2375:2380 <> length
+R2387:2393 LF.c03_lists <> natlist ind
+R2398:2400 Coq.Init.Datatypes <> nat ind
+R2414:2414 LF.c03_lists <> l var
+R2425:2427 LF.c03_lists <> nil constr
+R2432:2432 Coq.Init.Datatypes <> O constr
+R2439:2442 LF.c03_lists <> :::x_'::'_x not
+R2448:2448 Coq.Init.Datatypes <> S constr
+R2451:2456 LF.c03_lists <> length def
+R2477:2482 LF.c03_lists <> length def
+R2484:2484 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2486:2487 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2489:2490 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2492:2492 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 2533:2535 <> app
+R2546:2552 LF.c03_lists <> natlist ind
+R2557:2563 LF.c03_lists <> natlist ind
+R2577:2578 LF.c03_lists <> l1 var
+R2589:2591 LF.c03_lists <> nil constr
+R2599:2600 LF.c03_lists <> l2 var
+R2607:2610 LF.c03_lists <> :::x_'::'_x not
+R2617:2621 LF.c03_lists <> :::x_'::'_x not
+R2630:2630 LF.c03_lists <> :::x_'::'_x not
+R2622:2624 LF.c03_lists <> app def
+R2628:2629 LF.c03_lists <> l2 var
+R2648:2650 LF.c03_lists <> app def
+R2668:2669 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2671:2672 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2674:2674 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2652:2652 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2654:2655 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2657:2658 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2660:2661 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2663:2664 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2666:2666 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2700:2702 LF.c03_lists <> app def
+not 2687:2687 <> :::x_'++'_x
+def 2754:2762 <> test_app1
+R2784:2786 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2774:2777 LF.c03_lists <> :::x_'++'_x not
+R2765:2765 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2767:2768 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2770:2771 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2773:2773 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2778:2778 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2780:2781 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2783:2783 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2787:2787 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2789:2790 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2792:2793 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2795:2796 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2798:2799 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2801:2801 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 2849:2857 <> test_app2
+R2873:2875 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2863:2866 LF.c03_lists <> :::x_'++'_x not
+R2860:2862 LF.c03_lists <> nil constr
+R2867:2867 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2869:2870 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2872:2872 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2876:2876 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2878:2879 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2881:2881 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 2929:2937 <> test_app3
+R2956:2958 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2949:2952 LF.c03_lists <> :::x_'++'_x not
+R2940:2940 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2942:2943 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2945:2946 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2948:2948 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2953:2955 LF.c03_lists <> nil constr
+R2959:2959 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2961:2962 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2964:2965 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R2967:2967 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 3043:3044 <> hd
+R3057:3059 Coq.Init.Datatypes <> nat ind
+R3067:3073 LF.c03_lists <> natlist ind
+R3078:3080 Coq.Init.Datatypes <> nat ind
+R3093:3093 LF.c03_lists <> l var
+R3104:3106 LF.c03_lists <> nil constr
+R3111:3117 LF.c03_lists <> default var
+R3124:3127 LF.c03_lists <> :::x_'::'_x not
+def 3151:3158 <> test_hd1
+R3175:3177 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3161:3162 LF.c03_lists <> hd def
+R3166:3166 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3168:3169 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3171:3172 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3174:3174 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 3226:3233 <> test_hd2
+R3243:3245 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3236:3237 LF.c03_lists <> hd def
+R3241:3242 LF.c03_lists <> :::'['_']' not
+def 3320:3321 <> tl
+R3328:3334 LF.c03_lists <> natlist ind
+R3339:3345 LF.c03_lists <> natlist ind
+R3358:3358 LF.c03_lists <> l var
+R3369:3371 LF.c03_lists <> nil constr
+R3376:3378 LF.c03_lists <> nil constr
+R3385:3388 LF.c03_lists <> :::x_'::'_x not
+def 3412:3419 <> test_tl1
+R3434:3436 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3422:3423 LF.c03_lists <> tl def
+R3425:3425 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3427:3428 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3430:3431 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3433:3433 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3437:3437 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3439:3440 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3442:3442 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 3490:3497 <> test_tl2
+R3515:3517 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3500:3501 LF.c03_lists <> tl def
+R3503:3503 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3505:3506 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3508:3509 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3511:3512 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3514:3514 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3518:3518 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3520:3521 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3523:3524 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3526:3526 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 3636:3643 <> nonzeros
+R3650:3656 LF.c03_lists <> natlist ind
+R3661:3667 LF.c03_lists <> natlist ind
+R3680:3680 LF.c03_lists <> l var
+R3691:3693 LF.c03_lists <> nil constr
+R3698:3700 LF.c03_lists <> nil constr
+R3707:3710 LF.c03_lists <> :::x_'::'_x not
+R3706:3706 Coq.Init.Datatypes <> O constr
+R3716:3723 LF.c03_lists <> nonzeros def
+R3732:3735 LF.c03_lists <> :::x_'::'_x not
+R3742:3746 LF.c03_lists <> :::x_'::'_x not
+R3757:3757 LF.c03_lists <> :::x_'::'_x not
+R3747:3754 LF.c03_lists <> nonzeros def
+def 3775:3787 <> test_nonzeros
+R3820:3822 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3790:3797 LF.c03_lists <> nonzeros def
+R3799:3799 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3801:3802 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3804:3805 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3807:3808 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3810:3811 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3813:3814 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3816:3817 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3819:3819 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3823:3823 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3825:3826 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3828:3829 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R3831:3831 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 3880:3889 <> oddmembers
+R3896:3902 LF.c03_lists <> natlist ind
+R3907:3913 LF.c03_lists <> natlist ind
+R3926:3926 LF.c03_lists <> l var
+R3937:3939 LF.c03_lists <> nil constr
+R3944:3946 LF.c03_lists <> nil constr
+R3953:3956 LF.c03_lists <> :::x_'::'_x not
+R3969:3972 LF.c01_basics <> oddb def
+R3988:3991 LF.c01_basics <> true constr
+R3997:4001 LF.c03_lists <> :::x_'::'_x not
+R4014:4014 LF.c03_lists <> :::x_'::'_x not
+R4002:4011 LF.c03_lists <> oddmembers def
+R4022:4026 LF.c01_basics <> false constr
+R4031:4040 LF.c03_lists <> oddmembers def
+def 4068:4082 <> test_oddmembers
+R4118:4120 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4086:4095 LF.c03_lists <> oddmembers def
+R4097:4097 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4099:4100 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4102:4103 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4105:4106 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4108:4109 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4111:4112 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4114:4115 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4117:4117 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4121:4121 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4123:4124 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4126:4126 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 4175:4189 <> countoddmembers
+R4196:4202 LF.c03_lists <> natlist ind
+R4207:4209 Coq.Init.Datatypes <> nat ind
+R4222:4222 LF.c03_lists <> l var
+R4233:4235 LF.c03_lists <> nil constr
+R4240:4240 Coq.Init.Datatypes <> O constr
+R4247:4250 LF.c03_lists <> :::x_'::'_x not
+R4260:4263 LF.c01_basics <> oddb def
+R4302:4316 LF.c03_lists <> countoddmembers def
+R4274:4277 LF.c01_basics <> ::nat_scope:x_'+'_x not
+R4295:4295 LF.c01_basics <> ::nat_scope:x_'+'_x not
+R4278:4292 LF.c03_lists <> countoddmembers def
+def 4336:4356 <> test_countoddmembers1
+R4393:4395 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4359:4373 LF.c03_lists <> countoddmembers def
+R4375:4375 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4377:4378 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4380:4381 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4383:4384 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4386:4387 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4389:4390 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4392:4392 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 4444:4464 <> test_countoddmembers2
+R4492:4494 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4467:4481 LF.c03_lists <> countoddmembers def
+R4483:4483 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4485:4486 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4488:4489 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4491:4491 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 4543:4563 <> test_countoddmembers3
+R4585:4587 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4566:4580 LF.c03_lists <> countoddmembers def
+R4582:4584 LF.c03_lists <> nil constr
+def 4685:4693 <> alternate
+R4704:4710 LF.c03_lists <> natlist ind
+R4715:4721 LF.c03_lists <> natlist ind
+R4738:4739 LF.c03_lists <> l2 var
+R4734:4735 LF.c03_lists <> l1 var
+R4750:4752 LF.c03_lists <> nil constr
+R4755:4757 LF.c03_lists <> nil constr
+R4762:4764 LF.c03_lists <> nil constr
+R4770:4772 LF.c03_lists <> nil constr
+R4792:4794 LF.c03_lists <> nil constr
+R4807:4810 LF.c03_lists <> :::x_'::'_x not
+R4816:4819 LF.c03_lists <> :::x_'::'_x not
+R4827:4830 LF.c03_lists <> :::x_'::'_x not
+R4832:4835 LF.c03_lists <> :::x_'::'_x not
+R4836:4844 LF.c03_lists <> alternate def
+def 4868:4882 <> test_alternate1
+R4914:4916 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4885:4893 LF.c03_lists <> alternate def
+R4905:4905 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4907:4908 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4910:4911 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4913:4913 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4895:4895 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4897:4898 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4900:4901 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4903:4903 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4917:4917 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4919:4920 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4922:4923 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4925:4926 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4928:4929 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4931:4932 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R4934:4934 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 4982:4996 <> test_alternate2
+R5022:5024 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4999:5007 LF.c03_lists <> alternate def
+R5013:5013 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5015:5016 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5018:5019 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5021:5021 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5009:5009 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5011:5011 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5025:5025 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5027:5028 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5030:5031 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5033:5034 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5036:5036 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 5084:5098 <> test_alternate3
+R5124:5126 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5101:5109 LF.c03_lists <> alternate def
+R5121:5121 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5123:5123 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5111:5111 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5113:5114 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5116:5117 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5119:5119 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5127:5127 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5129:5130 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5132:5133 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5135:5136 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5138:5138 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 5186:5200 <> test_alternate4
+R5223:5225 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5203:5211 LF.c03_lists <> alternate def
+R5216:5216 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5219:5219 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5222:5222 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5213:5214 LF.c03_lists <> :::'['_']' not
+R5226:5226 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5229:5229 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5232:5232 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 5283:5285 <> bag
+R5290:5296 LF.c03_lists <> natlist ind
+def 5374:5378 <> count
+R5385:5387 Coq.Init.Datatypes <> nat ind
+R5395:5397 LF.c03_lists <> bag def
+R5402:5404 Coq.Init.Datatypes <> nat ind
+R5417:5417 LF.c03_lists <> b var
+R5428:5430 LF.c03_lists <> nil constr
+R5435:5435 Coq.Init.Datatypes <> O constr
+R5442:5445 LF.c03_lists <> :::x_'::'_x not
+R5454:5456 LF.c01_basics <> eqb def
+R5458:5458 LF.c03_lists <> x var
+R5486:5490 LF.c03_lists <> count def
+R5492:5492 LF.c03_lists <> x var
+R5467:5467 Coq.Init.Datatypes <> S constr
+R5470:5474 LF.c03_lists <> count def
+R5476:5476 LF.c03_lists <> x var
+def 5512:5522 <> test_count1
+R5551:5553 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5525:5529 LF.c03_lists <> count def
+R5533:5533 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5535:5536 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5538:5539 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5541:5542 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5544:5545 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5547:5548 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5550:5550 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 5602:5612 <> test_count2
+R5641:5643 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5615:5619 LF.c03_lists <> count def
+R5623:5623 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5625:5626 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5628:5629 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5631:5632 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5634:5635 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5637:5638 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5640:5640 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 5695:5697 <> sum
+R5704:5707 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5711:5714 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5715:5717 LF.c03_lists <> bag def
+R5708:5710 LF.c03_lists <> bag def
+R5701:5703 LF.c03_lists <> bag def
+R5722:5724 LF.c03_lists <> app def
+def 5736:5744 <> test_sum1
+R5780:5782 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5747:5751 LF.c03_lists <> count def
+R5756:5758 LF.c03_lists <> sum def
+R5770:5770 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5772:5773 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5775:5776 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5778:5778 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5760:5760 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5762:5763 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5765:5766 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5768:5768 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 5834:5836 <> add
+R5843:5845 Coq.Init.Datatypes <> nat ind
+R5853:5855 LF.c03_lists <> bag def
+R5860:5862 LF.c03_lists <> bag def
+R5868:5871 LF.c03_lists <> :::x_'::'_x not
+R5867:5867 LF.c03_lists <> x var
+R5872:5872 LF.c03_lists <> b var
+def 5884:5892 <> test_add1
+R5920:5922 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5895:5899 LF.c03_lists <> count def
+R5904:5906 LF.c03_lists <> add def
+R5910:5910 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5912:5913 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5915:5916 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5918:5918 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 5971:5979 <> test_add2
+R6007:6009 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R5982:5986 LF.c03_lists <> count def
+R5991:5993 LF.c03_lists <> add def
+R5997:5997 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R5999:6000 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6002:6003 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6005:6005 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 6061:6066 <> member
+R6073:6075 Coq.Init.Datatypes <> nat ind
+R6083:6085 LF.c03_lists <> bag def
+R6090:6093 LF.c01_basics <> bool ind
+R6107:6111 LF.c03_lists <> count def
+R6115:6115 LF.c03_lists <> b var
+R6113:6113 LF.c03_lists <> x var
+R6127:6127 Coq.Init.Datatypes <> O constr
+R6132:6136 LF.c01_basics <> false constr
+R6147:6150 LF.c01_basics <> true constr
+def 6168:6179 <> test_member1
+R6200:6202 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6182:6187 LF.c03_lists <> member def
+R6191:6191 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6193:6194 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6196:6197 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6199:6199 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6203:6206 LF.c01_basics <> true constr
+def 6245:6256 <> test_member2
+R6277:6279 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6259:6264 LF.c03_lists <> member def
+R6268:6268 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6270:6271 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6273:6274 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6276:6276 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6280:6284 LF.c01_basics <> false constr
+def 6391:6400 <> remove_one
+R6407:6409 Coq.Init.Datatypes <> nat ind
+R6417:6419 LF.c03_lists <> bag def
+R6424:6426 LF.c03_lists <> bag def
+R6439:6439 LF.c03_lists <> b var
+R6450:6452 LF.c03_lists <> nil constr
+R6457:6459 LF.c03_lists <> nil constr
+R6466:6469 LF.c03_lists <> :::x_'::'_x not
+R6478:6480 LF.c01_basics <> eqb def
+R6482:6482 LF.c03_lists <> x var
+R6499:6502 LF.c03_lists <> :::x_'::'_x not
+R6503:6512 LF.c03_lists <> remove_one def
+R6514:6514 LF.c03_lists <> x var
+def 6534:6549 <> test_remove_one1
+R6590:6592 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6552:6556 LF.c03_lists <> count def
+R6561:6570 LF.c03_lists <> remove_one def
+R6574:6574 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6576:6577 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6579:6580 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6582:6583 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6585:6586 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6588:6588 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 6641:6656 <> test_remove_one2
+R6694:6696 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6659:6663 LF.c03_lists <> count def
+R6668:6677 LF.c03_lists <> remove_one def
+R6681:6681 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6683:6684 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6686:6687 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6689:6690 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6692:6692 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 6745:6760 <> test_remove_one3
+R6804:6806 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6763:6767 LF.c03_lists <> count def
+R6772:6781 LF.c03_lists <> remove_one def
+R6785:6785 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6787:6788 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6790:6791 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6793:6794 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6796:6797 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6799:6800 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6802:6802 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 6855:6870 <> test_remove_one4
+R6917:6919 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R6873:6877 LF.c03_lists <> count def
+R6882:6891 LF.c03_lists <> remove_one def
+R6895:6895 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6897:6898 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6900:6901 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6903:6904 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6906:6907 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6909:6910 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6912:6913 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R6915:6915 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 6969:6978 <> remove_all
+R6985:6987 Coq.Init.Datatypes <> nat ind
+R6995:6997 LF.c03_lists <> bag def
+R7002:7004 LF.c03_lists <> bag def
+R7017:7017 LF.c03_lists <> b var
+R7028:7030 LF.c03_lists <> nil constr
+R7035:7037 LF.c03_lists <> nil constr
+R7044:7047 LF.c03_lists <> :::x_'::'_x not
+R7056:7058 LF.c01_basics <> eqb def
+R7060:7060 LF.c03_lists <> x var
+R7090:7093 LF.c03_lists <> :::x_'::'_x not
+R7094:7103 LF.c03_lists <> remove_all def
+R7105:7105 LF.c03_lists <> x var
+R7069:7078 LF.c03_lists <> remove_all def
+R7080:7080 LF.c03_lists <> x var
+def 7125:7140 <> test_remove_all1
+R7181:7183 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7143:7147 LF.c03_lists <> count def
+R7152:7161 LF.c03_lists <> remove_all def
+R7165:7165 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7167:7168 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7170:7171 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7173:7174 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7176:7177 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7179:7179 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 7232:7247 <> test_remove_all2
+R7285:7287 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7250:7254 LF.c03_lists <> count def
+R7259:7268 LF.c03_lists <> remove_all def
+R7272:7272 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7274:7275 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7277:7278 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7280:7281 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7283:7283 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 7336:7351 <> test_remove_all3
+R7395:7397 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7354:7358 LF.c03_lists <> count def
+R7363:7372 LF.c03_lists <> remove_all def
+R7376:7376 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7378:7379 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7381:7382 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7384:7385 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7387:7388 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7390:7391 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7393:7393 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 7446:7461 <> test_remove_all4
+R7517:7519 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7464:7468 LF.c03_lists <> count def
+R7473:7482 LF.c03_lists <> remove_all def
+R7486:7486 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7488:7489 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7491:7492 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7494:7495 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7497:7498 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7500:7501 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7503:7504 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7506:7507 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7509:7510 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7512:7513 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7515:7515 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 7569:7574 <> subset
+R7582:7584 LF.c03_lists <> bag def
+R7593:7595 LF.c03_lists <> bag def
+R7600:7603 LF.c01_basics <> bool ind
+R7616:7617 LF.c03_lists <> b1 var
+R7628:7630 LF.c03_lists <> nil constr
+R7635:7638 LF.c01_basics <> true constr
+R7645:7648 LF.c03_lists <> :::x_'::'_x not
+R7654:7657 LF.c01_basics <> andb def
+R7674:7679 LF.c03_lists <> subset def
+R7684:7693 LF.c03_lists <> remove_one def
+R7697:7698 LF.c03_lists <> b2 var
+R7660:7665 LF.c03_lists <> member def
+R7669:7670 LF.c03_lists <> b2 var
+def 7718:7729 <> test_subset1
+R7758:7760 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7732:7737 LF.c03_lists <> subset def
+R7746:7746 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7748:7749 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7751:7752 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7754:7755 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7757:7757 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7739:7739 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7741:7742 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7744:7744 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7761:7764 LF.c01_basics <> true constr
+def 7812:7823 <> test_subset2
+R7855:7857 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R7826:7831 LF.c03_lists <> subset def
+R7843:7843 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7845:7846 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7848:7849 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7851:7852 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7854:7854 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7833:7833 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7835:7836 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7838:7839 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7841:7841 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R7858:7862 LF.c01_basics <> false constr
+prf 7973:7983 <> bag_theorem
+R7999:8001 LF.c03_lists <> bag def
+R8017:8019 Coq.Init.Datatypes <> nat ind
+R8037:8039 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8025:8025 Coq.Init.Datatypes <> S constr
+R8028:8033 LF.c03_lists <> length def
+R8035:8035 LF.c03_lists <> b var
+R8040:8045 LF.c03_lists <> length def
+R8048:8050 LF.c03_lists <> add def
+R8054:8054 LF.c03_lists <> b var
+R8052:8052 LF.c03_lists <> x var
+prf 8150:8156 <> nil_app
+R8171:8177 LF.c03_lists <> natlist ind
+R8189:8191 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8184:8187 LF.c03_lists <> :::x_'++'_x not
+R8182:8183 LF.c03_lists <> :::'['_']' not
+R8188:8188 LF.c03_lists <> l var
+R8192:8192 LF.c03_lists <> l var
+prf 8240:8253 <> tl_length_pred
+R8268:8274 LF.c03_lists <> natlist ind
+R8294:8296 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8279:8282 Coq.Init.Peano <> pred syndef
+R8285:8290 LF.c03_lists <> length def
+R8292:8292 LF.c03_lists <> l var
+R8297:8302 LF.c03_lists <> length def
+R8305:8306 LF.c03_lists <> tl def
+R8308:8308 LF.c03_lists <> l var
+prf 8421:8429 <> app_assoc
+R8451:8457 LF.c03_lists <> natlist ind
+R8478:8480 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8462:8462 LF.c03_lists <> :::x_'++'_x not
+R8471:8475 LF.c03_lists <> :::x_'++'_x not
+R8465:8468 LF.c03_lists <> :::x_'++'_x not
+R8463:8464 LF.c03_lists <> l1 var
+R8469:8470 LF.c03_lists <> l2 var
+R8476:8477 LF.c03_lists <> l3 var
+R8483:8487 LF.c03_lists <> :::x_'++'_x not
+R8496:8496 LF.c03_lists <> :::x_'++'_x not
+R8481:8482 LF.c03_lists <> l1 var
+R8490:8493 LF.c03_lists <> :::x_'++'_x not
+R8488:8489 LF.c03_lists <> l2 var
+R8494:8495 LF.c03_lists <> l3 var
+def 8659:8661 <> rev
+R8668:8674 LF.c03_lists <> natlist ind
+R8679:8685 LF.c03_lists <> natlist ind
+R8698:8698 LF.c03_lists <> l var
+R8709:8711 LF.c03_lists <> nil constr
+R8716:8718 LF.c03_lists <> nil constr
+R8725:8728 LF.c03_lists <> :::x_'::'_x not
+R8739:8742 LF.c03_lists <> :::x_'++'_x not
+R8734:8736 LF.c03_lists <> rev def
+R8743:8743 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R8745:8745 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 8763:8771 <> test_rev1
+R8787:8789 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8774:8776 LF.c03_lists <> rev def
+R8778:8778 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R8780:8781 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R8783:8784 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R8786:8786 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R8790:8790 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R8792:8793 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R8795:8796 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R8798:8798 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+def 8846:8854 <> test_rev2
+R8864:8866 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8857:8859 LF.c03_lists <> rev def
+R8861:8863 LF.c03_lists <> nil constr
+R8867:8869 LF.c03_lists <> nil constr
+prf 8917:8926 <> app_length
+R8945:8951 LF.c03_lists <> natlist ind
+R8973:8975 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R8956:8961 LF.c03_lists <> length def
+R8966:8969 LF.c03_lists <> :::x_'++'_x not
+R8964:8965 LF.c03_lists <> l1 var
+R8970:8971 LF.c03_lists <> l2 var
+R8976:8976 LF.c01_basics <> ::nat_scope:x_'+'_x not
+R8986:8990 LF.c01_basics <> ::nat_scope:x_'+'_x not
+R9000:9000 LF.c01_basics <> ::nat_scope:x_'+'_x not
+R8977:8982 LF.c03_lists <> length def
+R8984:8985 LF.c03_lists <> l1 var
+R8991:8996 LF.c03_lists <> length def
+R8998:8999 LF.c03_lists <> l2 var
+prf 9152:9161 <> rev_length
+R9176:9182 LF.c03_lists <> natlist ind
+R9201:9203 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9187:9192 LF.c03_lists <> length def
+R9195:9197 LF.c03_lists <> rev def
+R9199:9199 LF.c03_lists <> l var
+R9204:9209 LF.c03_lists <> length def
+R9211:9211 LF.c03_lists <> l var
+R9326:9335 LF.c03_lists <> app_length thm
+R9326:9335 LF.c03_lists <> app_length thm
+R9326:9335 LF.c03_lists <> app_length thm
+R9353:9361 LF.c02_induction <> plus_comm thm
+R9353:9361 LF.c02_induction <> plus_comm thm
+R9353:9361 LF.c02_induction <> plus_comm thm
+prf 9479:9487 <> app_nil_r
+R9502:9508 LF.c03_lists <> natlist ind
+R9520:9522 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9514:9517 LF.c03_lists <> :::x_'++'_x not
+R9513:9513 LF.c03_lists <> l var
+R9518:9519 LF.c03_lists <> :::'['_']' not
+R9523:9523 LF.c03_lists <> l var
+prf 9673:9685 <> rev_app_distr
+R9703:9709 LF.c03_lists <> natlist ind
+R9728:9730 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R9714:9716 LF.c03_lists <> rev def
+R9721:9724 LF.c03_lists <> :::x_'++'_x not
+R9719:9720 LF.c03_lists <> l1 var
+R9725:9726 LF.c03_lists <> l2 var
+R9737:9740 LF.c03_lists <> :::x_'++'_x not
+R9731:9733 LF.c03_lists <> rev def
+R9735:9736 LF.c03_lists <> l2 var
+R9741:9743 LF.c03_lists <> rev def
+R9745:9746 LF.c03_lists <> l1 var
+R9923:9931 LF.c03_lists <> app_assoc thm
+R9923:9931 LF.c03_lists <> app_assoc thm
+R9923:9931 LF.c03_lists <> app_assoc thm
+R9951:9959 LF.c03_lists <> app_nil_r thm
+R9951:9959 LF.c03_lists <> app_nil_r thm
+R9951:9959 LF.c03_lists <> app_nil_r thm
+R10032:10040 LF.c03_lists <> app_assoc thm
+R10032:10040 LF.c03_lists <> app_assoc thm
+R10032:10040 LF.c03_lists <> app_assoc thm
+prf 10074:10087 <> rev_involutive
+R10102:10108 LF.c03_lists <> natlist ind
+R10124:10126 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10113:10115 LF.c03_lists <> rev def
+R10118:10120 LF.c03_lists <> rev def
+R10122:10122 LF.c03_lists <> l var
+R10127:10127 LF.c03_lists <> l var
+R10241:10253 LF.c03_lists <> rev_app_distr thm
+R10241:10253 LF.c03_lists <> rev_app_distr thm
+R10241:10253 LF.c03_lists <> rev_app_distr thm
+prf 10318:10327 <> app_assoc4
+R10352:10358 LF.c03_lists <> natlist ind
+R10387:10389 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10365:10369 LF.c03_lists <> :::x_'++'_x not
+R10386:10386 LF.c03_lists <> :::x_'++'_x not
+R10363:10364 LF.c03_lists <> l1 var
+R10372:10376 LF.c03_lists <> :::x_'++'_x not
+R10385:10385 LF.c03_lists <> :::x_'++'_x not
+R10370:10371 LF.c03_lists <> l2 var
+R10379:10382 LF.c03_lists <> :::x_'++'_x not
+R10377:10378 LF.c03_lists <> l3 var
+R10383:10384 LF.c03_lists <> l4 var
+R10390:10390 LF.c03_lists <> :::x_'++'_x not
+R10407:10411 LF.c03_lists <> :::x_'++'_x not
+R10391:10391 LF.c03_lists <> :::x_'++'_x not
+R10400:10404 LF.c03_lists <> :::x_'++'_x not
+R10394:10397 LF.c03_lists <> :::x_'++'_x not
+R10392:10393 LF.c03_lists <> l1 var
+R10398:10399 LF.c03_lists <> l2 var
+R10405:10406 LF.c03_lists <> l3 var
+R10412:10413 LF.c03_lists <> l4 var
+R10458:10466 LF.c03_lists <> app_assoc thm
+R10458:10466 LF.c03_lists <> app_assoc thm
+R10458:10466 LF.c03_lists <> app_assoc thm
+R10482:10490 LF.c03_lists <> app_assoc thm
+R10482:10490 LF.c03_lists <> app_assoc thm
+R10482:10490 LF.c03_lists <> app_assoc thm
+prf 10520:10531 <> nonzeros_app
+R10550:10556 LF.c03_lists <> natlist ind
+R10580:10582 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10561:10568 LF.c03_lists <> nonzeros def
+R10573:10576 LF.c03_lists <> :::x_'++'_x not
+R10571:10572 LF.c03_lists <> l1 var
+R10577:10578 LF.c03_lists <> l2 var
+R10583:10583 LF.c03_lists <> :::x_'++'_x not
+R10595:10600 LF.c03_lists <> :::x_'++'_x not
+R10612:10612 LF.c03_lists <> :::x_'++'_x not
+R10584:10591 LF.c03_lists <> nonzeros def
+R10593:10594 LF.c03_lists <> l1 var
+R10601:10608 LF.c03_lists <> nonzeros def
+R10610:10611 LF.c03_lists <> l2 var
+def 10915:10921 <> eqblist
+R10932:10938 LF.c03_lists <> natlist ind
+R10943:10946 LF.c01_basics <> bool ind
+R10963:10964 LF.c03_lists <> l2 var
+R10959:10960 LF.c03_lists <> l1 var
+R10975:10976 LF.c03_lists <> :::'['_']' not
+R10979:10980 LF.c03_lists <> :::'['_']' not
+R10985:10988 LF.c01_basics <> true constr
+R10997:10998 LF.c03_lists <> :::'['_']' not
+R11003:11007 LF.c01_basics <> false constr
+R11013:11014 LF.c03_lists <> :::'['_']' not
+R11022:11026 LF.c01_basics <> false constr
+R11034:11037 LF.c03_lists <> :::x_'::'_x not
+R11044:11047 LF.c03_lists <> :::x_'::'_x not
+R11057:11059 LF.c01_basics <> eqb def
+R11091:11095 LF.c01_basics <> false constr
+R11072:11078 LF.c03_lists <> eqblist def
+def 11113:11125 <> test_eqblist1
+R11145:11147 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11130:11136 LF.c03_lists <> eqblist def
+R11142:11144 LF.c03_lists <> nil constr
+R11138:11140 LF.c03_lists <> nil constr
+R11148:11151 LF.c01_basics <> true constr
+def 11200:11212 <> test_eqblist2
+R11243:11245 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11216:11222 LF.c03_lists <> eqblist def
+R11234:11234 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11236:11237 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11239:11240 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11242:11242 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11224:11224 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11226:11227 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11229:11230 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11232:11232 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11246:11249 LF.c01_basics <> true constr
+def 11297:11309 <> test_eqblist3
+R11340:11342 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11313:11319 LF.c03_lists <> eqblist def
+R11331:11331 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11333:11334 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11336:11337 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11339:11339 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11321:11321 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11323:11324 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11326:11327 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11329:11329 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R11343:11347 LF.c01_basics <> false constr
+prf 11395:11406 <> eqblist_refl
+R11421:11427 LF.c03_lists <> natlist ind
+R11436:11438 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11432:11435 LF.c01_basics <> true constr
+R11439:11445 LF.c03_lists <> eqblist def
+R11449:11449 LF.c03_lists <> l var
+R11447:11447 LF.c03_lists <> l var
+prf 11770:11789 <> count_member_nonzero
+R11805:11807 LF.c03_lists <> bag def
+R11837:11839 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11813:11815 LF.c01_basics <> leb def
+R11820:11824 LF.c03_lists <> count def
+R11830:11833 LF.c03_lists <> :::x_'::'_x not
+R11834:11834 LF.c03_lists <> b var
+R11840:11843 LF.c01_basics <> true constr
+prf 11891:11898 <> leb_x_Sx
+R11925:11927 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R11914:11916 LF.c01_basics <> leb def
+R11921:11921 Coq.Init.Datatypes <> S constr
+R11923:11923 LF.c03_lists <> x var
+R11918:11918 LF.c03_lists <> x var
+R11928:11931 LF.c01_basics <> true constr
+prf 12146:12175 <> remove_does_not_increase_count
+R12190:12192 LF.c03_lists <> bag def
+R12240:12242 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12198:12200 LF.c01_basics <> leb def
+R12230:12234 LF.c03_lists <> count def
+R12238:12238 LF.c03_lists <> b var
+R12203:12207 LF.c03_lists <> count def
+R12212:12221 LF.c03_lists <> remove_one def
+R12225:12225 LF.c03_lists <> b var
+R12243:12246 LF.c01_basics <> true constr
+R12393:12400 LF.c03_lists <> leb_x_Sx thm
+R12393:12400 LF.c03_lists <> leb_x_Sx thm
+R12393:12400 LF.c03_lists <> leb_x_Sx thm
+prf 12630:12642 <> rev_injective
+R12662:12668 LF.c03_lists <> natlist ind
+R12689:12692 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12695:12697 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12693:12694 LF.c03_lists <> l1 var
+R12698:12699 LF.c03_lists <> l2 var
+R12680:12682 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12674:12676 LF.c03_lists <> rev def
+R12678:12679 LF.c03_lists <> l1 var
+R12683:12685 LF.c03_lists <> rev def
+R12687:12688 LF.c03_lists <> l2 var
+R12740:12753 LF.c03_lists <> rev_involutive thm
+R12740:12753 LF.c03_lists <> rev_involutive thm
+R12740:12753 LF.c03_lists <> rev_involutive thm
+R12785:12798 LF.c03_lists <> rev_involutive thm
+R12785:12798 LF.c03_lists <> rev_involutive thm
+R12785:12798 LF.c03_lists <> rev_involutive thm
+def 12848:12854 <> xth_bad
+R12861:12867 LF.c03_lists <> natlist ind
+R12875:12877 Coq.Init.Datatypes <> nat ind
+R12882:12884 Coq.Init.Datatypes <> nat ind
+R12897:12897 LF.c03_lists <> l var
+R12908:12910 LF.c03_lists <> nil constr
+R12943:12946 LF.c03_lists <> :::x_'::'_x not
+R12959:12961 LF.c01_basics <> eqb def
+R12965:12965 Coq.Init.Datatypes <> O constr
+R12963:12963 LF.c03_lists <> x var
+R12978:12981 LF.c01_basics <> true constr
+R12994:12998 LF.c01_basics <> false constr
+R13003:13009 LF.c03_lists <> xth_bad def
+R13015:13018 Coq.Init.Peano <> pred syndef
+R13020:13020 LF.c03_lists <> x var
+ind 13049:13057 <> natoption
+constr 13073:13076 <> Some
+constr 13104:13107 <> None
+R13083:13085 Coq.Init.Datatypes <> nat ind
+R13090:13098 LF.c03_lists <> natoption ind
+R13111:13119 LF.c03_lists <> natoption ind
+def 13132:13140 <> xth_error
+R13147:13153 LF.c03_lists <> natlist ind
+R13161:13163 Coq.Init.Datatypes <> nat ind
+R13168:13176 LF.c03_lists <> natoption ind
+R13189:13189 LF.c03_lists <> l var
+R13200:13202 LF.c03_lists <> nil constr
+R13207:13210 LF.c03_lists <> None constr
+R13219:13222 LF.c03_lists <> :::x_'::'_x not
+R13235:13237 LF.c01_basics <> eqb def
+R13241:13241 Coq.Init.Datatypes <> O constr
+R13239:13239 LF.c03_lists <> x var
+R13256:13259 LF.c01_basics <> true constr
+R13264:13267 LF.c03_lists <> Some constr
+R13279:13283 LF.c01_basics <> false constr
+R13288:13296 LF.c03_lists <> xth_error def
+R13302:13305 Coq.Init.Peano <> pred syndef
+R13307:13307 LF.c03_lists <> x var
+def 13334:13348 <> test_xth_error1
+R13376:13378 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R13352:13360 LF.c03_lists <> xth_error def
+R13362:13362 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13364:13365 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13367:13368 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13370:13371 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13373:13373 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13379:13382 LF.c03_lists <> Some constr
+def 13432:13446 <> test_xth_error2
+R13474:13476 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R13450:13458 LF.c03_lists <> xth_error def
+R13460:13460 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13462:13463 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13465:13466 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13468:13469 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13471:13471 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13477:13480 LF.c03_lists <> Some constr
+def 13530:13544 <> test_xth_error3
+R13572:13574 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R13548:13556 LF.c03_lists <> xth_error def
+R13558:13558 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13560:13561 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13563:13564 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13566:13567 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13569:13569 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R13575:13578 LF.c03_lists <> None constr
+def 13627:13636 <> xth_error'
+R13643:13649 LF.c03_lists <> natlist ind
+R13657:13659 Coq.Init.Datatypes <> nat ind
+R13664:13672 LF.c03_lists <> natoption ind
+R13685:13685 LF.c03_lists <> l var
+R13696:13698 LF.c03_lists <> nil constr
+R13703:13706 LF.c03_lists <> None constr
+R13713:13716 LF.c03_lists <> :::x_'::'_x not
+R13726:13728 LF.c01_basics <> eqb def
+R13732:13732 Coq.Init.Datatypes <> O constr
+R13730:13730 LF.c03_lists <> x var
+R13751:13760 LF.c03_lists <> xth_error' def
+R13766:13769 Coq.Init.Peano <> pred syndef
+R13771:13771 LF.c03_lists <> x var
+R13739:13742 LF.c03_lists <> Some constr
+def 13793:13803 <> option_elim
+R13810:13812 Coq.Init.Datatypes <> nat ind
+R13820:13828 LF.c03_lists <> natoption ind
+R13833:13835 Coq.Init.Datatypes <> nat ind
+R13848:13848 LF.c03_lists <> o var
+R13859:13862 LF.c03_lists <> Some constr
+R13877:13880 LF.c03_lists <> None constr
+R13885:13885 LF.c03_lists <> x var
+def 13944:13951 <> hd_error
+R13958:13964 LF.c03_lists <> natlist ind
+R13969:13977 LF.c03_lists <> natoption ind
+R13990:13990 LF.c03_lists <> l var
+R14001:14002 LF.c03_lists <> :::'['_']' not
+R14007:14010 LF.c03_lists <> None constr
+R14017:14020 LF.c03_lists <> :::x_'::'_x not
+R14026:14029 LF.c03_lists <> Some constr
+def 14049:14062 <> test_hd_error1
+R14077:14079 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14066:14073 LF.c03_lists <> hd_error def
+R14075:14076 LF.c03_lists <> :::'['_']' not
+R14080:14083 LF.c03_lists <> None constr
+def 14131:14144 <> test_hd_error2
+R14160:14162 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14148:14155 LF.c03_lists <> hd_error def
+R14157:14157 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R14159:14159 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R14163:14166 LF.c03_lists <> Some constr
+def 14216:14229 <> test_hd_error3
+R14248:14250 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14233:14240 LF.c03_lists <> hd_error def
+R14242:14242 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R14244:14245 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R14247:14247 LF.c03_lists <> :::'['_x_';'_'..'_';'_x_']' not
+R14251:14254 LF.c03_lists <> Some constr
+prf 14357:14370 <> option_elim_hd
+R14386:14392 LF.c03_lists <> natlist ind
+R14406:14408 Coq.Init.Datatypes <> nat ind
+R14426:14428 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14414:14415 LF.c03_lists <> hd def
+R14425:14425 LF.c03_lists <> l var
+R14417:14423 LF.c03_lists <> default var
+R14429:14439 LF.c03_lists <> option_elim def
+R14450:14457 LF.c03_lists <> hd_error def
+R14459:14459 LF.c03_lists <> l var
+R14441:14447 LF.c03_lists <> default var
+ind 14622:14623 <> id
+constr 14639:14640 <> Id
+R14647:14649 Coq.Init.Datatypes <> nat ind
+R14654:14655 LF.c03_lists <> id ind
+def 14670:14675 <> eqb_id
+R14686:14687 LF.c03_lists <> id ind
+R14705:14706 LF.c03_lists <> x2 var
+R14701:14702 LF.c03_lists <> x1 var
+R14719:14720 LF.c03_lists <> Id constr
+R14726:14727 LF.c03_lists <> Id constr
+R14735:14737 LF.c01_basics <> eqb def
+prf 14800:14810 <> eqb_id_refl
+R14828:14830 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14824:14827 LF.c01_basics <> true constr
+R14831:14836 LF.c03_lists <> eqb_id def
+R14840:14840 LF.c03_lists <> x var
+R14838:14838 LF.c03_lists <> x var
+R14906:14913 LF.c02_induction <> eqb_refl thm
+R14906:14913 LF.c02_induction <> eqb_refl thm
+R14906:14913 LF.c02_induction <> eqb_refl thm
+ind 14947:14957 <> partial_map
+constr 14973:14977 <> empty
+constr 14997:15002 <> record
+R14981:14991 LF.c03_lists <> partial_map ind
+R15009:15010 LF.c03_lists <> id ind
+R15018:15020 Coq.Init.Datatypes <> nat ind
+R15028:15038 LF.c03_lists <> partial_map ind
+R15043:15053 LF.c03_lists <> partial_map ind
+def 15068:15073 <> update
+R15080:15090 LF.c03_lists <> partial_map ind
+R15098:15099 LF.c03_lists <> id ind
+R15107:15109 Coq.Init.Datatypes <> nat ind
+R15114:15124 LF.c03_lists <> partial_map ind
+R15131:15136 LF.c03_lists <> record constr
+R15142:15142 LF.c03_lists <> m var
+R15140:15140 LF.c03_lists <> x var
+R15138:15138 LF.c03_lists <> i var
+def 15155:15158 <> find
+R15165:15166 LF.c03_lists <> id ind
+R15174:15184 LF.c03_lists <> partial_map ind
+R15189:15197 LF.c03_lists <> natoption ind
+R15210:15210 LF.c03_lists <> m var
+R15221:15225 LF.c03_lists <> empty constr
+R15230:15233 LF.c03_lists <> None constr
+R15239:15244 LF.c03_lists <> record constr
+R15259:15264 LF.c03_lists <> eqb_id def
+R15266:15266 LF.c03_lists <> i var
+R15287:15290 LF.c03_lists <> find def
+R15292:15292 LF.c03_lists <> i var
+R15275:15278 LF.c03_lists <> Some constr
+prf 15350:15358 <> update_eq
+R15374:15384 LF.c03_lists <> partial_map ind
+R15392:15393 LF.c03_lists <> id ind
+R15400:15402 Coq.Init.Datatypes <> nat ind
+R15431:15433 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R15410:15413 LF.c03_lists <> find def
+R15418:15423 LF.c03_lists <> update def
+R15429:15429 LF.c03_lists <> x var
+R15427:15427 LF.c03_lists <> i var
+R15425:15425 LF.c03_lists <> m var
+R15415:15415 LF.c03_lists <> i var
+R15434:15437 LF.c03_lists <> Some constr
+R15439:15439 LF.c03_lists <> x var
+R15487:15497 LF.c03_lists <> eqb_id_refl thm
+R15487:15497 LF.c03_lists <> eqb_id_refl thm
+R15487:15497 LF.c03_lists <> eqb_id_refl thm
+prf 15573:15582 <> update_neq
+R15598:15608 LF.c03_lists <> partial_map ind
+R15618:15619 LF.c03_lists <> id ind
+R15626:15628 Coq.Init.Datatypes <> nat ind
+R15654:15657 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15679:15681 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R15658:15661 LF.c03_lists <> find def
+R15666:15671 LF.c03_lists <> update def
+R15677:15677 LF.c03_lists <> n var
+R15675:15675 LF.c03_lists <> y var
+R15673:15673 LF.c03_lists <> m var
+R15663:15663 LF.c03_lists <> x var
+R15682:15685 LF.c03_lists <> find def
+R15689:15689 LF.c03_lists <> m var
+R15687:15687 LF.c03_lists <> x var
+R15646:15648 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R15636:15641 LF.c03_lists <> eqb_id def
+R15645:15645 LF.c03_lists <> y var
+R15643:15643 LF.c03_lists <> x var
+R15649:15653 LF.c01_basics <> false constr
+ind 15817:15819 <> baz
+constr 15835:15838 <> Baz1
+constr 15860:15863 <> Baz2
+R15845:15847 LF.c03_lists <> baz ind
+R15852:15854 LF.c03_lists <> baz ind
+R15870:15872 LF.c03_lists <> baz ind
+R15880:15883 LF.c01_basics <> bool ind
+R15888:15890 LF.c03_lists <> baz ind
