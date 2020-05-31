@@ -1,0 +1,8 @@
+-Q . LF
+c01_basics.v
+c02_induction.v
+c03_lists.v
+c04_poly.v
+c05_tactics.v
+c06_logic.v
+c07_indprop.v

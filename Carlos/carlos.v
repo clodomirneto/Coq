@@ -25,7 +25,7 @@ Section S1.
   Compute ID nat 3.
   Check ID Prop True.
   Eval compute in ID Prop True.
-  
+
   (* In a more compact way *)
   Definition ID' (A:Type) (x:A) := x.
   Check ID'.
@@ -34,7 +34,7 @@ Section S1.
   Eval compute in ID (nat -> nat). (* identity on nat functions *)
   Eval compute in ID (nat -> nat) (fun x :nat => S x).
   Eval compute in ID (nat -> nat) (fun x :nat => S x) 4.
-  
+
   (* We can write a "program" with type A ->A. *)
   Definition ProgId : A -> A:=
     fun x:A => x.
@@ -43,12 +43,10 @@ Section S1.
   (* Or using or polymorphic version of ID *)
   Definition ProgId' : A -> A:=
     ID A.
-  
 
   (* Note that the theorem Id1 (proved using tactics) is indeed a
   "program" that inhabit the proposition A -> A *)
-  Print Id1. 
-  
+  Print Id1.
 
   (* Consider the proposition/type (A -> B) -> A -> B *)
   Definition Prop1 :Prop := (A-> B) -> A -> B.
@@ -104,8 +102,6 @@ Section S1.
   Qed.
 End S1.
 
-
-
 Section Bools.
   (* The type for booleans *)
   Variable T : Type.
@@ -130,7 +126,7 @@ Section Bools.
   Definition soma (x y:nat) :=  x+y.
   Definition soma3 := soma 3.
   Eval compute in soma3 5.
-  
+
   Definition NOT : BOOL -> BOOL :=
     fun (A :BOOL) => (* the  operand of the negation *)
       fun (x y :T) => A (FALSE x y) (TRUE x y).
@@ -186,7 +182,7 @@ Section Logic.
   (* Falsity IN L2 *)
 
   Definition Bot : Type :=  forall Pa :Type, Pa.
-  
+
   (* Inhabitant of beta *)
   Theorem Beta_InHab: forall (B:Type) (H:Bot), B.
     intros B HB.
@@ -197,7 +193,6 @@ Section Logic.
 
   (* So, if Bot appears in the hypothesis, it can prove any
   proposition *)
-      
 
   Theorem Falsity: forall A B :Type, (A -> Bot) -> ( (A -> A) -> A) -> B.
     intros A B x f.
@@ -214,8 +209,7 @@ Section Logic.
   Definition Falsity' : forall A B :Type, (A -> Bot) -> ( (A -> A) -> A) -> B :=
     fun (A B:Type) (x: A -> Bot) (f: (A -> A) -> A) =>
       (x (f (fun (x:A) => x) ) ) B.
-  
-  
+
   (* DISJUNCTION IN L2 *)
   Definition OR (A B:Type): Type := forall C:Type, (A->C) -> (B->C) -> C.
 
