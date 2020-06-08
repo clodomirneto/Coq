@@ -4,8 +4,7 @@ Set Warnings "-notation-overridden,-parsing".
 
 From LF Require Export c05_tactics.
 
-Theorem plus_2_2_is_4 :
-  2 + 2 = 4.
+Theorem plus_2_2_is_4 : 2 + 2 = 4.
 Proof.
   simpl.
   reflexivity.
@@ -642,7 +641,7 @@ Proof.
   reflexivity.
 Qed.
 
-Axiom functional_extensionality : forall {X Y: Type} {f g : X -> Y}, (forall (x:X), f x = g x) -> f = g.
+Axiom functional_extensionality : forall {X Y: Type} {f g : X -> Y}, (forall (x : X), f x = g x) -> f = g.
 
 Example function_equality_ex2 : (fun x => plus x 1) = (fun x => plus 1 x).
 Proof.
@@ -780,7 +779,6 @@ Proof.
   - intro H. inversion H. rewrite -> H0. rewrite -> H1. reflexivity.
 Qed.
 
-(*
 Lemma orb_true_iff : forall b1 b2 : bool, orb b1 b2 = true <-> b1 = true \/ b2 = true.
 Proof.
   intros b1 b2.
@@ -791,15 +789,16 @@ Proof.
     + destruct b2.
       * right. reflexivity.
       * inversion H.
-  - intros H.
-    destruct b1.
-    + reflexivity.
-    + inversion H.
-      * destruct b2.
-        {  }
-      * apply H0.
+  - destruct b1.
+    + destruct b2.
+      * intro H. reflexivity.
+      * intro H. reflexivity.
+    + destruct b2.
+      * intro H. reflexivity.
+      * intro H. exfalso. inversion H.
+      { inversion H0. } { inversion H0. }
 Qed.
-*)
+
 (** Exercise: 1 star, standard (eqb_neq) *)
 Theorem eqb_neq : forall x y : nat, eqb x y = false <-> x <> y.
 Proof.
@@ -856,7 +855,6 @@ Fixpoint forallb {X : Type} (test : X -> bool) (l : list X) : bool :=
   | x :: l' => andb (test x) (forallb test l')
   end.
 
-(*
 Theorem forallb_true_iff : forall X test (l : list X), forallb test l = true <-> All (fun x => eq (test x) true) l.
 Proof.
   intros X test l.
@@ -868,10 +866,8 @@ Proof.
       * apply IHl. apply andb_true_elim2 in H. apply H.
   - induction l as [|n l' IHl].
     + reflexivity.
-    + simpl. intros [H1 H2]. rewrite -> H1. simpl. apply IHl.
-      apply H2.
+    + simpl. intros [H1 H2]. rewrite -> H1. apply IHl in H2. rewrite -> H2. reflexivity.
 Qed.
-*)
 
 Definition excluded_middle := forall P : Prop, P \/ ~ P.
 

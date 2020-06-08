@@ -71,7 +71,6 @@ Proof.
 Qed.
 
 (** Exercise: 1 star, standard (inversion_practice) *)
-
 Theorem SSSSev__even : forall n, ev (S (S (S (S n)))) -> ev n.
 Proof.
   intros n H.
@@ -81,7 +80,6 @@ Proof.
 Qed.
 
 (** Exercise: 1 star (even5_nonsense)  *)
-
 Theorem even5_nonsense : ev 5 -> 2 + 2 = 9.
 Proof.
   intros H.
@@ -107,7 +105,6 @@ Proof.
 Qed.
 
 (** Exercise: 2 stars (ev_sum) *)
-
 Theorem ev_sum : forall n m, ev n -> ev m -> ev (n + m).
 Proof.
   intros n m En Em.
@@ -117,7 +114,6 @@ Proof.
 Qed.
 
 (** Exercise: 4 stars, advanced, optional (ev'_ev)  *)
-
 Inductive ev' : nat -> Prop :=
 | ev'_0 : ev' 0
 | ev'_2 : ev' 2
@@ -143,7 +139,6 @@ Proof.
 Qed.
 
 (** Exercise: 3 stars, advanced, recommended (ev_ev__ev) *)
-
 Theorem ev_ev__ev : forall n m, ev (n + m) -> ev n -> ev m.
 Proof.
   intros n m Enm En.
@@ -156,7 +151,6 @@ Proof.
 Qed.
 
 (** Exercise: 3 stars, optional (ev_plus_plus)  *)
-
 Theorem ev_plus_plus : forall n m p, ev (n + m) -> ev (n + p) -> ev (m + p).
 Proof.
   intros n m p Hnm Hnp.
@@ -216,17 +210,14 @@ Inductive next_even : nat -> nat -> Prop :=
   | ne_2 : forall n, ev (S (S n)) -> next_even n (S (S n)).
 
 (** Exercise: 2 stars, standard, optional (total_relation) *)
-
 Inductive total_relation : nat -> nat -> Prop :=
   | tr : forall n m, total_relation n m.
 
 (** Exercise: 2 stars, optional (empty_relation)  *)
-
 Inductive empty_relation : nat -> nat -> Prop :=
   | er : forall n m, False -> empty_relation n m.
 
 (** Exercise: 3 stars, standard, optional (le_exercises) *)
-
 Lemma le_trans : forall m n o, le m n -> le n o -> le m o.
 Proof.
   intros m n o Hmn Hno.
@@ -325,7 +316,6 @@ Proof.
 Qed.
 
 (** Exercise: 2 stars, optional (leb_iff)  *)
-
 Theorem leb_iff : forall n m, leb n m = true <-> le n m.
 Proof.
   split.
@@ -334,7 +324,6 @@ Proof.
 Qed.
 
 (** Exercise: 2 stars, advanced (subsequence)  *)
-
 Inductive subseq : list nat -> list nat -> Prop :=
 | s1 : forall l, subseq [] l
 | s2 : forall n l1 l2, subseq l1 l2 -> subseq (n :: l1) (n :: l2)
@@ -361,8 +350,7 @@ Proof.
       * apply s3. apply IHl2. apply H2.
 Qed.
 
-Theorem subseq_trans : forall (l1 l2 l3 : list nat),
-  subseq l1 l2 -> subseq l2 l3 -> subseq l1 l3.
+Theorem subseq_trans : forall (l1 l2 l3 : list nat), subseq l1 l2 -> subseq l2 l3 -> subseq l1 l3.
 Proof.
   intros l1 l2 l3.
   generalize dependent l2.
@@ -497,7 +485,6 @@ Proof.
 Qed.
 
 (** Exercise: 3 stars, standard (exp_match_ex1) *)
-
 Lemma empty_is_empty : forall T (s : list T), ~ (s =~ EmptySet).
 Proof.
   intros T s H.
@@ -515,7 +502,6 @@ Proof.
 Qed.
 
 (** Exercise: 4 stars, optional (reg_exp_of_list_spec)  *)
-
 Lemma reg_exp_of_list_spec : forall T (l1 l2 : list T),
   l1 =~ reg_exp_of_list l2 <-> l1 = l2.
 Proof.
@@ -580,8 +566,6 @@ Fixpoint re_not_empty {T : Type} (re : @reg_exp T) : bool :=
   | Star re => true
   end.
 
-(* orb_true_iff provar isso
-
 Lemma re_not_empty_correct : forall T (re : @reg_exp T),
   (exists s, s =~ re) <-> re_not_empty re = true.
 Proof.
@@ -619,7 +603,6 @@ Proof.
       * apply IHre2 in H0. inversion H0. exists x. apply MUnionR. apply H2.
     + exists []. apply MStar0.
 Qed.
-*)
 
 Lemma star_app: forall T (s1 s2 : list T) (re : reg_exp),
   s1 =~ Star re ->
@@ -644,6 +627,60 @@ Proof.
     + apply IH2.
       * reflexivity.
       * apply H1.
+Qed.
+
+(** Falta Exercise: 4 stars, optional (exp_match_ex2)  *)
+
+Fixpoint pumping_constant {T} (re : @reg_exp T) : nat :=
+  match re with
+  | EmptySet => 0
+  | EmptyStr => 1
+  | Char _ => 2
+  | App re1 re2 =>
+      pumping_constant re1 + pumping_constant re2
+  | Union re1 re2 =>
+      pumping_constant re1 + pumping_constant re2
+  | Star _ => 1
+  end.
+
+Fixpoint napp {T} (n : nat) (l : list T) : list T :=
+  match n with
+  | 0 => []
+  | S n' => l ++ napp n' l
+  end.
+
+Lemma napp_plus: forall T (n m : nat) (l : list T),
+  napp (n + m) l = napp n l ++ napp m l.
+Proof.
+  intros T n m l.
+  induction n as [|n IHn].
+  - reflexivity.
+  - simpl. rewrite IHn, app_assoc. reflexivity.
+Qed.
+
+Lemma plus_n_m_k_le_n_k : forall (n m k : nat), le (n + m) k -> le n k.
+Proof.
+  intros n m k.
+  generalize dependent m. 
+  generalize dependent n. 
+  induction k as [|k' IHk].
+  - intros n m. intros H. inversion H. apply le_plus_l.
+  - intros n m. generalize dependent n. induction m.
+    + intros n H. rewrite <- plus_n_O in H. apply H.
+    + intros n H. apply IHm. apply le_S. rewrite <- plus_n_Sm in H. apply Sn_le_Sm__n_le_m in H. apply H.
+Qed.
+
+(* Falta o Lema pumpin *)
+
+(** Case Study: Improving Reflection *)
+
+Theorem filter_not_empty_In : forall n l, filter (eqb n) l <> [] -> In n l.
+Proof.
+  intros n l. induction l as [|m l' IHl'].
+  - simpl. intros H. apply H. reflexivity.
+  - simpl. destruct (eqb n m) eqn:H.
+    + intros _. rewrite eqb_eq in H. rewrite H. left. reflexivity.
+    + intros H'. right. apply IHl'. apply H'.
 Qed.
 
 Inductive reflect (P : Prop) : bool -> Prop :=
@@ -671,8 +708,178 @@ Proof.
     + intro HT. inversion HT.
 Qed.
 
+Lemma eqbP : forall n m, reflect (n = m) (eqb n m).
+Proof.
+  intros n m.
+  apply iff_reflect.
+  rewrite eqb_eq.
+  reflexivity.
+Qed.
+
+Theorem filter_not_empty_In' : forall n l, filter (eqb n) l <> [] -> In n l.
+Proof.
+  intros n l. induction l as [|m l' IHl'].
+  - simpl. intros H. apply H. reflexivity.
+  - simpl. destruct (eqbP n m) as [H | H].
+    + intros _. rewrite H. left. reflexivity.
+    + intros H'. right. apply IHl'. apply H'.
+Qed.
+
+(** Exercise: 3 stars, recommended (eqbP_practice)  *)
 Fixpoint count n l :=
   match l with
   | [] => 0
   | m :: l' => (if eqb n m then 1 else 0) + count n l'
   end.
+
+Theorem eqbP_practice : forall n l, count n l = 0 -> ~(In n l).
+Proof.
+  intros n l.
+  induction l as [|m l' IHl].
+  - intros H1 H2. inversion H2.
+  - simpl. destruct (eqbP n m) as [H | H].
+    + intro H1. inversion H1.
+    + intros H1 H2.
+     destruct H2.
+     * unfold not in H. apply H. symmetry. apply H0.
+     * inversion H1. apply IHl in H3. apply H3. apply H0.
+Qed.
+
+(** Additional Exercises *)
+
+(** Exercise: 3 stars, recommended (nostutter_defn)  *)
+Inductive nostutter {X:Type} : list X -> Prop :=
+| ns1 : nostutter []
+| ns2 : forall n, nostutter [n]
+| ns3 : forall (n m : X) (l : list X), n <> m -> nostutter l -> nostutter (m :: l) -> nostutter (n :: m :: l).
+
+Example test_nostutter_1: nostutter [3;1;4;1;5;6].
+Proof.
+  repeat constructor; apply eqb_neq; auto.
+Qed.
+
+Example test_nostutter_2: nostutter (@nil nat).
+Proof.
+  repeat constructor; apply eqb_neq; auto.
+Qed.
+
+Example test_nostutter_3:  nostutter [5].
+Proof.
+  repeat constructor; apply eqb_neq; auto.
+Qed.
+
+Example test_nostutter_4: not (nostutter [3;1;1;4]).
+Proof.
+  intro.
+  repeat match goal with
+    h: nostutter _ |- _ => inversion h; clear h; subst
+  end.
+  contradiction H2; auto.
+Qed.
+
+(** Exercise: 4 stars, advanced (filter_challenge)  *)
+Inductive in_order_merge { X : Type } : list X -> list X -> list X -> Prop :=
+| iom_n : in_order_merge [] [] []
+| iom_l : forall (n : X) (ll lr la : list X),
+  in_order_merge ll lr la -> in_order_merge (n::ll) lr (n::la)
+| iom_r : forall (n : X) (ll lr la : list X),
+  in_order_merge ll lr la -> in_order_merge ll (n::lr) (n::la).
+
+Inductive all_true { X : Type } : (X -> bool) -> list X -> Prop :=
+| at1 : forall (test : X -> bool), all_true test []
+| at2 : forall (test : X -> bool) (n : X) (l : list X),
+  (test n = true) -> all_true test l -> all_true test (n :: l).
+
+Theorem filter_challenge : forall (X : Type) (test : X -> bool) (l l1 l2 : list X), in_order_merge l1 l2 l -> all_true test l1 -> all_true (fun x => negb(test x)) l2 -> filter test l = l1.
+Proof.
+  intros X test l.
+  induction l as [|n l' IHl].
+  - intros. inversion H. reflexivity.
+  - intros. inversion H.
+    + rewrite <- H3 in H0. inversion H0. simpl. rewrite <- H2. rewrite H10. apply IHl in H5.
+      * rewrite H5. reflexivity.
+      * inversion H0. apply H16.
+      * apply H1.
+    + rewrite <- H4 in H1. inversion H1. simpl. rewrite H2 in H10. destruct (test n).
+    * inversion H10.
+    * apply IHl in H5.
+      { apply H5. }
+      { apply H0. }
+      { apply H11. }
+Qed.
+
+(** Exercise: 5 stars, advanced, optional (filter_challenge_2)  *)
+Inductive lsubseq { X : Type } : list X -> list X -> Prop :=
+| ssq1 : forall (l : list X), lsubseq [] l
+| ssq2 : forall (n : X) (l1 l2 : list X),
+  lsubseq l1 l2 -> lsubseq l1 (n :: l2)
+| ssq3 : forall (n : X) (l1 l2 : list X),
+  lsubseq l1 l2 -> lsubseq (n :: l1) (n :: l2).
+
+Theorem filter_challenge_2 : forall (X : Type) (test : X -> bool) (l l1 : list X), lsubseq l1 l -> all_true test l1 -> le (length l1) (length(filter test l)).
+Proof.
+  intros X test l.
+  induction l as [|n l' IHl]. 
+  - intros l1 H H0. inversion H. simpl. apply le_n.
+  - intros l1 H H0. simpl. destruct (test n) eqn:Htn.
+    + inversion H.
+      * simpl. apply le_S. apply O_le_n.
+      * simpl. apply IHl in H3.
+        { apply le_S. apply H3. }
+        { apply H0. }
+      * simpl. apply n_le_m__Sn_le_Sm. apply IHl.
+        { apply H3. }
+        { rewrite <- H2 in H0. inversion H0. apply H9. }
+    + apply IHl.
+      * remember (n :: l'). inversion H. 
+        { apply ssq1. }
+        { rewrite Heql in H3. inversion H3. rewrite <- H6. apply H1. }
+        { rewrite <- H2 in H0. rewrite Heql in H3.      inversion H3. subst n0. inversion H0. rewrite H8 in Htn. inversion Htn.
+        }
+      * apply H0.
+Qed.
+
+(** Exercise: 4 stars, optional (palindromes)  *)
+Inductive pal { X : Type } : list X -> Prop :=
+| pal1 : pal []
+| pal2 : forall (n : X), pal [n]
+| pal3 : forall (n : X) (l : list X), pal l -> pal ((n :: l) ++ [n]).
+
+Theorem pal_app_rev : forall (X : Type) (l : list X), pal (l ++ rev l).
+Proof.
+  intros X l.
+  induction l.
+  - simpl. apply pal1.
+  - simpl. rewrite app_assoc. apply (pal3 x (l ++ rev l)).
+    apply IHl.
+Qed.
+
+Theorem pal_rev : forall (X : Type) (l : list X), pal l -> l = rev l.
+Proof.
+  intros X l H.
+  induction H.
+  - reflexivity.
+  - reflexivity.
+  - simpl. rewrite rev_app_distr. rewrite <- app_assoc.    rewrite <- IHpal. simpl. reflexivity.
+Qed.
+
+(** Falta Exercise: 5 stars, optional (palindrome_converse)  *)
+
+(** Exercise: 4 stars, advanced, optional (NoDup)  *)
+Inductive disjoint { X : Type } : list X -> list X -> Prop :=
+| d0 : forall (l : list X), disjoint [] l
+| dnl : forall (n : X) (l1 l2 : list X),
+    disjoint l1 l2 -> not (In n l1) -> not (In n l2) -> disjoint (n :: l1) l2
+| dnr : forall (n : X) (l1 l2 : list X),
+    disjoint l1 l2 -> not (In n l1) -> not (In n l2) -> disjoint l1 (n :: l2)
+| dil : forall (n : X) (l1 l2 : list X),
+    disjoint l1 l2 -> In n l1 -> not (In n l2) -> disjoint (n :: l1) l2
+| dir : forall (n : X) (l1 l2 : list X),
+    disjoint l1 l2 -> not (In n l1) -> In n l2 -> disjoint l1 (n :: l2).
+
+Inductive NoDup { X : Type } : list X -> Prop :=
+| nd1 : NoDup []
+| nd2 : forall (n : X) (l1 : list X), NoDup l1 -> not (In n l1) -> NoDup (n :: l1).
+
+(** Falta Exercise: 4 stars, advanced, optional (pigeonhole_principle)  *)
+

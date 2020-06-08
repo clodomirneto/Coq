@@ -1,43 +1,37 @@
 Require Export c_completeness.
 Set Implicit Arguments.
-
 Module Type sequent_mod (B: base_mod) (S: sound_mod B) (C: complete_mod B S).
 Import B S C.
 
-(** * Gentzen's Sequent Calculus *)
-
 Reserved Notation "Γ ⊃ A" (at level 80).
-Inductive G : list PropF->list PropF->Prop :=
-| Gax  : forall A Γ Δ      , In A Γ           -> In A Δ          -> Γ ⊃ Δ
-| GBot : forall Γ Δ        , In ⊥ Γ                              -> Γ ⊃ Δ
-| AndL : forall A B Γ1 Γ2 Δ, Γ1++A::B::Γ2 ⊃ Δ                    -> Γ1++A∧B::Γ2 ⊃ Δ
-| AndR : forall A B Γ Δ1 Δ2, Γ ⊃ Δ1++A::Δ2    -> Γ ⊃ Δ1++B::Δ2   -> Γ ⊃ Δ1++A∧B::Δ2
-| OrL  : forall A B Γ1 Γ2 Δ, Γ1++A::Γ2 ⊃ Δ    -> Γ1++B::Γ2 ⊃ Δ   -> Γ1++A∨B::Γ2 ⊃ Δ
-| OrR  : forall A B Γ Δ1 Δ2, Γ ⊃ Δ1++A::B::Δ2                     -> Γ ⊃ Δ1++A∨B::Δ2
-| ImpL : forall A B Γ1 Γ2 Δ, Γ1++B::Γ2 ⊃ Δ    -> Γ1++Γ2 ⊃ A::Δ   -> Γ1++A→B::Γ2 ⊃ Δ
-| ImpR : forall A B Γ Δ1 Δ2, A::Γ ⊃ Δ1++B::Δ2                     -> Γ ⊃ Δ1++A→B::Δ2
-| Cut  : forall A Γ Δ      , Γ ⊃ A::Δ         -> A::Γ ⊃ Δ        -> Γ ⊃ Δ
+Inductive G : list PropF -> list PropF -> Prop :=
+| Gax : forall A Γ Δ, In A Γ -> In A Δ -> Γ ⊃ Δ
+| GBot : forall Γ Δ, In ⊥ Γ -> Γ ⊃ Δ
+| AndL : forall A B Γ1 Γ2 Δ, Γ1 ++ A :: B :: Γ2 ⊃ Δ -> Γ1 ++ A ∧ B :: Γ2 ⊃ Δ
+| AndR : forall A B Γ Δ1 Δ2, Γ ⊃ Δ1 ++ A :: Δ2 -> Γ ⊃ Δ1 ++ B :: Δ2 -> Γ ⊃ Δ1 ++ A ∧ B :: Δ2
+| OrL : forall A B Γ1 Γ2 Δ, Γ1 ++ A :: Γ2 ⊃ Δ -> Γ1 ++ B :: Γ2 ⊃ Δ -> Γ1 ++ A ∨ B :: Γ2 ⊃ Δ
+| OrR : forall A B Γ Δ1 Δ2, Γ ⊃ Δ1 ++ A :: B :: Δ2 -> Γ ⊃ Δ1 ++ A ∨ B :: Δ2
+| ImpL : forall A B Γ1 Γ2 Δ, Γ1 ++ B :: Γ2 ⊃ Δ -> Γ1 ++ Γ2 ⊃ A :: Δ -> Γ1 ++ A → B :: Γ2 ⊃ Δ
+| ImpR : forall A B Γ Δ1 Δ2, A :: Γ ⊃ Δ1 ++ B :: Δ2 -> Γ ⊃ Δ1 ++ A → B :: Δ2
+| Cut : forall A Γ Δ, Γ ⊃ A :: Δ -> A :: Γ ⊃ Δ -> Γ ⊃ Δ
 where "Γ ⊃ Δ" := (G Γ Δ) : My_scope.
 
-
-(** The disjunction of a list of formulas*)
 Definition BigOr := fold_right Disj ⊥.
+
 Notation "⋁ Δ" := (BigOr Δ) (at level 19).
-(** Γ ⊢⊢ Δ means that Γ ⊢ A for all A in Δ*)
+
 Definition Ncl Γ := map_fold_right (Nc Γ) and True.
+
 Notation "Γ ⊢⊢ Δ" := (Ncl Γ Δ) (at level 80).
+
 Notation "¬l Γ" := (map Neg Γ) (at level 40).
 
-(** * Theorems *)
-
-(** Gc to Nc*)
-
-Lemma NegAnd_impl_OrNeg : forall Γ A B, Γ ⊢ ¬(A∧B) -> Γ ⊢ ¬A∨¬B.
-do 3 intro;apply prov_impl.
-apply ImpI;apply BotC;apply ImpE with (A ∧ B);
- [is_ass|apply AndI;apply BotC;(apply ImpE with (¬A ∨ ¬B);[is_ass|])].
-   apply OrI1;is_ass.
-   apply OrI2;is_ass.
+Lemma NegAnd_impl_OrNeg : forall Γ A B, Γ ⊢ ¬ (A ∧ B) -> Γ ⊢ ¬ A ∨ ¬ B.
+do 3 intro; apply prov_impl.
+apply ImpI; apply BotC; apply ImpE with (A ∧ B);
+[is_ass|apply AndI; apply BotC; (apply ImpE with (¬ A ∨ ¬ B); [is_ass|])].
+apply OrI1; is_ass.
+apply OrI2; is_ass.
 Qed.
 
 Lemma Nc_list_weakening : forall Γ1 Γ2 Δ, (forall B, In B Γ1 -> In B Γ2) -> Γ1 ⊢⊢ Δ -> Γ2 ⊢⊢ Δ.

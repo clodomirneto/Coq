@@ -1,27 +1,24 @@
 Require Export c_completeness.
 Set Implicit Arguments.
-
 Module Type hilbert_mod (B: base_mod) (S: sound_mod B) (C: complete_mod B S).
 Import B S C.
 
-(** * Hilbert style calculus*)
 Reserved Notation "Γ ⊢H A" (at level 80).
 
 Inductive AxiomH : PropF -> Prop :=
-| HOrI1  : forall A B  , AxiomH (A → A∨B)
-| HOrI2  : forall A B  , AxiomH (B → A∨B)
-| HAndI  : forall A B  , AxiomH (A → B → A∧B)
-| HOrE   : forall A B C, AxiomH (A∨B → (A → C) → (B → C) → C)
-| HAndE1 : forall A B  , AxiomH (A∧B → A)
-| HAndE2 : forall A B  , AxiomH (A∧B → B)
-| HS      : forall A B C, AxiomH ((A → B → C) → (A → B) → A → C)
-| HK      : forall A B  , AxiomH (A → B → A)
-| HClas  : forall A    , AxiomH (¬(¬A) → A)
-.
+| HOrI1 : forall A B, AxiomH (A → A ∨ B)
+| HOrI2 : forall A B, AxiomH (B → A ∨ B)
+| HAndI : forall A B, AxiomH (A → B → A ∧ B)
+| HOrE : forall A B C, AxiomH (A ∨ B → (A → C) → (B → C) → C)
+| HAndE1 : forall A B, AxiomH (A ∧ B → A)
+| HAndE2 : forall A B, AxiomH (A ∧ B → B)
+| HS : forall A B C, AxiomH ((A → B → C) → (A → B) → A → C)
+| HK : forall A B, AxiomH (A → B → A)
+| HClas : forall A, AxiomH (¬ (¬ A) → A).
 
-Inductive Hc : list PropF-> PropF->Prop :=
-| Hass  : forall A Γ,   In A Γ               -> Γ ⊢H A
-| Hax   : forall A Γ,   AxiomH A             -> Γ ⊢H A
+Inductive Hc : list PropF -> PropF -> Prop :=
+| Hass : forall A Γ, In A Γ -> Γ ⊢H A
+| Hax : forall A Γ, AxiomH A -> Γ ⊢H A
 | HImpE : forall Γ A B, Γ ⊢H A → B -> Γ ⊢H A -> Γ ⊢H B
 where "Γ ⊢H A" := (Hc Γ A) : My_scope.
 
