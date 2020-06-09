@@ -1,14 +1,14 @@
-From LF Require Export a_base.
+From LF Require Export ml1_base.
 Import ListNotations.
-Module Type sound_mod (X : base_mod).
+Module Type mod_sound (X : mod_base).
 Import X.
 
-Inductive PropF : Set :=
-| Var : PropVars -> PropF
-| Bot : PropF
-| Conj : PropF -> PropF -> PropF
-| Disj : PropF -> PropF -> PropF
-| Impl : PropF -> PropF -> PropF.
+Inductive FormProp : Set :=
+| Var : VarProp -> FormProp
+| Bot : FormProp
+| Conj : FormProp -> FormProp -> FormProp
+| Disj : FormProp -> FormProp -> FormProp
+| Impl : FormProp -> FormProp -> FormProp.
 
 Notation "# P" := (Var P) (at level 1) : My_scope.
 
@@ -22,9 +22,9 @@ Notation "⊥" := Bot (at level 0)  : My_scope.
 
 Definition Neg A := A → ⊥.
 
-Notation "¬A" := (Neg A) (at level 5) : My_scope.
+Notation "¬ A" := (Neg A) (at level 5) : My_scope.
 
-Definition Top := ¬⊥.
+Definition Top := ¬ ⊥.
 
 Notation "⊤" := Top (at level 0) : My_scope.
 
@@ -50,7 +50,7 @@ Definition Valid A := [] ⊨ A.
 
 Reserved Notation "Γ ⊢ A" (at level 80).
 
-Inductive Nc : list PropF -> PropF -> Prop :=
+Inductive Nc : list FormProp -> FormProp -> Prop :=
 | Nax : forall Γ A, In A Γ -> Γ ⊢ A
 | ImpI : forall Γ A B, A :: Γ ⊢ B -> Γ ⊢ A → B
 | ImpE : forall Γ A B, Γ ⊢ A → B -> Γ ⊢ A -> Γ ⊢ B
@@ -95,9 +95,9 @@ match goal with
 | [ H : TrueQ _ _ = _  |-  _ ] => rewrite H
 end; exact I|auto].
 
-Lemma PropFeq_dec : forall (x y : PropF), {x = y} + {x <> y}.
+Lemma FormPropSeq : forall (x y : FormProp), {x = y} + {x <> y}.
 induction x; destruct y; try (right;discriminate); try (destruct (IHx1 y1); [destruct (IHx2 y2); [left;f_equal;assumption|]|]; right; injection; intros; contradiction).
-destruct (Varseq_dec p p0).
+destruct (VarSeq v v0).
 left; f_equal; assumption.
 right; injection; intro; contradiction.
 left; reflexivity.
@@ -138,4 +138,4 @@ Theorem Soundness : Prop_Soundness.
 intros ? ? ? ?; eapply Soundness_general; eassumption.
 Qed.
 
-End sound_mod.
+End mod_sound.

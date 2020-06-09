@@ -1,0 +1,395 @@
+DIGEST 52cc3d77833acb0e8e00dc099d4fe264
+FLF.ml2_soundness
+R23:30 LF.ml1_base <> <> lib
+R82:89 LF.ml1_base mod_base <> mod
+modtype 67:75 <> mod_sound
+ind 114:121 mod_sound FormProp
+constr 134:136 mod_sound Var
+constr 162:164 mod_sound Bot
+constr 179:182 mod_sound Conj
+constr 221:224 mod_sound Disj
+constr 263:266 mod_sound Impl
+R147:150 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R151:158 LF.ml2_soundness <> FormProp ind
+R140:146 LF.ml2_soundness X VarProp defax
+R168:175 LF.ml2_soundness <> FormProp ind
+R194:197 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R206:209 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R210:217 LF.ml2_soundness <> FormProp ind
+R198:205 LF.ml2_soundness <> FormProp ind
+R186:193 LF.ml2_soundness <> FormProp ind
+R236:239 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R248:251 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R252:259 LF.ml2_soundness <> FormProp ind
+R240:247 LF.ml2_soundness <> FormProp ind
+R228:235 LF.ml2_soundness <> FormProp ind
+R278:281 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R290:293 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R294:301 LF.ml2_soundness <> FormProp ind
+R282:289 LF.ml2_soundness <> FormProp ind
+R270:277 LF.ml2_soundness <> FormProp ind
+R324:326 LF.ml2_soundness mod_sound Var constr
+not 314:314 mod_sound ::My_scope:'#'_x
+R380:383 LF.ml2_soundness mod_sound Disj constr
+not 366:366 mod_sound ::My_scope:x_'∨'_x
+R461:464 LF.ml2_soundness mod_sound Conj constr
+not 447:447 mod_sound ::My_scope:x_'∧'_x
+R542:545 LF.ml2_soundness mod_sound Impl constr
+not 528:528 mod_sound ::My_scope:x_'→'_x
+R618:620 LF.ml2_soundness mod_sound Bot constr
+not 609:609 mod_sound ::My_scope:'⊥'
+def 660:662 mod_sound Neg
+R670:674 LF.ml2_soundness mod_sound ::My_scope:x_'→'_x not
+R669:669 LF.ml2_soundness <> A var
+R675:677 LF.ml2_soundness mod_sound ::My_scope:'⊥' not
+R701:703 LF.ml2_soundness mod_sound Neg def
+not 690:690 mod_sound ::My_scope:'¬'_x
+def 745:747 mod_sound Top
+R752:754 LF.ml2_soundness mod_sound ::My_scope:'¬'_x not
+R755:757 LF.ml2_soundness mod_sound ::My_scope:'⊥' not
+R779:781 LF.ml2_soundness mod_sound Top def
+not 770:770 mod_sound ::My_scope:'⊤'
+def 820:825 mod_sound BiImpl
+R834:834 LF.ml2_soundness mod_sound ::My_scope:x_'∧'_x not
+R842:848 LF.ml2_soundness mod_sound ::My_scope:x_'∧'_x not
+R856:856 LF.ml2_soundness mod_sound ::My_scope:x_'∧'_x not
+R836:840 LF.ml2_soundness mod_sound ::My_scope:x_'→'_x not
+R835:835 LF.ml2_soundness <> A var
+R841:841 LF.ml2_soundness <> B var
+R850:854 LF.ml2_soundness mod_sound ::My_scope:x_'→'_x not
+R849:849 LF.ml2_soundness <> B var
+R855:855 LF.ml2_soundness <> A var
+R883:888 LF.ml2_soundness mod_sound BiImpl def
+not 869:869 mod_sound ::My_scope:x_'↔'_x
+def 952:956 mod_sound TrueQ
+R964:967 Coq.Init.Datatypes <> bool ind
+R978:978 LF.ml2_soundness <> A var
+R988:989 LF.ml2_soundness mod_sound ::My_scope:'#'_x not
+R995:995 LF.ml2_soundness <> v var
+R1002:1004 LF.ml2_soundness mod_sound ::My_scope:'⊥' not
+R1009:1013 Coq.Init.Datatypes <> false constr
+R1019:1023 LF.ml2_soundness mod_sound ::My_scope:x_'∨'_x not
+R1029:1029 Coq.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R1039:1044 Coq.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R1054:1054 Coq.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R1030:1034 LF.ml2_soundness <> TrueQ def
+R1036:1036 LF.ml2_soundness <> v var
+R1045:1049 LF.ml2_soundness <> TrueQ def
+R1051:1051 LF.ml2_soundness <> v var
+R1060:1064 LF.ml2_soundness mod_sound ::My_scope:x_'∧'_x not
+R1070:1070 Coq.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1080:1085 Coq.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1095:1095 Coq.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R1071:1075 LF.ml2_soundness <> TrueQ def
+R1077:1077 LF.ml2_soundness <> v var
+R1086:1090 LF.ml2_soundness <> TrueQ def
+R1092:1092 LF.ml2_soundness <> v var
+R1101:1105 LF.ml2_soundness mod_sound ::My_scope:x_'→'_x not
+R1111:1111 Coq.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R1128:1133 Coq.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R1143:1143 Coq.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R1112:1115 Coq.Init.Datatypes <> negb def
+R1118:1122 LF.ml2_soundness <> TrueQ def
+R1124:1124 LF.ml2_soundness <> v var
+R1134:1138 LF.ml2_soundness <> TrueQ def
+R1140:1140 LF.ml2_soundness <> v var
+def 1162:1170 mod_sound Satisfies
+R1197:1200 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1201:1207 Coq.Bool.Bool <> Is_true def
+R1210:1214 LF.ml2_soundness mod_sound TrueQ def
+R1218:1218 LF.ml2_soundness <> A var
+R1216:1216 LF.ml2_soundness <> v var
+R1190:1191 Coq.Lists.List <> In def
+R1195:1196 LF.ml2_soundness <> Γ var
+R1193:1193 LF.ml2_soundness <> A var
+def 1234:1239 mod_sound Models
+R1273:1276 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1277:1283 Coq.Bool.Bool <> Is_true def
+R1286:1290 LF.ml2_soundness mod_sound TrueQ def
+R1294:1294 LF.ml2_soundness <> A var
+R1292:1292 LF.ml2_soundness <> v var
+R1259:1267 LF.ml2_soundness mod_sound Satisfies def
+R1271:1272 LF.ml2_soundness <> Γ var
+R1269:1269 LF.ml2_soundness <> v var
+R1323:1328 LF.ml2_soundness mod_sound Models def
+not 1308:1308 mod_sound :::x_'⊨'_x
+def 1363:1367 mod_sound Valid
+R1376:1380 LF.ml2_soundness mod_sound :::x_'⊨'_x not
+R1374:1375 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R1381:1381 LF.ml2_soundness <> A var
+ind 1440:1441 mod_sound Nc
+constr 1484:1486 mod_sound Nax
+constr 1525:1528 mod_sound ImpI
+constr 1581:1584 mod_sound ImpE
+constr 1644:1647 mod_sound BotC
+constr 1697:1700 mod_sound AndI
+constr 1760:1764 mod_sound AndE1
+constr 1812:1816 mod_sound AndE2
+constr 1864:1867 mod_sound OrI1
+constr 1915:1918 mod_sound OrI2
+constr 1966:1968 mod_sound OrE
+R1458:1461 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1470:1473 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1462:1469 LF.ml2_soundness mod_sound FormProp ind
+R1445:1448 Coq.Init.Datatypes <> list ind
+R1450:1457 LF.ml2_soundness mod_sound FormProp ind
+R1458:1461 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1470:1473 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1462:1469 LF.ml2_soundness mod_sound FormProp ind
+R1445:1448 Coq.Init.Datatypes <> list ind
+R1450:1457 LF.ml2_soundness mod_sound FormProp ind
+R2071:2072 LF.ml2_soundness <> Nc ind
+R1510:1513 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1516:1520 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1514:1515 LF.ml2_soundness <> Γ var
+R1521:1521 LF.ml2_soundness <> A var
+R1503:1504 Coq.Lists.List <> In def
+R1508:1509 LF.ml2_soundness <> Γ var
+R1506:1506 LF.ml2_soundness <> A var
+R1560:1563 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1566:1570 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1564:1565 LF.ml2_soundness <> Γ var
+R1572:1576 LF.ml2_soundness mod_sound ::My_scope:x_'→'_x not
+R1571:1571 LF.ml2_soundness <> A var
+R1577:1577 LF.ml2_soundness <> B var
+R1554:1558 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1548:1551 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1547:1547 LF.ml2_soundness <> A var
+R1552:1553 LF.ml2_soundness <> Γ var
+R1559:1559 LF.ml2_soundness <> B var
+R1617:1620 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1629:1632 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1635:1639 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1633:1634 LF.ml2_soundness <> Γ var
+R1640:1640 LF.ml2_soundness <> B var
+R1623:1627 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1621:1622 LF.ml2_soundness <> Γ var
+R1628:1628 LF.ml2_soundness <> A var
+R1605:1609 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1603:1604 LF.ml2_soundness <> Γ var
+R1611:1615 LF.ml2_soundness mod_sound ::My_scope:x_'→'_x not
+R1610:1610 LF.ml2_soundness <> A var
+R1616:1616 LF.ml2_soundness <> B var
+R1682:1685 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1688:1692 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1686:1687 LF.ml2_soundness <> Γ var
+R1693:1693 LF.ml2_soundness <> A var
+R1674:1678 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1668:1671 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1664:1666 LF.ml2_soundness mod_sound ::My_scope:'¬'_x not
+R1667:1667 LF.ml2_soundness <> A var
+R1672:1673 LF.ml2_soundness <> Γ var
+R1679:1681 LF.ml2_soundness mod_sound ::My_scope:'⊥' not
+R1727:1730 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1739:1742 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1745:1749 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1743:1744 LF.ml2_soundness <> Γ var
+R1751:1755 LF.ml2_soundness mod_sound ::My_scope:x_'∧'_x not
+R1750:1750 LF.ml2_soundness <> A var
+R1756:1756 LF.ml2_soundness <> B var
+R1733:1737 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1731:1732 LF.ml2_soundness <> Γ var
+R1738:1738 LF.ml2_soundness <> B var
+R1721:1725 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1719:1720 LF.ml2_soundness <> Γ var
+R1726:1726 LF.ml2_soundness <> A var
+R1797:1800 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1803:1807 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1801:1802 LF.ml2_soundness <> Γ var
+R1808:1808 LF.ml2_soundness <> A var
+R1785:1789 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1783:1784 LF.ml2_soundness <> Γ var
+R1791:1795 LF.ml2_soundness mod_sound ::My_scope:x_'∧'_x not
+R1790:1790 LF.ml2_soundness <> A var
+R1796:1796 LF.ml2_soundness <> B var
+R1849:1852 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1855:1859 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1853:1854 LF.ml2_soundness <> Γ var
+R1860:1860 LF.ml2_soundness <> B var
+R1837:1841 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1835:1836 LF.ml2_soundness <> Γ var
+R1843:1847 LF.ml2_soundness mod_sound ::My_scope:x_'∧'_x not
+R1842:1842 LF.ml2_soundness <> A var
+R1848:1848 LF.ml2_soundness <> B var
+R1894:1897 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1900:1904 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1898:1899 LF.ml2_soundness <> Γ var
+R1906:1910 LF.ml2_soundness mod_sound ::My_scope:x_'∨'_x not
+R1905:1905 LF.ml2_soundness <> A var
+R1911:1911 LF.ml2_soundness <> B var
+R1888:1892 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1886:1887 LF.ml2_soundness <> Γ var
+R1893:1893 LF.ml2_soundness <> A var
+R1945:1948 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1951:1955 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1949:1950 LF.ml2_soundness <> Γ var
+R1957:1961 LF.ml2_soundness mod_sound ::My_scope:x_'∨'_x not
+R1956:1956 LF.ml2_soundness <> A var
+R1962:1962 LF.ml2_soundness <> B var
+R1939:1943 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1937:1938 LF.ml2_soundness <> Γ var
+R1944:1944 LF.ml2_soundness <> B var
+R2003:2006 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2020:2023 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2037:2040 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2043:2047 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R2041:2042 LF.ml2_soundness <> Γ var
+R2048:2048 LF.ml2_soundness <> C var
+R2031:2035 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R2025:2028 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2024:2024 LF.ml2_soundness <> B var
+R2029:2030 LF.ml2_soundness <> Γ var
+R2036:2036 LF.ml2_soundness <> C var
+R2014:2018 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R2008:2011 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2007:2007 LF.ml2_soundness <> A var
+R2012:2013 LF.ml2_soundness <> Γ var
+R2019:2019 LF.ml2_soundness <> C var
+R1991:1995 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R1989:1990 LF.ml2_soundness <> Γ var
+R1997:2001 LF.ml2_soundness mod_sound ::My_scope:x_'∨'_x not
+R1996:1996 LF.ml2_soundness <> A var
+R2002:2002 LF.ml2_soundness <> B var
+R2071:2072 LF.ml2_soundness mod_sound Nc ind
+not 2056:2056 mod_sound ::My_scope:x_'⊢'_x
+def 2104:2111 mod_sound Provable
+R2120:2124 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R2118:2119 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R2125:2125 LF.ml2_soundness <> A var
+def 2140:2153 mod_sound Prop_Soundness
+R2178:2181 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2182:2186 LF.ml2_soundness mod_sound Valid def
+R2188:2188 LF.ml2_soundness <> A var
+R2168:2175 LF.ml2_soundness mod_sound Provable def
+R2177:2177 LF.ml2_soundness <> A var
+def 2203:2219 mod_sound Prop_Completeness
+R2240:2241 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2242:2249 LF.ml2_soundness mod_sound Provable def
+R2251:2251 LF.ml2_soundness <> A var
+R2233:2237 LF.ml2_soundness mod_sound Valid def
+R2239:2239 LF.ml2_soundness <> A var
+R2273:2276 LF.ml2_soundness mod_sound ImpE constr
+R2346:2349 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R2344:2345 Coq.Lists.List ListNotations ::list_scope:'['_']' not
+R2429:2430 Coq.Lists.List <> In def
+R2436:2437 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2429:2430 Coq.Lists.List <> In def
+R2436:2437 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2493:2494 Coq.Lists.List <> In def
+R2500:2501 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R2493:2494 Coq.Lists.List <> In def
+R2500:2501 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R2553:2554 Coq.Lists.List <> In def
+R2560:2561 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R2553:2554 Coq.Lists.List <> In def
+R2560:2561 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R2574:2583 Coq.Lists.List <> in_app_iff thm
+R2519:2528 Coq.Lists.List <> in_app_iff thm
+R2785:2789 LF.ml2_soundness mod_sound TrueQ def
+R2977:2979 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2968:2972 LF.ml2_soundness mod_sound TrueQ def
+R2977:2979 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R2968:2972 LF.ml2_soundness mod_sound TrueQ def
+R3015:3015 Coq.Init.Logic <> I constr
+prf 3031:3041 mod_sound FormPropSeq
+R3059:3066 LF.ml2_soundness mod_sound FormProp ind
+R3070:3070 Coq.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R3076:3080 Coq.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R3087:3087 Coq.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R3072:3074 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R3071:3071 LF.ml2_soundness <> x var
+R3075:3075 LF.ml2_soundness <> y var
+R3082:3085 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R3081:3081 LF.ml2_soundness <> x var
+R3086:3086 LF.ml2_soundness <> y var
+R3269:3274 LF.ml2_soundness X VarSeq defax
+R3269:3274 LF.ml2_soundness X VarSeq defax
+prf 3381:3395 mod_sound Excluded_Middle
+R3414:3418 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R3412:3413 LF.ml2_soundness <> Γ var
+R3420:3424 LF.ml2_soundness mod_sound ::My_scope:x_'∨'_x not
+R3419:3419 LF.ml2_soundness <> A var
+R3425:3427 LF.ml2_soundness mod_sound ::My_scope:'¬'_x not
+R3428:3428 LF.ml2_soundness <> A var
+R3445:3448 LF.ml2_soundness mod_sound BotC constr
+R3469:3472 LF.ml2_soundness mod_sound OrI2 constr
+R3481:3484 LF.ml2_soundness mod_sound ImpI constr
+R3505:3508 LF.ml2_soundness mod_sound OrI1 constr
+R3445:3448 LF.ml2_soundness mod_sound BotC constr
+R3469:3472 LF.ml2_soundness mod_sound OrI2 constr
+R3481:3484 LF.ml2_soundness mod_sound ImpI constr
+R3505:3508 LF.ml2_soundness mod_sound OrI1 constr
+prf 3533:3542 mod_sound weakening2
+R3567:3570 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3582:3582 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3611:3615 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3618:3622 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R3616:3617 LF.ml2_soundness <> Δ var
+R3623:3623 LF.ml2_soundness <> A var
+R3600:3603 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3604:3605 Coq.Lists.List <> In def
+R3609:3610 LF.ml2_soundness <> Δ var
+R3607:3607 LF.ml2_soundness <> B var
+R3593:3594 Coq.Lists.List <> In def
+R3598:3599 LF.ml2_soundness <> Γ var
+R3596:3596 LF.ml2_soundness <> B var
+R3561:3565 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R3559:3560 LF.ml2_soundness <> Γ var
+R3566:3566 LF.ml2_soundness <> A var
+prf 3878:3886 mod_sound weakening
+R3914:3917 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3926:3930 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R3920:3923 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R3918:3919 LF.ml2_soundness <> Γ var
+R3924:3925 LF.ml2_soundness <> Δ var
+R3931:3931 LF.ml2_soundness <> A var
+R3908:3912 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R3906:3907 LF.ml2_soundness <> Γ var
+R3913:3913 LF.ml2_soundness <> A var
+R3949:3958 LF.ml2_soundness mod_sound weakening2 thm
+R3949:3958 LF.ml2_soundness mod_sound weakening2 thm
+prf 3997:4005 mod_sound deduction
+R4038:4041 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4049:4053 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R4043:4046 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R4042:4042 LF.ml2_soundness <> A var
+R4047:4048 LF.ml2_soundness <> Γ var
+R4054:4054 LF.ml2_soundness <> B var
+R4026:4030 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R4024:4025 LF.ml2_soundness <> Γ var
+R4032:4036 LF.ml2_soundness mod_sound ::My_scope:x_'→'_x not
+R4031:4031 LF.ml2_soundness <> A var
+R4037:4037 LF.ml2_soundness <> B var
+R4072:4075 LF.ml2_soundness mod_sound ImpE constr
+R4093:4102 LF.ml2_soundness mod_sound weakening2 thm
+R4072:4075 LF.ml2_soundness mod_sound ImpE constr
+R4093:4102 LF.ml2_soundness mod_sound weakening2 thm
+prf 4149:4157 mod_sound prov_impl
+R4191:4193 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4213:4216 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4219:4223 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R4217:4218 LF.ml2_soundness <> Γ var
+R4224:4224 LF.ml2_soundness <> B var
+R4207:4211 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R4205:4206 LF.ml2_soundness <> Γ var
+R4212:4212 LF.ml2_soundness <> A var
+R4173:4180 LF.ml2_soundness mod_sound Provable def
+R4184:4188 LF.ml2_soundness mod_sound ::My_scope:x_'→'_x not
+R4183:4183 LF.ml2_soundness <> A var
+R4189:4189 LF.ml2_soundness <> B var
+R4254:4262 LF.ml2_soundness mod_sound weakening thm
+R4254:4262 LF.ml2_soundness mod_sound weakening thm
+R4353:4361 LF.ml2_soundness mod_sound prov_impl thm
+prf 4407:4423 mod_sound Soundness_general
+R4448:4451 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4454:4458 LF.ml2_soundness mod_sound :::x_'⊨'_x not
+R4452:4453 LF.ml2_soundness <> Γ var
+R4459:4459 LF.ml2_soundness <> A var
+R4442:4446 LF.ml2_soundness mod_sound ::My_scope:x_'⊢'_x not
+R4440:4441 LF.ml2_soundness <> Γ var
+R4447:4447 LF.ml2_soundness <> A var
+prf 4729:4737 mod_sound Soundness
+R4741:4754 LF.ml2_soundness mod_sound Prop_Soundness def
+R4780:4796 LF.ml2_soundness mod_sound Soundness_general thm
+R4780:4796 LF.ml2_soundness mod_sound Soundness_general thm
+R4822:4830 LF.ml2_soundness mod_sound <> modtype

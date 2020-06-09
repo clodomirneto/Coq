@@ -1,25 +1,25 @@
-From LF Require Export b_soundness.
+From LF Require Export ml2_soundness.
 Require Export Decidable.
 Set Implicit Arguments.
-Module Type complete_mod (X: base_mod) (Y: sound_mod X).
+Module Type mod_complete (X: mod_base) (Y: mod_sound X).
 Import X Y.
 
 Inductive NNF : Set :=
-| NPos : PropVars -> NNF
-| NNeg : PropVars -> NNF
+| NPos : VarProp -> NNF
+| NNeg : VarProp -> NNF
 | NBot : NNF
 | NTop : NNF
 | NConj : NNF -> NNF -> NNF
 | NDisj : NNF -> NNF -> NNF.
 
-Fixpoint MakeNNF (A : PropF) : NNF := match A with
+Fixpoint MakeNNF (A : FormProp) : NNF := match A with
 | # P => NPos P
 | ⊥ => NBot
 | B ∨ C => NDisj (MakeNNF B) (MakeNNF C)
 | B ∧ C => NConj (MakeNNF B) (MakeNNF C)
 | B → C => NDisj (MakeNNFN B) (MakeNNF C)
 end
-with MakeNNFN (A : PropF) : NNF := match A with
+with MakeNNFN (A : FormProp) : NNF := match A with
 | # P => NNeg P
 | ⊥ => NTop
 | B ∨ C => NConj (MakeNNFN B) (MakeNNFN C)
@@ -27,18 +27,18 @@ with MakeNNFN (A : PropF) : NNF := match A with
 | B → C => NConj (MakeNNF B) (MakeNNFN C)
 end.
 
-Fixpoint NNFtoPropF (A : NNF) : PropF := match A with
+Fixpoint NNFtoFormProp (A : NNF) : FormProp := match A with
 | NPos P => # P
 | NNeg P => ¬ # P
 | NBot => ⊥
 | NTop => ¬ ⊥
-| NConj B C => NNFtoPropF B ∧ NNFtoPropF C
-| NDisj B C => NNFtoPropF B ∨ NNFtoPropF C
+| NConj B C => NNFtoFormProp B ∧ NNFtoFormProp C
+| NDisj B C => NNFtoFormProp B ∨ NNFtoFormProp C
 end.
 
 Inductive Literal :=
-| LPos : PropVars -> Literal
-| LNeg : PropVars -> Literal
+| LPos : VarProp -> Literal
+| LNeg : VarProp -> Literal
 | LBot : Literal
 | LTop : Literal.
 
@@ -49,7 +49,7 @@ Fixpoint Bar P := match P with
 | LTop => LBot
 end.
 
-Fixpoint LiteraltoPropF (P : Literal) : PropF :=
+Fixpoint LiteraltoFormProp (P : Literal) : FormProp :=
 match P with
 | LPos Q => # Q
 | LNeg Q => ¬ # Q
@@ -59,11 +59,11 @@ end.
 
 Definition Clause := list Literal.
 
-Definition ClausetoPropF := map_fold_right LiteraltoPropF Disj ⊥.
+Definition ClausetoFormProp := map_fold_right LiteraltoFormProp Disj ⊥.
 
 Definition CNF := list Clause.
 
-Definition CNFtoPropF := map_fold_right ClausetoPropF Conj ⊤.
+Definition CNFtoFormProp := map_fold_right ClausetoFormProp Conj ⊤.
 
 Definition AddClause (l : Clause) (ll : CNF) : CNF := map (fun l2 => l ++ l2) ll.
 
@@ -86,41 +86,41 @@ Lemma Literal_eqdec : forall x y : Literal, {x = y} + {x <> y}.
 intros; destruct x; destruct y; try (right; discriminate); try (left; reflexivity); destruct (Varseq_dec p p0);  (left; f_equal; assumption)||(right; intro HH; injection HH; contradiction).
 Qed.
 
-Lemma NNF_equiv_valid : forall v A, TrueQ v (NNFtoPropF (MakeNNF  A)) = TrueQ v A /\ TrueQ v (NNFtoPropF (MakeNNFN A)) = TrueQ v ¬ A.
+Lemma NNF_equiv_valid : forall v A, TrueQ v (NNFtoFormProp (MakeNNF  A)) = TrueQ v A /\ TrueQ v (NNFtoFormProp (MakeNNFN A)) = TrueQ v ¬ A.
 intros v A; induction A; try destruct IHA; try destruct IHA1; try destruct IHA2; split; simpl in *; try trivial; try rewrite H; try rewrite H0; try rewrite H1; try rewrite H2; try trivial; repeat rewrite orb_false_r; repeat rewrite orb_false_l; try rewrite negb_andb; try rewrite negb_orb; try rewrite negb_involutive; reflexivity.
 Qed.
 
-Lemma CNF_and_valid : forall v ll1 ll2, TrueQ v (CNFtoPropF (ll1 ++ ll2)) = TrueQ v (CNFtoPropF ll1) && TrueQ v (CNFtoPropF ll2).
+Lemma CNF_and_valid : forall v ll1 ll2, TrueQ v (CNFtoFormProp (ll1 ++ ll2)) = TrueQ v (CNFtoFormProp ll1) && TrueQ v (CNFtoFormProp ll2).
 intros; induction ll1; simpl.
 reflexivity.
-unfold CNFtoPropF in IHll1 at 1; rewrite IHll1.
+unfold CNFtoFormProp in IHll1 at 1; rewrite IHll1.
 apply andb_assoc.
 Qed.
 
-Lemma CNF_or_clause_valid : forall v l1 l2, TrueQ v (ClausetoPropF (l1 ++ l2)) = TrueQ v (ClausetoPropF l1) || TrueQ v (ClausetoPropF l2).
+Lemma CNF_or_clause_valid : forall v l1 l2, TrueQ v (ClausetoFormProp (l1 ++ l2)) = TrueQ v (ClausetoFormProp l1) || TrueQ v (ClausetoFormProp l2).
 intros; induction l1; simpl.
 reflexivity.
-unfold ClausetoPropF in IHl1 at 1; rewrite IHl1.
+unfold ClausetoFormProp in IHl1 at 1; rewrite IHl1.
 apply orb_assoc.
 Qed.
 
-Lemma CNF_add_clause_valid : forall v l ll, TrueQ v (CNFtoPropF (AddClause l ll)) = TrueQ v (ClausetoPropF l) || TrueQ v (CNFtoPropF ll).
+Lemma CNF_add_clause_valid : forall v l ll, TrueQ v (CNFtoFormProp (AddClause l ll)) = TrueQ v (ClausetoFormProp l) || TrueQ v (CNFtoFormProp ll).
 intros; induction ll; simpl.
 rewrite orb_true_r; reflexivity.
-unfold CNFtoPropF in IHll at 1; rewrite IHll.
+unfold CNFtoFormProp in IHll at 1; rewrite IHll.
 rewrite CNF_or_clause_valid.
 rewrite orb_andb_distrib_r.
 reflexivity.
 Qed.
 
-Lemma CNF_or_valid : forall v ll1 ll2, TrueQ v (CNFtoPropF (Disjunct ll1 ll2)) = TrueQ v (CNFtoPropF ll1) || TrueQ v (CNFtoPropF ll2).
+Lemma CNF_or_valid : forall v ll1 ll2, TrueQ v (CNFtoFormProp (Disjunct ll1 ll2)) = TrueQ v (CNFtoFormProp ll1) || TrueQ v (CNFtoFormProp ll2).
 intros; induction ll1; simpl.
 reflexivity.
 rewrite CNF_and_valid; rewrite IHll1; rewrite CNF_add_clause_valid.
 rewrite orb_andb_distrib_l; reflexivity.
 Qed.
 
-Theorem CNF_equiv_valid : forall v A, TrueQ v (CNFtoPropF (MakeCNF A)) = TrueQ v (NNFtoPropF A).
+Theorem CNF_equiv_valid : forall v A, TrueQ v (CNFtoFormProp (MakeCNF A)) = TrueQ v (NNFtoFormProp A).
 intros; induction A; simpl; try reflexivity; try (destruct (v p); simpl; reflexivity; fail); [rewrite CNF_and_valid|rewrite CNF_or_valid]; rewrite IHA1; rewrite IHA2; reflexivity.
 Qed.
 
@@ -128,15 +128,15 @@ Definition Countervaluation l P := if (in_dec Literal_eqdec (LNeg P) l) then tru
 
 Definition Validates v Δ := exists A, In A Δ /\ Is_true (TrueQ v A).
 
-Lemma TrueQ_impl_Validates : forall v m, Is_true (TrueQ v (ClausetoPropF m)) -> Validates v (map LiteraltoPropF m).
+Lemma TrueQ_impl_Validates : forall v m, Is_true (TrueQ v (ClausetoFormProp m)) -> Validates v (map LiteraltoFormProp m).
 intros; induction m.
 contradiction.
-simpl in H; case_bool v (LiteraltoPropF a).
-exists (LiteraltoPropF a); split; [in_solve|rewrite H0; trivial].
+simpl in H; case_bool v (LiteraltoFormProp a).
+exists (LiteraltoFormProp a); split; [in_solve|rewrite H0; trivial].
 destruct (IHm H) as (?&?&?); exists x; split; [in_solve|assumption].
 Qed.
 
-Lemma Validated_valid : forall l, Validates (Countervaluation l) (map LiteraltoPropF l) -> Valid_Clause l.
+Lemma Validated_valid : forall l, Validates (Countervaluation l) (map LiteraltoFormProp l) -> Valid_Clause l.
 intros l (A&H&K).
 apply in_map_iff in H as (p&?&H); subst; destruct p; unfold Countervaluation in K; simpl in K.
 destruct (in_dec Literal_eqdec (LNeg p) l).
@@ -147,13 +147,13 @@ contradiction.
 left; assumption.
 Qed.
 
-Theorem Clause_valid : forall l, Valid (ClausetoPropF l) -> Valid_Clause l.
+Theorem Clause_valid : forall l, Valid (ClausetoFormProp l) -> Valid_Clause l.
 intros; apply Validated_valid; apply TrueQ_impl_Validates; apply H; intros ? Q; destruct Q.
 Qed.
 
-Theorem CNF_valid : forall ll, Valid (CNFtoPropF ll) -> Valid_CNF ll.
+Theorem CNF_valid : forall ll, Valid (CNFtoFormProp ll) -> Valid_CNF ll.
 induction ll; intros ? ? H0; destruct H0; subst.
-apply Clause_valid; intros v K; remember (H v K) as i eqn:x; clear x; simpl in i; case_bool v (ClausetoPropF l).
+apply Clause_valid; intros v K; remember (H v K) as i eqn:x; clear x; simpl in i; case_bool v (ClausetoFormProp l).
 apply IHll.
 intros v K.
 remember (H v K).
@@ -165,19 +165,19 @@ eapply H; assumption.
 assumption.
 Qed.
 
-Lemma Clause_provable_3 : forall a l1 l2 Γ, In (LiteraltoPropF a) Γ -> Γ ⊢ ClausetoPropF (l1 ++ a :: l2).
+Lemma Clause_provable_3 : forall a l1 l2 Γ, In (LiteraltoFormProp a) Γ -> Γ ⊢ ClausetoFormProp (l1 ++ a :: l2).
 intros; induction l1.
 apply OrI1; is_ass.
 apply OrI2; assumption.
 Qed.
 
-Lemma Clause_provable_2 : forall a l1 l2 l3, Provable (ClausetoPropF (l1 ++ (Bar a) :: l2 ++ a :: l3)).
+Lemma Clause_provable_2 : forall a l1 l2 l3, Provable (ClausetoFormProp (l1 ++ (Bar a) :: l2 ++ a :: l3)).
 intros; induction l1.
 apply BotC; mp; [is_ass|destruct a; simpl; apply OrI1]; try (apply ImpI; mp; [is_ass|apply OrI2; apply Clause_provable_3; in_solve]); (apply BotC; mp; [constructor; constructor 2; in_solve|apply OrI2; apply Clause_provable_3; in_solve]).
 apply OrI2; assumption.
 Qed.
 
-Theorem Clause_provable : forall l, Valid_Clause l -> Provable (ClausetoPropF l).
+Theorem Clause_provable : forall l, Valid_Clause l -> Provable (ClausetoFormProp l).
 intros ? [?|(?&?&?)]; apply in_split in H as (?&?&?); subst.
 induction x; simpl.
 apply OrI1; simpl; apply ImpI; is_ass.
@@ -190,8 +190,8 @@ apply in_split in H0 as (?&?&?); subst.
 apply (Clause_provable_2 (LNeg x)).
 Qed.
 
-Theorem CNF_provable : forall ll, Valid_CNF ll -> Provable (CNFtoPropF ll).
-intros; induction ll; unfold CNFtoPropF; simpl.
+Theorem CNF_provable : forall ll, Valid_CNF ll -> Provable (CNFtoFormProp ll).
+intros; induction ll; unfold CNFtoFormProp; simpl.
 apply ImpI;is_ass.
 eapply AndI.
 apply Clause_provable; apply H; constructor; reflexivity.
@@ -205,63 +205,63 @@ apply OrI1; apply K; is_ass.
 apply OrI2; apply K0; is_ass.
 Qed.
 
-Lemma CNF_and_prov : forall ll1 ll2, Provable (CNFtoPropF (ll1 ++ ll2) → CNFtoPropF ll1 ∧ CNFtoPropF ll2).
+Lemma CNF_and_prov : forall ll1 ll2, Provable (CNFtoFormProp (ll1 ++ ll2) → CNFtoFormProp ll1 ∧ CNFtoFormProp ll2).
 intros; induction ll1; simpl.
-unfold CNFtoPropF at 2; unfold ClausetoPropF; simpl.
+unfold CNFtoFormProp at 2; unfold ClausetoFormProp; simpl.
 apply ImpI; apply AndI.
 unfold Top; unfold Neg; apply ImpI; is_ass.
 is_ass.
 prov_impl_in IHll1; apply ImpI; apply AndI.
-unfold CNFtoPropF; simpl; apply AndI.
+unfold CNFtoFormProp; simpl; apply AndI.
 eapply AndE1; is_ass.
 eapply AndE1; apply K.
 eapply AndE2; is_ass.
 eapply AndE2; apply K; eapply AndE2; is_ass.
 Qed.
 
-Lemma CNF_or_clause_prov : forall l1 l2, Provable (ClausetoPropF (l1 ++ l2) → ClausetoPropF l1 ∨ ClausetoPropF l2).
-intros; induction l1; simpl; unfold ClausetoPropF; simpl.
+Lemma CNF_or_clause_prov : forall l1 l2, Provable (ClausetoFormProp (l1 ++ l2) → ClausetoFormProp l1 ∨ ClausetoFormProp l2).
+intros; induction l1; simpl; unfold ClausetoFormProp; simpl.
 apply ImpI; eapply OrI2; is_ass.
 prov_impl_in IHl1.
 apply ImpI.
 eapply OrE.
 is_ass.
 do 2 eapply OrI1; is_ass.
-apply OrE with (ClausetoPropF l1) (ClausetoPropF l2).
+apply OrE with (ClausetoFormProp l1) (ClausetoFormProp l2).
 apply K; is_ass.
 apply OrI1; apply OrI2; is_ass.
 apply OrI2; is_ass.
 Qed.
 
-Lemma CNF_add_clause_prov : forall l ll, Provable (CNFtoPropF (AddClause l ll) → ClausetoPropF l ∨ CNFtoPropF ll).
-intros; induction ll; simpl; unfold CNFtoPropF; simpl.
+Lemma CNF_add_clause_prov : forall l ll, Provable (CNFtoFormProp (AddClause l ll) → ClausetoFormProp l ∨ CNFtoFormProp ll).
+intros; induction ll; simpl; unfold CNFtoFormProp; simpl.
 apply ImpI; eapply OrI2; is_ass.
-prov_impl_in IHll; apply ImpI; apply OrE with (ClausetoPropF l) (ClausetoPropF a).
+prov_impl_in IHll; apply ImpI; apply OrE with (ClausetoFormProp l) (ClausetoFormProp a).
 eapply prov_impl.
 apply CNF_or_clause_prov.
 eapply AndE1; is_ass.
 apply OrI1; is_ass.
-apply OrE with (ClausetoPropF l) (CNFtoPropF ll).
+apply OrE with (ClausetoFormProp l) (CNFtoFormProp ll).
 apply K; eapply AndE2; is_ass.
 apply OrI1; is_ass.
 apply OrI2; apply AndI; is_ass.
 Qed.
 
-Lemma CNF_or_prov : forall ll1 ll2, Provable (CNFtoPropF (Disjunct ll1 ll2) → CNFtoPropF ll1 ∨ CNFtoPropF ll2).
-intros; induction ll1; simpl; unfold CNFtoPropF; simpl.
+Lemma CNF_or_prov : forall ll1 ll2, Provable (CNFtoFormProp (Disjunct ll1 ll2) → CNFtoFormProp ll1 ∨ CNFtoFormProp ll2).
+intros; induction ll1; simpl; unfold CNFtoFormProp; simpl.
 apply ImpI; eapply OrI1; is_ass.
-prov_impl_in IHll1; apply ImpI; apply OrE with (ClausetoPropF a) (CNFtoPropF ll2).
+prov_impl_in IHll1; apply ImpI; apply OrE with (ClausetoFormProp a) (CNFtoFormProp ll2).
 eapply prov_impl; [apply CNF_add_clause_prov|].
 eapply AndE1; eapply prov_impl; [apply CNF_and_prov|is_ass].
-apply OrE with (CNFtoPropF ll1) (CNFtoPropF ll2).
+apply OrE with (CNFtoFormProp ll1) (CNFtoFormProp ll2).
 apply K; eapply AndE2; eapply prov_impl; [apply CNF_and_prov|is_ass].
 apply OrI1; apply AndI; is_ass.
 apply OrI2; is_ass.
 apply OrI2; is_ass.
 Qed.
 
-Theorem CNF_impl_prov : forall A, Provable (CNFtoPropF (MakeCNF A) → NNFtoPropF A).
-induction A; simpl; try (unfold CNFtoPropF; unfold ClausetoPropF; simpl; apply ImpI;eapply OrE; [eapply AndE1;is_ass|is_ass|apply BotC;is_ass]; fail).
+Theorem CNF_impl_prov : forall A, Provable (CNFtoFormProp (MakeCNF A) → NNFtoFormProp A).
+induction A; simpl; try (unfold CNFtoFormProp; unfold ClausetoFormProp; simpl; apply ImpI;eapply OrE; [eapply AndE1;is_ass|is_ass|apply BotC;is_ass]; fail).
 apply ImpI; apply AndI; (eapply prov_impl; [eassumption|]); [eapply AndE1|eapply AndE2]; (eapply prov_impl; [apply CNF_and_prov|is_ass]).
 apply ImpI; eapply prov_impl.
 apply ImpI; eapply prov_or; try eassumption; in_solve.
@@ -273,7 +273,7 @@ intros; prov_impl_in H; prov_impl_in H0.
 apply AndI; [apply K;eapply AndE1|apply K0; eapply AndE2]; is_ass.
 Qed.
 
-Lemma NNF_impl_prov : forall A, Provable (NNFtoPropF (MakeNNF  A) →  A) /\ Provable (NNFtoPropF (MakeNNFN A) → ¬A).
+Lemma NNF_impl_prov : forall A, Provable (NNFtoFormProp (MakeNNF  A) →  A) /\ Provable (NNFtoFormProp (MakeNNFN A) → ¬A).
 induction A; simpl; split; try destruct IHA; try destruct IHA1; try destruct IHA2; apply ImpI; try (is_ass; fail).
 eapply prov_and; try eassumption; in_solve.
 apply ImpI.
