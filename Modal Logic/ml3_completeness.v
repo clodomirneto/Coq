@@ -83,7 +83,7 @@ Definition Valid_Clause (l : Clause) := In LTop l \/ exists A, (In (LPos A) l /\
 Definition Valid_CNF ll := forall l, In l ll -> Valid_Clause l.
 
 Lemma Literal_eqdec : forall x y : Literal, {x = y} + {x <> y}.
-intros; destruct x; destruct y; try (right; discriminate); try (left; reflexivity); destruct (Varseq_dec p p0);  (left; f_equal; assumption)||(right; intro HH; injection HH; contradiction).
+intros; destruct x; destruct y; try (right; discriminate); try (left; reflexivity); destruct (VarSeq p p0);  (left; f_equal; assumption)||(right; intro HH; injection HH; contradiction).
 Qed.
 
 Lemma NNF_equiv_valid : forall v A, TrueQ v (NNFtoFormProp (MakeNNF  A)) = TrueQ v A /\ TrueQ v (NNFtoFormProp (MakeNNFN A)) = TrueQ v ¬ A.
