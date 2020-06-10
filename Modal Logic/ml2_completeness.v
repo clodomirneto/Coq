@@ -1,8 +1,8 @@
-From LF Require Export ml2_soundness.
+From LF Require Export ml1_soundness.
 Require Export Decidable.
 Set Implicit Arguments.
-Module Type mod_complete (X: mod_base) (Y: mod_sound X).
-Import X Y.
+Module Type mod_complete (B: mod_base) (S: mod_sound B).
+Import B S.
 
 Inductive NNF : Set :=
 | NPos : VarProp -> NNF
@@ -55,6 +55,11 @@ match P with
 | LNeg Q => ¬ # Q
 | LBot => ⊥
 | LTop => ¬ ⊥
+end.
+
+Fixpoint map_fold_right (A B :Type) (f : B -> A) (g : A -> A -> A) a l := match l with
+| nil => a
+| b :: l2 => g (f b) (map_fold_right f g a l2)
 end.
 
 Definition Clause := list Literal.

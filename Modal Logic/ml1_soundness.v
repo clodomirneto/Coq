@@ -1,8 +1,21 @@
-From LF Require Export ml1_base.
+Set Implicit Arguments.
+Require Export Bool.
+Require Export List.
 Import ListNotations.
-Module Type mod_sound (X : mod_base).
-Import X.
 
+(* Módulo Base *)
+Module Type mod_base.
+Declare Scope My_scope.
+Open Scope My_scope.
+Parameter VarProp : Set.
+Parameter VarSeq : forall x y: VarProp, {x = y} + {x <> y}.
+End mod_base.
+
+(* Módulo Corretude *)
+Module Type mod_sound (B : mod_base).
+Import B.
+
+(* Definição de Fórmulas Proposicionais *)
 Inductive FormProp : Set :=
 | Var : VarProp -> FormProp
 | Bot : FormProp
@@ -10,6 +23,7 @@ Inductive FormProp : Set :=
 | Disj : FormProp -> FormProp -> FormProp
 | Impl : FormProp -> FormProp -> FormProp.
 
+(* Notações *)
 Notation "# P" := (Var P) (at level 1) : My_scope.
 
 Notation "A ∨ B" := (Disj A B) (at level 15, right associativity) : My_scope.
@@ -32,6 +46,7 @@ Definition BiImpl A B := (A → B) ∧ (B → A).
 
 Notation "A ↔ B" := (BiImpl A B) (at level 17, right associativity) : My_scope.
 
+(* Semântica *)
 Fixpoint TrueQ v A : bool := match A with
  | # P => v P
  | ⊥ => false
@@ -50,6 +65,7 @@ Definition Valid A := [] ⊨ A.
 
 Reserved Notation "Γ ⊢ A" (at level 80).
 
+(* Dedução Natural *)
 Inductive Nc : list FormProp -> FormProp -> Prop :=
 | Nax : forall Γ A, In A Γ -> Γ ⊢ A
 | ImpI : forall Γ A B, A :: Γ ⊢ B -> Γ ⊢ A → B

@@ -1,8 +1,9 @@
-Require Export c_completeness.
+Require Export ml2_completeness.
 Set Implicit Arguments.
-Module Type hilbert_mod (B: base_mod) (S: sound_mod B) (C: complete_mod B S).
+Module Type mod_hilbert (B: mod_base) (S: mod_sound B) (C: mod_complete B S).
 Import B S C.
 
+(* Cálculo de Hilbert *)
 Reserved Notation "Γ ⊢H A" (at level 80).
 
 Inductive AxiomH : PropF -> Prop :=
@@ -25,14 +26,16 @@ where "Γ ⊢H A" := (Hc Γ A) : My_scope.
 Definition ProvH A := [] ⊢H A.
 
 Ltac Hmp := eapply HImpE. (*Modus ponens (for H)*)
+
 Ltac aK := constructor 2;apply HK.
+
 Ltac aS := constructor 2;apply HS.
+
 Ltac aC := constructor 2;apply HClas.
+
 Ltac is_ax := constructor 2;constructor||assumption.
 
-(** * Theorems 
-
-Hc to Nc *)
+(* Hc => Nc *)
 
 Lemma Nc_AxiomH : forall A, AxiomH A -> Provable A.
 induction 1;repeat apply ImpI.
@@ -54,7 +57,7 @@ induction 1.
  mp;eassumption.
 Qed.
 
-(** Nc to Hc *)
+(* Nc => Hc *)
 
 Lemma H_weakening : forall Γ Δ A, (forall B, In B Γ -> In B Δ) -> Γ ⊢H A -> Δ ⊢H A.
 induction 2.
@@ -94,4 +97,4 @@ Theorem Nc_equiv_Hc : forall Γ A, Γ ⊢ A <-> Γ ⊢H A.
 split;[apply Nc_to_Hc|apply Hc_to_Nc]. 
 Qed.
 
-End hilbert_mod.
+End mod_hilbert.

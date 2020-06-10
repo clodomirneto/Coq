@@ -1,4 +1,4 @@
 -Q . LF
-ml1_base.v
-ml2_soundness.v
-ml3_completeness.v
+ml1_soundness.v
+ml2_completeness.v
+ml3_hilbert_calculus.v

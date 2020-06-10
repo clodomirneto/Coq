@@ -1,0 +1,184 @@
+DIGEST 60f660f0961f2002e84c3d14649036f2
+FLF.ml2_completeness
+R23:35 LF.ml1_soundness <> <> lib
+R54:62 Coq.Logic.Decidable <> <> lib
+R120:127 LF.ml1_soundness mod_base <> mod
+R134:142 LF.ml1_soundness mod_sound <> mod
+R144:144 LF.ml2_completeness B <> modtype
+modtype 103:114 <> mod_complete
+ind 174:176 mod_complete NNF
+constr 190:193 mod_complete NPos
+constr 215:218 mod_complete NNeg
+constr 240:243 mod_complete NBot
+constr 254:257 mod_complete NTop
+constr 268:272 mod_complete NConj
+constr 297:301 mod_complete NDisj
+R204:207 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R208:210 LF.ml2_completeness <> NNF ind
+R197:203 LF.ml2_completeness B VarProp defax
+R229:232 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R233:235 LF.ml2_completeness <> NNF ind
+R222:228 LF.ml2_completeness B VarProp defax
+R247:249 LF.ml2_completeness <> NNF ind
+R261:263 LF.ml2_completeness <> NNF ind
+R279:282 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R286:289 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R290:292 LF.ml2_completeness <> NNF ind
+R283:285 LF.ml2_completeness <> NNF ind
+R276:278 LF.ml2_completeness <> NNF ind
+R308:311 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R315:318 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R319:321 LF.ml2_completeness <> NNF ind
+R312:314 LF.ml2_completeness <> NNF ind
+R305:307 LF.ml2_completeness <> NNF ind
+def 336:342 mod_complete MakeNNF
+def 557:564 mod_complete MakeNNFN
+R349:356 LF.ml2_completeness S FormProp ind
+R571:578 LF.ml2_completeness S FormProp ind
+R361:363 LF.ml2_completeness mod_complete NNF ind
+R583:585 LF.ml2_completeness mod_complete NNF ind
+R374:374 LF.ml2_completeness <> A var
+R384:385 LF.ml1_soundness mod_sound ::My_scope:'#'_x not
+R391:394 LF.ml2_completeness mod_complete NPos constr
+R401:403 LF.ml1_soundness mod_sound ::My_scope:'⊥' not
+R408:411 LF.ml2_completeness mod_complete NBot constr
+R417:421 LF.ml1_soundness mod_sound ::My_scope:x_'∨'_x not
+R427:431 LF.ml2_completeness mod_complete NDisj constr
+R446:452 LF.ml2_completeness <> MakeNNF def
+R434:440 LF.ml2_completeness <> MakeNNF def
+R461:465 LF.ml1_soundness mod_sound ::My_scope:x_'∧'_x not
+R471:475 LF.ml2_completeness mod_complete NConj constr
+R490:496 LF.ml2_completeness <> MakeNNF def
+R478:484 LF.ml2_completeness <> MakeNNF def
+R505:509 LF.ml1_soundness mod_sound ::My_scope:x_'→'_x not
+R515:519 LF.ml2_completeness mod_complete NDisj constr
+R535:541 LF.ml2_completeness <> MakeNNF def
+R522:529 LF.ml2_completeness <> MakeNNFN def
+R596:596 LF.ml2_completeness <> A var
+R606:607 LF.ml1_soundness mod_sound ::My_scope:'#'_x not
+R613:616 LF.ml2_completeness mod_complete NNeg constr
+R623:625 LF.ml1_soundness mod_sound ::My_scope:'⊥' not
+R630:633 LF.ml2_completeness mod_complete NTop constr
+R639:643 LF.ml1_soundness mod_sound ::My_scope:x_'∨'_x not
+R649:653 LF.ml2_completeness mod_complete NConj constr
+R669:676 LF.ml2_completeness <> MakeNNFN def
+R656:663 LF.ml2_completeness <> MakeNNFN def
+R685:689 LF.ml1_soundness mod_sound ::My_scope:x_'∧'_x not
+R695:699 LF.ml2_completeness mod_complete NDisj constr
+R715:722 LF.ml2_completeness <> MakeNNFN def
+R702:709 LF.ml2_completeness <> MakeNNFN def
+R731:735 LF.ml1_soundness mod_sound ::My_scope:x_'→'_x not
+R741:745 LF.ml2_completeness mod_complete NConj constr
+R760:767 LF.ml2_completeness <> MakeNNFN def
+R748:754 LF.ml2_completeness <> MakeNNF def
+def 790:802 mod_complete NNFtoFormProp
+R809:811 LF.ml2_completeness mod_complete NNF ind
+R816:823 LF.ml2_completeness S FormProp ind
+R834:834 LF.ml2_completeness <> A var
+R844:847 LF.ml2_completeness mod_complete NPos constr
+R854:855 LF.ml1_soundness mod_sound ::My_scope:'#'_x not
+R861:864 LF.ml2_completeness mod_complete NNeg constr
+R871:873 LF.ml1_soundness mod_sound ::My_scope:'¬'_x not
+R874:875 LF.ml1_soundness mod_sound ::My_scope:'#'_x not
+R881:884 LF.ml2_completeness mod_complete NBot constr
+R889:891 LF.ml1_soundness mod_sound ::My_scope:'⊥' not
+R896:899 LF.ml2_completeness mod_complete NTop constr
+R904:906 LF.ml1_soundness mod_sound ::My_scope:'¬'_x not
+R907:909 LF.ml1_soundness mod_sound ::My_scope:'⊥' not
+R914:918 LF.ml2_completeness mod_complete NConj constr
+R942:946 LF.ml1_soundness mod_sound ::My_scope:x_'∧'_x not
+R927:939 LF.ml2_completeness <> NNFtoFormProp def
+R947:959 LF.ml2_completeness <> NNFtoFormProp def
+R966:970 LF.ml2_completeness mod_complete NDisj constr
+R994:998 LF.ml1_soundness mod_sound ::My_scope:x_'∨'_x not
+R979:991 LF.ml2_completeness <> NNFtoFormProp def
+R999:1011 LF.ml2_completeness <> NNFtoFormProp def
+ind 1034:1040 mod_complete Literal
+constr 1048:1051 mod_complete LPos
+constr 1077:1080 mod_complete LNeg
+constr 1106:1109 mod_complete LBot
+constr 1124:1127 mod_complete LTop
+R1062:1065 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1066:1072 LF.ml2_completeness <> Literal ind
+R1055:1061 LF.ml2_completeness B VarProp defax
+R1091:1094 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1095:1101 LF.ml2_completeness <> Literal ind
+R1084:1090 LF.ml2_completeness B VarProp defax
+R1113:1119 LF.ml2_completeness <> Literal ind
+R1131:1137 LF.ml2_completeness <> Literal ind
+def 1152:1154 mod_complete Bar
+R1167:1167 LF.ml2_completeness <> P var
+R1177:1180 LF.ml2_completeness mod_complete LPos constr
+R1187:1190 LF.ml2_completeness mod_complete LNeg constr
+R1197:1200 LF.ml2_completeness mod_complete LNeg constr
+R1207:1210 LF.ml2_completeness mod_complete LPos constr
+R1217:1220 LF.ml2_completeness mod_complete LBot constr
+R1225:1228 LF.ml2_completeness mod_complete LTop constr
+R1233:1236 LF.ml2_completeness mod_complete LTop constr
+R1241:1244 LF.ml2_completeness mod_complete LBot constr
+def 1264:1280 mod_complete LiteraltoFormProp
+R1287:1293 LF.ml2_completeness mod_complete Literal ind
+R1298:1305 LF.ml2_completeness S FormProp ind
+R1317:1317 LF.ml2_completeness <> P var
+R1327:1330 LF.ml2_completeness mod_complete LPos constr
+R1337:1338 LF.ml1_soundness mod_sound ::My_scope:'#'_x not
+R1344:1347 LF.ml2_completeness mod_complete LNeg constr
+R1354:1356 LF.ml1_soundness mod_sound ::My_scope:'¬'_x not
+R1357:1358 LF.ml1_soundness mod_sound ::My_scope:'#'_x not
+R1364:1367 LF.ml2_completeness mod_complete LBot constr
+R1372:1374 LF.ml1_soundness mod_sound ::My_scope:'⊥' not
+R1379:1382 LF.ml2_completeness mod_complete LTop constr
+R1387:1389 LF.ml1_soundness mod_sound ::My_scope:'¬'_x not
+R1390:1392 LF.ml1_soundness mod_sound ::My_scope:'⊥' not
+def 1412:1425 mod_complete map_fold_right
+R1445:1448 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1449:1449 LF.ml2_completeness <> A var
+R1444:1444 LF.ml2_completeness <> B var
+R1458:1461 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1463:1466 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1467:1467 LF.ml2_completeness <> A var
+R1462:1462 LF.ml2_completeness <> A var
+R1457:1457 LF.ml2_completeness <> A var
+R1483:1483 LF.ml2_completeness <> l var
+R1493:1495 Coq.Init.Datatypes <> nil constr
+R1500:1500 LF.ml2_completeness <> a var
+R1506:1509 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1516:1516 LF.ml2_completeness <> g var
+R1525:1538 LF.ml2_completeness <> map_fold_right def
+R1544:1544 LF.ml2_completeness <> a var
+R1542:1542 LF.ml2_completeness <> g var
+R1540:1540 LF.ml2_completeness <> f var
+R1519:1519 LF.ml2_completeness <> f var
+def 1570:1575 mod_complete Clause
+R1580:1583 Coq.Init.Datatypes <> list ind
+R1585:1591 LF.ml2_completeness mod_complete Literal ind
+def 1608:1623 mod_complete ClausetoFormProp
+R1628:1641 LF.ml2_completeness mod_complete map_fold_right def
+R1666:1668 LF.ml1_soundness mod_sound ::My_scope:'⊥' not
+R1661:1664 LF.ml2_completeness S Disj constr
+R1643:1659 LF.ml2_completeness mod_complete LiteraltoFormProp def
+def 1685:1687 mod_complete CNF
+R1692:1695 Coq.Init.Datatypes <> list ind
+R1697:1702 LF.ml2_completeness mod_complete Clause def
+def 1719:1731 mod_complete CNFtoFormProp
+R1736:1749 LF.ml2_completeness mod_complete map_fold_right def
+R1773:1775 LF.ml1_soundness mod_sound ::My_scope:'⊤' not
+R1768:1771 LF.ml2_completeness S Conj constr
+R1751:1766 LF.ml2_completeness mod_complete ClausetoFormProp def
+def 1792:1800 mod_complete AddClause
+R1807:1812 LF.ml2_completeness mod_complete Clause def
+R1821:1823 LF.ml2_completeness mod_complete CNF def
+R1828:1830 LF.ml2_completeness mod_complete CNF def
+R1835:1837 Coq.Lists.List <> map def
+R1859:1860 LF.ml2_completeness <> ll var
+R1851:1854 Coq.Init.Datatypes <> ::list_scope:x_'++'_x not
+R1850:1850 LF.ml2_completeness <> l var
+R1855:1856 LF.ml2_completeness <> l2 var
+def 1877:1884 mod_complete Disjunct
+R1896:1898 LF.ml2_completeness mod_complete CNF def
+R1903:1905 LF.ml2_completeness mod_complete CNF def
+R1910:1917 Coq.Lists.List <> flat_map def
+R1946:1947 LF.ml2_completeness <> ll var
+R1929:1937 LF.ml2_completeness mod_complete AddClause def
+R1941:1943 LF.ml2_completeness <> ll2 var
+R1939:1939 LF.ml2_completeness <> l var
