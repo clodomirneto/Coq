@@ -1,6 +1,8 @@
 From LF Require Export ml1_soundness.
 Require Export Decidable.
 Set Implicit Arguments.
+Export ListNotations.
+
 Module Type mod_complete (B: mod_base) (S: mod_sound B).
 Import B S.
 
@@ -88,7 +90,7 @@ Definition Valid_Clause (l : Clause) := In LTop l \/ exists A, (In (LPos A) l /\
 Definition Valid_CNF ll := forall l, In l ll -> Valid_Clause l.
 
 Lemma Literal_eqdec : forall x y : Literal, {x = y} + {x <> y}.
-intros; destruct x; destruct y; try (right; discriminate); try (left; reflexivity); destruct (VarSeq p p0);  (left; f_equal; assumption)||(right; intro HH; injection HH; contradiction).
+intros; destruct x; destruct y; try (right; discriminate); try (left; reflexivity); destruct (VarSeq v v0);  (left; f_equal; assumption)||(right; intro HH; injection HH; contradiction).
 Qed.
 
 Lemma NNF_equiv_valid : forall v A, TrueQ v (NNFtoFormProp (MakeNNF  A)) = TrueQ v A /\ TrueQ v (NNFtoFormProp (MakeNNFN A)) = TrueQ v ¬ A.
@@ -126,7 +128,7 @@ rewrite orb_andb_distrib_l; reflexivity.
 Qed.
 
 Theorem CNF_equiv_valid : forall v A, TrueQ v (CNFtoFormProp (MakeCNF A)) = TrueQ v (NNFtoFormProp A).
-intros; induction A; simpl; try reflexivity; try (destruct (v p); simpl; reflexivity; fail); [rewrite CNF_and_valid|rewrite CNF_or_valid]; rewrite IHA1; rewrite IHA2; reflexivity.
+intros; induction A; simpl; try reflexivity; try (destruct (v v0); simpl; reflexivity; fail); [rewrite CNF_and_valid|rewrite CNF_or_valid]; rewrite IHA1; rewrite IHA2; reflexivity.
 Qed.
 
 Definition Countervaluation l P := if (in_dec Literal_eqdec (LNeg P) l) then true else false.
@@ -144,10 +146,10 @@ Qed.
 Lemma Validated_valid : forall l, Validates (Countervaluation l) (map LiteraltoFormProp l) -> Valid_Clause l.
 intros l (A&H&K).
 apply in_map_iff in H as (p&?&H); subst; destruct p; unfold Countervaluation in K; simpl in K.
-destruct (in_dec Literal_eqdec (LNeg p) l).
+destruct (in_dec Literal_eqdec (LNeg v) l).
 right; eauto.
 contradiction.
-destruct (in_dec Literal_eqdec (LNeg p) l); contradiction.
+destruct (in_dec Literal_eqdec (LNeg v) l); contradiction.
 contradiction.
 left; assumption.
 Qed.
@@ -203,11 +205,9 @@ apply Clause_provable; apply H; constructor; reflexivity.
 apply IHll; intro; intro; apply H; constructor 2; assumption.
 Qed.
 
-Lemma prov_or : forall A1 A2 B1 B2 Γ, Provable (A1 → A2) -> Provable (B1 → B2) -> In (A1 ∨ B1) Γ -> Γ ⊢ A2 ∨ B2.
-intros; prov_impl_in H; prov_impl_in H0. eapply OrE.
-is_ass.
-apply OrI1; apply K; is_ass.
-apply OrI2; apply K0; is_ass.
+Lemma prov_and : forall A1 A2 B1 B2 Γ, Provable (A1 → A2) -> Provable (B1 → B2) -> In (A1∧B1) Γ -> Γ ⊢ A2 ∧ B2.
+intros; prov_impl_in H; prov_impl_in H0.
+apply AndI; [apply K;eapply AndE1|apply K0; eapply AndE2]; is_ass.
 Qed.
 
 Lemma CNF_and_prov : forall ll1 ll2, Provable (CNFtoFormProp (ll1 ++ ll2) → CNFtoFormProp ll1 ∧ CNFtoFormProp ll2).
@@ -222,6 +222,14 @@ eapply AndE1; is_ass.
 eapply AndE1; apply K.
 eapply AndE2; is_ass.
 eapply AndE2; apply K; eapply AndE2; is_ass.
+Qed.
+
+Lemma prov_or : forall A1 A2 B1 B2 Γ, Provable (A1 → A2) -> Provable (B1 → B2) -> In (A1 ∨ B1) Γ -> Γ ⊢ A2 ∨ B2.
+intros; prov_impl_in H; prov_impl_in H0.
+eapply OrE.
+is_ass.
+apply OrI1; apply K; is_ass.
+apply OrI2; apply K0; is_ass.
 Qed.
 
 Lemma CNF_or_clause_prov : forall l1 l2, Provable (ClausetoFormProp (l1 ++ l2) → ClausetoFormProp l1 ∨ ClausetoFormProp l2).
@@ -266,16 +274,11 @@ apply OrI2; is_ass.
 Qed.
 
 Theorem CNF_impl_prov : forall A, Provable (CNFtoFormProp (MakeCNF A) → NNFtoFormProp A).
-induction A; simpl; try (unfold CNFtoFormProp; unfold ClausetoFormProp; simpl; apply ImpI;eapply OrE; [eapply AndE1;is_ass|is_ass|apply BotC;is_ass]; fail).
+induction A; simpl; try (unfold CNFtoFormProp; unfold ClausetoFormProp; simpl; apply Impl; eapply OrE; [eapply AndE1; is_ass|is_ass|apply BotC; is_ass]; fail).
 apply ImpI; apply AndI; (eapply prov_impl; [eassumption|]); [eapply AndE1|eapply AndE2]; (eapply prov_impl; [apply CNF_and_prov|is_ass]).
 apply ImpI; eapply prov_impl.
 apply ImpI; eapply prov_or; try eassumption; in_solve.
 eapply prov_impl; [apply CNF_or_prov|is_ass].
-Qed.
-
-Lemma prov_and : forall A1 A2 B1 B2 Γ, Provable (A1 → A2) -> Provable (B1 → B2) -> In (A1∧B1) Γ -> Γ ⊢ A2 ∧ B2.
-intros; prov_impl_in H; prov_impl_in H0.
-apply AndI; [apply K;eapply AndE1|apply K0; eapply AndE2]; is_ass.
 Qed.
 
 Lemma NNF_impl_prov : forall A, Provable (NNFtoFormProp (MakeNNF  A) →  A) /\ Provable (NNFtoFormProp (MakeNNFN A) → ¬A).

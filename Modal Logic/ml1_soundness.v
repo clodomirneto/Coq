@@ -83,7 +83,7 @@ Definition Provable A := [] ⊢ A.
 
 Definition Prop_Soundness := forall A, Provable A -> Valid A.
 
-Definition Prop_Completeness := forall A,Valid A->Provable A.
+Definition Prop_Completeness := forall A, Valid A -> Provable A.
 
 Ltac mp := eapply ImpE.
 
@@ -94,7 +94,7 @@ end.
 Ltac in_solve := intros; repeat
 (eassumption
 ||match goal with
-| H : In _ (_::_) |- _ => destruct H; [subst;try discriminate|]
+| H : In _ (_::_) |- _ => destruct H; [subst; try discriminate|]
 | H : In _ (_++_) |- _ => apply in_app_iff in H as []; subst
 | |- In _ (_++_) => apply in_app_iff; (left; in_solve; fail)|| (right; in_solve; fail) 
   end
@@ -106,13 +106,13 @@ Ltac is_ass := econstructor; in_solve.
 Ltac case_bool v A := let HA := fresh "H" in (case_eq (TrueQ v A); intro HA; try rewrite HA in *; simpl in *; try trivial; try contradiction).
 
 Local Ltac prove_satisfaction :=
-intros ? K;destruct K;[subst; simpl;
+intros ? K; destruct K; [subst; simpl;
 match goal with
 | [ H : TrueQ _ _ = _  |-  _ ] => rewrite H
 end; exact I|auto].
 
 Lemma FormPropSeq : forall (x y : FormProp), {x = y} + {x <> y}.
-induction x; destruct y; try (right;discriminate); try (destruct (IHx1 y1); [destruct (IHx2 y2); [left;f_equal;assumption|]|]; right; injection; intros; contradiction).
+induction x; destruct y; try (right; discriminate); try (destruct (IHx1 y1); [destruct (IHx2 y2); [left;f_equal;assumption|]|]; right; injection; intros; contradiction).
 destruct (VarSeq v v0).
 left; f_equal; assumption.
 right; injection; intro; contradiction.
