@@ -120,7 +120,17 @@ left; reflexivity.
 Qed.
 
 Lemma Excluded_Middle : forall Γ A, Γ ⊢ A ∨ ¬ A.
-intros; apply BotC; mp; [is_ass|apply OrI2; apply ImpI; mp; [is_ass|apply OrI1; is_ass]].
+Proof.
+intros Γ A.
+apply BotC.
+mp.
+is_ass.
+apply OrI2.
+apply ImpI.
+mp.
+is_ass.
+apply OrI1.
+is_ass.
 Qed.
 
 Lemma weakening2 : forall Γ A, Γ ⊢ A -> forall Δ, (forall B, In B Γ -> In B Δ) -> Δ ⊢ A.
