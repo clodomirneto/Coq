@@ -1,0 +1,37 @@
+DIGEST cce0d821a4499b5cb244a275c91bad08
+FLF.ml0_base
+R56:59 Coq.Bool.Bool <> <> lib
+R77:80 Coq.Lists.List <> <> lib
+modtype 136:143 <> mod_base
+ax 263:267 mod_base VProp
+ax 327:336 mod_base VarSeq_dec
+R352:356 LF.ml0_base mod_base VProp defax
+R359:359 Coq.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R365:369 Coq.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R376:376 Coq.Init.Specif <> ::type_scope:'{'_x_'}'_'+'_'{'_x_'}' not
+R361:363 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R360:360 LF.ml0_base <> x var
+R364:364 LF.ml0_base <> y var
+R371:374 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R370:370 LF.ml0_base <> x var
+R375:375 LF.ml0_base <> y var
+def 427:440 mod_base map_fold_right
+R460:463 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R464:464 LF.ml0_base <> A var
+R459:459 LF.ml0_base <> B var
+R473:476 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R478:481 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R482:482 LF.ml0_base <> A var
+R477:477 LF.ml0_base <> A var
+R472:472 LF.ml0_base <> A var
+R498:498 LF.ml0_base <> l var
+R507:509 Coq.Init.Datatypes <> nil constr
+R514:514 LF.ml0_base <> a var
+R519:522 Coq.Init.Datatypes <> ::list_scope:x_'::'_x not
+R529:529 LF.ml0_base <> g var
+R538:551 LF.ml0_base <> map_fold_right def
+R557:557 LF.ml0_base <> a var
+R555:555 LF.ml0_base <> g var
+R553:553 LF.ml0_base <> f var
+R532:532 LF.ml0_base <> f var
+R572:579 LF.ml0_base mod_base <> modtype

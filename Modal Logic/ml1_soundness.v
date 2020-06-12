@@ -1,27 +1,16 @@
+From LF Require Export ml0_base.
 Set Implicit Arguments.
-Require Export Bool.
-Require Export List.
-Import ListNotations.
-
-(* Módulo Base *)
-Module Type mod_base.
-Declare Scope My_scope.
-Open Scope My_scope.
-Parameter VarProp : Set.
-Parameter VarSeq : forall x y: VarProp, {x = y} + {x <> y}.
-End mod_base.
-
-(* Módulo Corretude *)
+Export ListNotations.
 Module Type mod_sound (B : mod_base).
 Import B.
 
 (* Definição de Fórmulas Proposicionais *)
-Inductive FormProp : Set :=
-| Var : VarProp -> FormProp
-| Bot : FormProp
-| Conj : FormProp -> FormProp -> FormProp
-| Disj : FormProp -> FormProp -> FormProp
-| Impl : FormProp -> FormProp -> FormProp.
+Inductive FProp : Set :=
+| Var : VProp -> FProp
+| Bot : FProp
+| Conj : FProp -> FProp -> FProp
+| Disj : FProp -> FProp -> FProp
+| Impl : FProp -> FProp -> FProp.
 
 (* Notações *)
 Notation "# P" := (Var P) (at level 1) : My_scope.
@@ -66,7 +55,7 @@ Definition Valid A := [] ⊨ A.
 Reserved Notation "Γ ⊢ A" (at level 80).
 
 (* Dedução Natural *)
-Inductive Nc : list FormProp -> FormProp -> Prop :=
+Inductive Nc : list FProp -> FProp -> Prop :=
 | Nax : forall Γ A, In A Γ -> Γ ⊢ A
 | ImpI : forall Γ A B, A :: Γ ⊢ B -> Γ ⊢ A → B
 | ImpE : forall Γ A B, Γ ⊢ A → B -> Γ ⊢ A -> Γ ⊢ B
@@ -111,9 +100,9 @@ match goal with
 | [ H : TrueQ _ _ = _  |-  _ ] => rewrite H
 end; exact I|auto].
 
-Lemma FormPropSeq : forall (x y : FormProp), {x = y} + {x <> y}.
+Lemma FPropSeq : forall (x y : FProp), {x = y} + {x <> y}.
 induction x; destruct y; try (right; discriminate); try (destruct (IHx1 y1); [destruct (IHx2 y2); [left;f_equal;assumption|]|]; right; injection; intros; contradiction).
-destruct (VarSeq v v0).
+destruct (VarSeq_dec v v0).
 left; f_equal; assumption.
 right; injection; intro; contradiction.
 left; reflexivity.
