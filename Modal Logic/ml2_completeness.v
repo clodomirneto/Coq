@@ -85,7 +85,7 @@ Definition Valid_Clause (l : Clause) := In LTop l \/ exists A, (In (LPos A) l /\
 Definition Valid_CNF ll := forall l, In l ll -> Valid_Clause l.
 
 Lemma Literal_eqdec : forall x y : Literal, {x = y} + {x <> y}.
-intros; destruct x; destruct y; try (right; discriminate); try (left; reflexivity); destruct (VarSeq_dec v v0);  (left; f_equal; assumption)||(right; intro HH; injection HH; contradiction).
+intros; destruct x; destruct y; try (right; discriminate); try (left; reflexivity); destruct (VarSeq_dec v v0); (left; f_equal; assumption)||(right; intro HH; injection HH; contradiction).
 Qed.
 
 Lemma NNF_equiv_valid : forall v A, TrueQ v (NNFtoFProp (MakeNNF  A)) = TrueQ v A /\ TrueQ v (NNFtoFProp (MakeNNFN A)) = TrueQ v ¬ A.
@@ -200,7 +200,7 @@ apply Clause_provable; apply H; constructor; reflexivity.
 apply IHll; intro; intro; apply H; constructor 2; assumption.
 Qed.
 
-Lemma prov_and : forall A1 A2 B1 B2 Γ, Provable (A1 → A2) -> Provable (B1 → B2) -> In (A1∧B1) Γ -> Γ ⊢ A2 ∧ B2.
+Lemma prov_and : forall A1 A2 B1 B2 Γ, Provable (A1 → A2) -> Provable (B1 → B2) -> In (A1 ∧ B1) Γ -> Γ ⊢ A2 ∧ B2.
 intros; prov_impl_in H; prov_impl_in H0.
 apply AndI; [apply K;eapply AndE1|apply K0; eapply AndE2]; is_ass.
 Qed.
@@ -269,15 +269,98 @@ apply OrI2; is_ass.
 Qed.
 
 Theorem CNF_impl_prov : forall A, Provable (CNFtoFProp (MakeCNF A) → NNFtoFProp A).
-induction A; simpl; try (unfold CNFtoFProp; unfold ClausetoFProp; simpl; apply Impl; eapply OrE; [eapply AndE1; is_ass|is_ass|apply BotC; is_ass]; fail).
-apply ImpI; apply AndI; (eapply prov_impl; [eassumption|]); [eapply AndE1|eapply AndE2]; (eapply prov_impl; [apply CNF_and_prov|is_ass]).
+Proof.
+intros.
+induction A.
+unfold CNFtoFProp.
+unfold ClausetoFProp.
+simpl.
+apply ImpI.
+eapply OrE.
+eapply AndE1.
+is_ass.
+is_ass.
+apply BotC.
+is_ass.
+unfold CNFtoFProp.
+unfold ClausetoFProp.
+simpl.
+apply ImpI.
+eapply OrE.
+eapply AndE1.
+is_ass.
+is_ass.
+apply BotC.
+is_ass.
+unfold CNFtoFProp.
+unfold ClausetoFProp.
+simpl.
+apply ImpI.
+eapply OrE.
+eapply AndE1.
+is_ass.
+is_ass.
+apply BotC.
+is_ass.
+unfold CNFtoFProp.
+unfold ClausetoFProp.
+simpl.
+apply ImpI.
+eapply OrE.
+eapply AndE1.
+is_ass.
+is_ass.
+apply BotC.
+is_ass.
+apply ImpI; apply AndI; (eapply prov_impl; [eassumption|]); [eapply AndE1|eapply AndE2]; 
+(eapply prov_impl; [apply CNF_and_prov|is_ass]).
 apply ImpI; eapply prov_impl.
 apply ImpI; eapply prov_or; try eassumption; in_solve.
 eapply prov_impl; [apply CNF_or_prov|is_ass].
 Qed.
 
-Lemma NNF_impl_prov : forall A, Provable (NNFtoFProp (MakeNNF  A) →  A) /\ Provable (NNFtoFProp (MakeNNFN A) → ¬A).
-induction A; simpl; split; try destruct IHA; try destruct IHA1; try destruct IHA2; apply ImpI; try (is_ass; fail).
+Lemma NNF_impl_prov : forall A, Provable (NNFtoFProp (MakeNNF A) → A) /\ Provable (NNFtoFProp (MakeNNFN A) → ¬ A).
+Proof.
+intros A.
+induction A.
+simpl.
+split.
+apply ImpI.
+is_ass.
+apply ImpI.
+is_ass.
+simpl.
+split.
+apply ImpI.
+is_ass.
+apply ImpI.
+is_ass.
+destruct IHA1.
+destruct IHA2.
+simpl.
+split.
+apply ImpI.
+eapply prov_and; try eassumption; in_solve.
+apply ImpI.
+apply OrE with ¬ A1 ¬ A2.
+eapply prov_or; try eassumption; in_solve.
+apply ImpI.
+mp; [|eapply AndE1]; is_ass.
+apply ImpI.
+mp; [|eapply AndE2]; is_ass.
+destruct IHA1.
+destruct IHA2.
+simpl.
+split.
+apply ImpI.
+eapply prov_or; try eassumption; in_solve.
+apply ImpI.
+Qed.
+
+Lemma NNF_impl_prov : forall A, Provable (NNFtoFProp (MakeNNF  A) →  A) /\ Provable (NNFtoFProp (MakeNNFN A) → ¬ A).
+induction A; simpl; split;
+try destruct IHA; try destruct IHA1;
+try destruct IHA2; apply ImpI; try (is_ass; fail).
 eapply prov_and; try eassumption; in_solve.
 apply ImpI.
 apply OrE with ¬ A1 ¬ A2.
