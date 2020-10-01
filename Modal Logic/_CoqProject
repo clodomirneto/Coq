@@ -3,3 +3,5 @@ ml0_base.v
 ml1_soundness.v
 ml2_completeness.v
 ml3_hilbert_calculus.v
+ml4_sequent_calculus.v
+ml5_cut_elimination.v

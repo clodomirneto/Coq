@@ -355,29 +355,32 @@ split.
 apply ImpI.
 eapply prov_or; try eassumption; in_solve.
 apply ImpI.
-Qed.
-
-Lemma NNF_impl_prov : forall A, Provable (NNFtoFProp (MakeNNF  A) →  A) /\ Provable (NNFtoFProp (MakeNNFN A) → ¬ A).
-induction A; simpl; split;
-try destruct IHA; try destruct IHA1;
-try destruct IHA2; apply ImpI; try (is_ass; fail).
+apply ImpI.
+apply ImpE with A1.
+apply AndE1 with ¬ A2.
 eapply prov_and; try eassumption; in_solve.
+apply OrE with A1 A2.
+is_ass.
+is_ass.
+apply BotC.
+apply ImpE with A2.
+apply AndE2 with ¬ A1.
+eapply prov_and; try eassumption; in_solve.
+is_ass.
+destruct IHA1.
+destruct IHA2.
+simpl.
+split.
 apply ImpI.
-apply OrE with ¬ A1 ¬ A2.
-eapply prov_or; try eassumption; in_solve.
-mp; [|eapply AndE1]; is_ass.
-mp; [|eapply AndE2]; is_ass.
-eapply prov_or; try eassumption; in_solve.
-apply ImpI.
-eapply OrE; [is_ass|mp; [|is_ass]; eapply prov_impl; try eassumption..].
-eapply AndE1; is_ass.
-eapply AndE2; is_ass.
 apply ImpI.
 apply OrE with ¬ A1 A2.
 eapply prov_or; try eassumption; in_solve.
 apply BotC.
-eapply ImpE with A1; is_ass.
+apply ImpE with A1.
 is_ass.
+is_ass.
+is_ass.
+apply ImpI.
 apply ImpI.
 apply ImpE with A2.
 eapply prov_impl; try eassumption.
@@ -420,4 +423,4 @@ Qed.
 
 Print Assumptions prov_equiv_models.
 
-End complete_mod.
+End mod_complete.

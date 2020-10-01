@@ -1,4 +1,4 @@
-Require Export ml2_completeness.
+From LF Require Export ml2_completeness.
 Set Implicit Arguments.
 Module Type mod_hilbert (B: mod_base) (S: mod_sound B) (C: mod_complete B S).
 Import B S C.
@@ -6,7 +6,7 @@ Import B S C.
 (* Cálculo de Hilbert *)
 Reserved Notation "Γ ⊢H A" (at level 80).
 
-Inductive AxiomH : PropF -> Prop :=
+Inductive AxiomH : FProp -> Prop :=
 | HOrI1 : forall A B, AxiomH (A → A ∨ B)
 | HOrI2 : forall A B, AxiomH (B → A ∨ B)
 | HAndI : forall A B, AxiomH (A → B → A ∧ B)
@@ -17,7 +17,7 @@ Inductive AxiomH : PropF -> Prop :=
 | HK : forall A B, AxiomH (A → B → A)
 | HClas : forall A, AxiomH (¬ (¬ A) → A).
 
-Inductive Hc : list PropF -> PropF -> Prop :=
+Inductive Hc : list FProp -> FProp -> Prop :=
 | Hass : forall A Γ, In A Γ -> Γ ⊢H A
 | Hax : forall A Γ, AxiomH A -> Γ ⊢H A
 | HImpE : forall Γ A B, Γ ⊢H A → B -> Γ ⊢H A -> Γ ⊢H B
@@ -51,7 +51,7 @@ induction 1;repeat apply ImpI.
 Qed.
 
 Theorem Hc_to_Nc : forall Γ A, Γ ⊢H A -> Γ ⊢ A.
-induction 1. 
+induction 1.
  is_ass.
  AddnilL;eapply weakening;apply Nc_AxiomH;assumption.
  mp;eassumption.
