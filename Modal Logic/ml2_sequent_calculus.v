@@ -1,9 +1,9 @@
-From LF Require Export ml2_completeness.
+From LF Require Export ml1_soundness.
 
 Set Implicit Arguments.
 
-Module Type mod_sequent (B: mod_base) (S: mod_sound B) (C: mod_complete B S).
-Import B S C.
+Module Type mod_sequent (B: mod_base) (S: mod_sound B).
+Import B S.
 
 (** * Gentzen's Sequent Calculus *)
 
@@ -19,7 +19,6 @@ Inductive G : list FProp -> list FProp -> Prop :=
 | ImpR : forall A B Γ Δ1 Δ2, A:: Γ ⊃ Δ1 ++ B :: Δ2 -> Γ ⊃ Δ1 ++ A → B :: Δ2
 | Cut  : forall A Γ Δ, Γ ⊃ A :: Δ -> A :: Γ ⊃ Δ -> Γ ⊃ Δ
 where "Γ ⊃ Δ" := (G Γ Δ) : My_scope.
-
 
 (** The disjunction of a list of formulas*)
 Definition BigOr := fold_right Disj ⊥.
@@ -127,8 +126,7 @@ The hardest part is proving weakening for Gc*)
 
 Local Ltac temp1 := econstructor;split;reflexivity||(rewrite app_comm_cons;reflexivity).
 
-Lemma in_split_app : forall A (a:A) l2 l4 l1 l3, l1++a::l2=l3++l4 -> ((exists l,l3=l1++a::l/\l2=l++l4)\/
-                                                                      (exists l,l4=l++a::l2/\l1=l3++l)).
+Lemma in_split_app : forall A (a:A) l2 l4 l1 l3, l1++a::l2=l3++l4 -> ((exists l,l3=l1++a::l/\l2=l++l4) \/ (exists l,l4=l++a::l2/\l1=l3++l)).
 induction l1;intros; (destruct l3;[destruct l4|];discriminate||(injection H;intros;subst)).
 right; exists [];split;reflexivity.
 left; temp1.
@@ -138,9 +136,7 @@ left; temp1.
 right; temp1.
 Qed.
 
-Lemma in_in_split_app : forall A (a:A) b l2 l4 l1 l3, l1++a::l2=l3++b::l4 -> (exists l,l3=l1++a::l/\l2=l++b::l4)\/
-                                                                            (exists l,l4=l++a::l2/\l1=l3++b::l)\/
-                                                                            (a=b/\l1=l3/\l2=l4).
+Lemma in_in_split_app : forall A (a:A) b l2 l4 l1 l3, l1++a::l2=l3++b::l4 -> (exists l,l3=l1++a::l/\l2=l++b::l4) \/ (exists l,l4=l++a::l2/\l1=l3++b::l) \/ (a=b/\l1=l3/\l2=l4).
 intros;apply in_split_app in H as [(?&?&?)|(?&?&?)];subst.
 left; econstructor; split; reflexivity.
 destruct x; injection H; intros; subst.

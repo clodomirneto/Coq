@@ -52,6 +52,8 @@ Notation "Γ ⊨ A" := (Models Γ A) (at level 80).
 
 Definition Valid A := [] ⊨ A.
 
+Definition Validates v Δ := exists A, In A Δ /\ Is_true (TrueQ v A).
+
 Reserved Notation "Γ ⊢ A" (at level 80).
 
 (* Dedução Natural *)

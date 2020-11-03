@@ -1,9 +1,9 @@
-From LF Require Export ml4_sequent_calculus.
+From LF Require Export ml2_sequent_calculus.
 Require Import Plus Le Lt.
 Set Implicit Arguments.
 
-Module Type mod_cut (B: mod_base) (S: mod_sound B) (C: mod_complete B S) (G: mod_sequent B S C).
-Import B S C G.
+Module Type mod_cut (B: mod_base) (S: mod_sound B) (G: mod_sequent B S).
+Import B S G.
 
 (** * Cut Elimination
 
